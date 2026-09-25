@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>KOFINAS VISUALS — Visual Production</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background: #0a0a0a;
+            color: #ffffff;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .hero {
+            height: 100vh;
+            min-height: 650px;
+            display: flex;
+            align-items: flex-end;
+            padding: 60px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-image {
+            position: absolute;
+            inset: 0;
+            background:
+                linear-gradient(
+                    to top,
+                    rgba(0,0,0,0.85),
+                    rgba(0,0,0,0.15)
+                ),
+                url("https://images.unsplash.com/photo-1516035069371-29a1b244cc32?auto=format&fit=crop&w=2200&q=85")
+                center / cover;
+        }
+
+        .content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .eyebrow {
+            font-size: 12px;
+            letter-spacing: 4px;
+            margin-bottom: 22px;
+            opacity: 0.7;
+        }
+
+        h1 {
+            font-size: clamp(55px, 10vw, 150px);
+            line-height: 0.85;
+            letter-spacing: -5px;
+            font-weight: 700;
+        }
+
+        .sub {
+            margin-top: 28px;
+            font-size: 14px;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+        }
+
+        .scroll {
+            position: absolute;
+            right: 60px;
+            bottom: 60px;
+            writing-mode: vertical-rl;
+            font-size: 10px;
+            letter-spacing: 4px;
+            opacity: 0.6;
+            z-index: 2;
+        }
+
+        @media (max-width: 700px) {
+
+            .hero {
+                padding: 30px;
+            }
+
+            h1 {
+                letter-spacing: -3px;
+            }
+
+            .scroll {
+                right: 25px;
+                bottom: 30px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <main class="hero">
+
+        <div class="hero-image"></div>
+
+        <div class="content">
+            <div class="eyebrow">
+                BY TRAVELFILMGR
+            </div>
+
+            <h1>
+                KOFINAS<br>
+                VISUALS
+            </h1>
+
+            <div class="sub">
+                Visual Production
+            </div>
+        </div>
+
+        <div class="scroll">
+            SCROLL TO EXPLORE
+        </div>
+
+    </main>
+
+</body>
+</html>
