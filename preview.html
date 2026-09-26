@@ -32,6 +32,10 @@ body{
     overflow-x:hidden;
 }
 
+body.menu-open{
+    overflow:hidden;
+}
+
 a{
     color:inherit;
     text-decoration:none;
@@ -42,14 +46,19 @@ button{
 }
 
 
-/* HERO */
+/* =====================================================
+   HERO
+===================================================== */
 
 .hero{
     min-height:100vh;
     position:relative;
+
     display:flex;
     align-items:flex-end;
+
     padding:55px;
+
     overflow:hidden;
 }
 
@@ -75,18 +84,27 @@ button{
 
 .hero-image:before{
     content:"COMING SOON";
+
     position:absolute;
+
     top:50%;
     left:50%;
+
     transform:translate(-50%,-50%);
+
     font-size:10px;
     letter-spacing:6px;
+
     color:rgba(255,255,255,.20);
+
+    white-space:nowrap;
+
     z-index:1;
 }
 
 .hero-image:after{
     content:"";
+
     position:absolute;
     inset:0;
 
@@ -100,10 +118,13 @@ button{
 }
 
 
-/* TOP NAVIGATION */
+/* =====================================================
+   TOP NAVIGATION
+===================================================== */
 
 .top{
     position:absolute;
+
     top:40px;
     left:55px;
     right:55px;
@@ -112,31 +133,36 @@ button{
     justify-content:space-between;
     align-items:center;
 
-    z-index:10;
+    z-index:100;
 }
 
 .by{
     font-size:10px;
     letter-spacing:4px;
+
     opacity:.65;
 }
 
 .top-right{
     display:flex;
     align-items:center;
+
     gap:32px;
 }
 
 .main-nav{
     display:flex;
     align-items:center;
+
     gap:27px;
 }
 
 .main-nav a{
     font-size:9px;
     letter-spacing:2.5px;
+
     opacity:.55;
+
     transition:opacity .3s ease;
 }
 
@@ -145,15 +171,168 @@ button{
 }
 
 
-/* LANGUAGE */
+/* =====================================================
+   MOBILE MENU BUTTON
+===================================================== */
+
+.mobile-menu-toggle{
+    display:none;
+
+    appearance:none;
+    border:0;
+    background:none;
+
+    color:#fff;
+
+    cursor:pointer;
+
+    font-size:9px;
+    letter-spacing:2.5px;
+
+    padding:6px 0;
+
+    opacity:.65;
+
+    transition:opacity .3s ease;
+
+    position:relative;
+    z-index:120;
+}
+
+.mobile-menu-toggle:hover{
+    opacity:1;
+}
+
+
+/* =====================================================
+   MOBILE FULLSCREEN MENU
+===================================================== */
+
+.mobile-menu{
+    position:fixed;
+
+    inset:0;
+
+    z-index:90;
+
+    background:#080808;
+
+    color:#f4f3ef;
+
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+
+    padding:110px 30px 45px;
+
+    opacity:0;
+    visibility:hidden;
+    pointer-events:none;
+
+    transform:translateY(-12px);
+
+    transition:
+        opacity .35s ease,
+        visibility .35s ease,
+        transform .45s cubic-bezier(.2,.7,.2,1);
+}
+
+.mobile-menu.open{
+    opacity:1;
+    visibility:visible;
+    pointer-events:auto;
+
+    transform:translateY(0);
+}
+
+.mobile-menu-nav{
+    display:flex;
+    flex-direction:column;
+
+    border-top:1px solid rgba(255,255,255,.12);
+}
+
+.mobile-menu-nav a{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+
+    padding:22px 0;
+
+    border-bottom:1px solid rgba(255,255,255,.12);
+
+    font-size:clamp(31px,11vw,54px);
+    line-height:1;
+
+    letter-spacing:-2px;
+
+    text-transform:uppercase;
+
+    transition:
+        opacity .3s ease,
+        padding .3s ease;
+}
+
+.mobile-menu-nav a:hover{
+    opacity:.55;
+    padding-left:8px;
+}
+
+.mobile-menu-index{
+    font-size:8px;
+    letter-spacing:2px;
+
+    opacity:.35;
+}
+
+.mobile-menu-bottom{
+    margin-top:auto;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-end;
+
+    gap:20px;
+
+    padding-top:35px;
+}
+
+.mobile-menu-brand{
+    font-size:8px;
+    letter-spacing:3px;
+
+    opacity:.4;
+
+    line-height:1.7;
+}
+
+.mobile-menu-status{
+    font-size:8px;
+    letter-spacing:2.5px;
+
+    opacity:.4;
+
+    text-align:right;
+
+    line-height:1.7;
+}
+
+
+/* =====================================================
+   LANGUAGE
+===================================================== */
 
 .language{
     display:flex;
     align-items:center;
+
     gap:7px;
 
     font-size:9px;
     letter-spacing:2px;
+
+    position:relative;
+    z-index:120;
 }
 
 .language button{
@@ -184,40 +363,54 @@ button{
 }
 
 
-/* HERO CONTENT */
+/* =====================================================
+   HERO CONTENT
+===================================================== */
 
 .hero-content{
     position:relative;
+
     z-index:2;
+
     max-width:1200px;
 }
 
 .eyebrow{
     font-size:10px;
     letter-spacing:5px;
+
     margin-bottom:25px;
+
     opacity:.65;
 }
 
 h1{
     font-size:clamp(60px,11vw,165px);
+
     line-height:.82;
+
     letter-spacing:-7px;
+
     font-weight:700;
 }
 
 .descriptor{
     margin-top:32px;
+
     font-size:12px;
     letter-spacing:5px;
+
     text-transform:uppercase;
+
     opacity:.75;
 }
 
 .bottom{
     position:absolute;
+
     right:55px;
     bottom:55px;
+
     z-index:2;
 
     writing-mode:vertical-rl;
@@ -229,11 +422,15 @@ h1{
 }
 
 
-/* INTRO */
+/* =====================================================
+   INTRO
+===================================================== */
 
 .intro{
     position:relative;
+
     padding:170px 8vw 190px;
+
     background:#080808;
 }
 
@@ -241,19 +438,23 @@ h1{
     display:flex;
     justify-content:space-between;
     align-items:flex-start;
+
     margin-bottom:110px;
 }
 
 .intro-label{
     font-size:10px;
     letter-spacing:4px;
+
     opacity:.4;
 }
 
 .intro-location{
     font-size:9px;
     letter-spacing:3px;
+
     opacity:.35;
+
     text-transform:uppercase;
 }
 
@@ -263,8 +464,11 @@ h1{
 
 .intro-title{
     font-size:clamp(55px,8.8vw,145px);
+
     line-height:.88;
+
     letter-spacing:-7px;
+
     font-weight:500;
 }
 
@@ -274,6 +478,7 @@ h1{
 
 .intro-title .indent{
     display:block;
+
     margin-left:15vw;
 }
 
@@ -305,10 +510,13 @@ h1{
 }
 
 
-/* MANIFESTO */
+/* =====================================================
+   MANIFESTO
+===================================================== */
 
 .manifesto{
     background:#e9e7e1;
+
     color:#0a0a0a;
 
     padding:150px 7vw 170px;
@@ -319,19 +527,25 @@ h1{
 .manifesto-number{
     font-size:10px;
     letter-spacing:4px;
+
     opacity:.4;
+
     margin-bottom:80px;
 }
 
 .manifesto-title{
     font-size:clamp(55px,9vw,145px);
+
     line-height:.84;
+
     letter-spacing:-7px;
+
     font-weight:500;
 }
 
 .manifesto-title span{
     display:block;
+
     margin-left:17vw;
 }
 
@@ -362,22 +576,28 @@ h1{
 }
 
 
-/* ABOUT */
+/* =====================================================
+   ABOUT
+===================================================== */
 
 .about-home{
     background:#080808;
+
     padding:160px 7vw 180px;
 }
 
 .about-grid{
     display:grid;
+
     grid-template-columns:1fr 2fr;
+
     gap:8vw;
 }
 
 .about-label{
     font-size:10px;
     letter-spacing:4px;
+
     opacity:.4;
 }
 
@@ -387,9 +607,13 @@ h1{
 
 .about-title{
     font-size:clamp(48px,7vw,105px);
+
     line-height:.9;
+
     letter-spacing:-6px;
+
     font-weight:500;
+
     text-transform:uppercase;
 }
 
@@ -407,6 +631,7 @@ h1{
 .section-link{
     display:inline-flex;
     align-items:center;
+
     gap:25px;
 
     margin-top:55px;
@@ -428,10 +653,13 @@ h1{
 }
 
 
-/* WORK */
+/* =====================================================
+   WORK
+===================================================== */
 
 .work{
     background:#080808;
+
     color:#f4f3ef;
 
     padding:160px 6vw 180px;
@@ -441,7 +669,9 @@ h1{
 
 .work-head{
     display:grid;
+
     grid-template-columns:1fr 1fr;
+
     gap:8vw;
 
     margin-bottom:120px;
@@ -450,18 +680,23 @@ h1{
 .work-number{
     font-size:10px;
     letter-spacing:4px;
+
     opacity:.4;
 }
 
 .work-title{
     font-size:clamp(70px,12vw,180px);
+
     line-height:.75;
+
     letter-spacing:-9px;
+
     font-weight:600;
 }
 
 .work-description{
     max-width:380px;
+
     align-self:end;
 
     font-size:13px;
@@ -471,7 +706,9 @@ h1{
 }
 
 
-/* PROJECT SYSTEM */
+/* =====================================================
+   PROJECTS
+===================================================== */
 
 .project{
     margin-bottom:180px;
@@ -479,7 +716,9 @@ h1{
 
 .project-visual{
     position:relative;
+
     overflow:hidden;
+
     background:#111;
 }
 
@@ -510,6 +749,7 @@ h1{
     content:"";
 
     position:absolute;
+
     inset:20px;
 
     border:1px solid rgba(255,255,255,.045);
@@ -535,6 +775,7 @@ h1{
 
 .project-coming-soon{
     position:relative;
+
     z-index:1;
 
     font-size:9px;
@@ -555,6 +796,7 @@ h1{
 
 .project-two{
     width:72%;
+
     margin-left:auto;
 }
 
@@ -564,6 +806,7 @@ h1{
 
 .project-three{
     width:84%;
+
     margin-left:4vw;
 }
 
@@ -573,7 +816,9 @@ h1{
 
 .project-meta{
     display:flex;
+
     justify-content:space-between;
+
     align-items:flex-start;
 
     padding-top:25px;
@@ -581,6 +826,7 @@ h1{
 
 .project-name{
     font-size:25px;
+
     letter-spacing:-1px;
 }
 
@@ -598,21 +844,28 @@ h1{
 .project-index{
     font-size:9px;
     letter-spacing:3px;
+
     opacity:.4;
 }
 
 
-/* WORK CTA */
+/* =====================================================
+   WORK CTA
+===================================================== */
 
 .work-cta{
     margin-top:40px;
+
     display:flex;
+
     justify-content:center;
 }
 
 .work-cta a{
     display:inline-flex;
+
     align-items:center;
+
     gap:30px;
 
     padding:18px 0;
@@ -632,16 +885,21 @@ h1{
 }
 
 
-/* SERVICES */
+/* =====================================================
+   SERVICES
+===================================================== */
 
 .services{
     background:#111;
+
     padding:160px 8vw 180px;
 }
 
 .services-head{
     display:grid;
+
     grid-template-columns:1fr 2fr;
+
     gap:8vw;
 
     margin-bottom:110px;
@@ -650,13 +908,17 @@ h1{
 .services-label{
     font-size:10px;
     letter-spacing:4px;
+
     opacity:.4;
 }
 
 .services-title{
     font-size:clamp(60px,9vw,135px);
+
     line-height:.78;
+
     letter-spacing:-7px;
+
     font-weight:500;
 }
 
@@ -678,7 +940,9 @@ h1{
 
 .service{
     display:grid;
+
     grid-template-columns:70px 1fr 80px;
+
     align-items:center;
 
     padding:32px 0;
@@ -695,31 +959,40 @@ h1{
 .service-number{
     font-size:9px;
     letter-spacing:3px;
+
     opacity:.35;
 }
 
 .service-name{
     font-size:clamp(22px,3vw,42px);
+
     letter-spacing:-1.5px;
 }
 
 .service-arrow{
     text-align:right;
+
     font-size:18px;
+
     opacity:.35;
 }
 
 .services-cta{
     margin-top:65px;
+
     display:flex;
+
     justify-content:flex-end;
 }
 
 
-/* CONTACT */
+/* =====================================================
+   CONTACT
+===================================================== */
 
 .contact{
     background:#e9e7e1;
+
     color:#080808;
 
     padding:160px 7vw 110px;
@@ -728,6 +1001,7 @@ h1{
 .contact-label{
     font-size:10px;
     letter-spacing:4px;
+
     opacity:.4;
 
     margin-bottom:90px;
@@ -735,16 +1009,21 @@ h1{
 
 .contact-title{
     font-size:clamp(60px,10vw,155px);
+
     line-height:.78;
+
     letter-spacing:-8px;
+
     font-weight:600;
 }
 
 .contact-title span{
     display:block;
+
     margin-left:14vw;
 
     font-family:Georgia,serif;
+
     font-weight:400;
 }
 
@@ -752,6 +1031,7 @@ h1{
     margin-top:120px;
 
     display:flex;
+
     justify-content:space-between;
     align-items:flex-end;
 
@@ -760,7 +1040,9 @@ h1{
 
 .contact-details{
     display:flex;
+
     flex-direction:column;
+
     align-items:flex-start;
 
     gap:28px;
@@ -768,6 +1050,7 @@ h1{
 
 .contact-email{
     font-size:clamp(18px,3vw,34px);
+
     letter-spacing:-1px;
 
     border-bottom:1px solid rgba(0,0,0,.3);
@@ -777,7 +1060,9 @@ h1{
 
 .contact-page-link{
     display:inline-flex;
+
     align-items:center;
+
     gap:20px;
 
     font-size:9px;
@@ -799,19 +1084,96 @@ h1{
 .contact-note{
     font-size:9px;
     letter-spacing:3px;
+
     opacity:.4;
 }
 
 
-/* FOOTER */
+/* =====================================================
+   BACK TO TOP
+===================================================== */
+
+.back-to-top{
+    position:fixed;
+
+    right:28px;
+    bottom:28px;
+
+    z-index:80;
+
+    width:46px;
+    height:46px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    appearance:none;
+
+    border:1px solid rgba(255,255,255,.18);
+
+    background:rgba(8,8,8,.76);
+
+    color:#fff;
+
+    font-size:17px;
+
+    cursor:pointer;
+
+    opacity:0;
+    visibility:hidden;
+
+    pointer-events:none;
+
+    transform:translateY(12px);
+
+    backdrop-filter:blur(10px);
+    -webkit-backdrop-filter:blur(10px);
+
+    transition:
+        opacity .3s ease,
+        visibility .3s ease,
+        transform .3s ease,
+        border-color .3s ease,
+        background .3s ease;
+}
+
+.back-to-top.visible{
+    opacity:.68;
+    visibility:visible;
+
+    pointer-events:auto;
+
+    transform:translateY(0);
+}
+
+.back-to-top:hover{
+    opacity:1;
+
+    border-color:rgba(255,255,255,.5);
+
+    background:#111;
+}
+
+.back-to-top:focus-visible{
+    outline:1px solid #fff;
+    outline-offset:4px;
+}
+
+
+/* =====================================================
+   FOOTER
+===================================================== */
 
 footer{
     background:#080808;
+
     color:#fff;
 
     padding:35px 6vw;
 
     display:flex;
+
     justify-content:space-between;
     align-items:center;
 }
@@ -823,6 +1185,7 @@ footer{
 
 .footer-copy{
     display:flex;
+
     align-items:center;
 
     gap:22px;
@@ -842,65 +1205,113 @@ footer{
 }
 
 
-/* MOBILE */
+/* =====================================================
+   MOBILE
+===================================================== */
 
 @media(max-width:700px){
 
     .hero{
-        padding:30px;
+        min-height:100svh;
+
+        padding:
+            max(30px, env(safe-area-inset-top))
+            25px
+            max(32px, env(safe-area-inset-bottom));
     }
 
     .top{
-        top:27px;
+        top:max(22px, env(safe-area-inset-top));
+
         left:25px;
         right:25px;
     }
 
     .by{
         font-size:8px;
-        letter-spacing:2.5px;
+        letter-spacing:2.3px;
+
+        white-space:nowrap;
     }
 
     .main-nav{
         display:none;
     }
 
+    .mobile-menu-toggle{
+        display:block;
+    }
+
     .top-right{
-        gap:15px;
+        gap:14px;
     }
 
     .language{
+        gap:5px;
+
         font-size:8px;
     }
 
     .language button{
         font-size:8px;
+
+        letter-spacing:1.5px;
+    }
+
+    .mobile-menu{
+        padding:
+            max(105px, calc(env(safe-area-inset-top) + 90px))
+            25px
+            max(32px, env(safe-area-inset-bottom));
     }
 
     h1{
         font-size:16vw;
+
         letter-spacing:-4px;
+
+        line-height:.84;
+    }
+
+    .eyebrow{
+        font-size:8px;
+
+        letter-spacing:3.5px;
+
+        margin-bottom:20px;
     }
 
     .descriptor{
         font-size:8px;
+
         letter-spacing:2.5px;
+
         line-height:1.8;
+
         max-width:280px;
+
+        margin-top:25px;
     }
 
     .bottom{
-        right:25px;
-        bottom:30px;
+        display:none;
     }
 
 
+    /* INTRO */
+
     .intro{
-        padding:110px 30px 120px;
+        padding:110px 25px 120px;
     }
 
     .intro-top{
         margin-bottom:75px;
+    }
+
+    .intro-label{
+        font-size:9px;
+
+        letter-spacing:3px;
     }
 
     .intro-location{
@@ -909,23 +1320,32 @@ footer{
 
     .intro-title{
         font-size:15vw;
+
         letter-spacing:-4px;
+
+        line-height:.9;
     }
 
     .intro-title .indent{
-        margin-left:9vw;
+        margin-left:7vw;
     }
 
     .intro-bottom{
         display:block;
+
         margin-top:65px;
     }
 
     .intro-small{
         margin-top:30px;
+
         font-size:12px;
+
+        line-height:1.85;
     }
 
+
+    /* MANIFESTO */
 
     .manifesto{
         padding:110px 25px 120px;
@@ -933,27 +1353,38 @@ footer{
 
     .manifesto-number{
         margin-bottom:60px;
+
+        font-size:9px;
     }
 
     .manifesto-title{
-        font-size:16vw;
+        font-size:15vw;
+
         letter-spacing:-4px;
+
+        line-height:.86;
     }
 
     .manifesto-title span{
-        margin-left:8vw;
+        margin-left:7vw;
     }
 
     .manifesto-copy{
         margin-top:65px;
+
         margin-left:8vw;
+
+        font-size:12px;
     }
 
     .manifesto-mark{
         top:110px;
+
         right:25px;
     }
 
+
+    /* ABOUT */
 
     .about-home{
         padding:110px 25px 130px;
@@ -968,15 +1399,21 @@ footer{
     }
 
     .about-title{
-        font-size:15vw;
+        font-size:14vw;
+
         letter-spacing:-4px;
+
+        line-height:.92;
     }
 
     .about-copy{
         margin-top:40px;
+
         font-size:13px;
     }
 
+
+    /* WORK */
 
     .work{
         padding:110px 25px 130px;
@@ -984,17 +1421,22 @@ footer{
 
     .work-head{
         display:block;
+
         margin-bottom:75px;
     }
 
     .work-title{
         margin-top:35px;
+
         font-size:20vw;
+
         letter-spacing:-5px;
     }
 
     .work-description{
         margin-top:45px;
+
+        font-size:12px;
     }
 
     .project{
@@ -1005,6 +1447,7 @@ footer{
     .project-two,
     .project-three{
         width:100%;
+
         margin-left:0;
     }
 
@@ -1012,6 +1455,8 @@ footer{
     .project-two .project-visual,
     .project-three .project-visual{
         height:105vw;
+
+        min-height:390px;
     }
 
     .project-meta{
@@ -1022,29 +1467,40 @@ footer{
         font-size:21px;
     }
 
+    .project-type{
+        line-height:1.6;
+    }
+
+
+    /* SERVICES */
 
     .services{
-        padding:110px 30px 130px;
+        padding:110px 25px 130px;
     }
 
     .services-head{
         display:block;
+
         margin-bottom:55px;
     }
 
     .services-title{
         margin-top:35px;
+
         font-size:18vw;
+
         letter-spacing:-4px;
     }
 
     .services-intro{
         margin:0 0 55px;
+
         font-size:12px;
     }
 
     .service{
         grid-template-columns:42px 1fr 35px;
+
         padding:25px 0;
     }
 
@@ -1058,12 +1514,15 @@ footer{
 
     .services-cta{
         justify-content:flex-start;
+
         margin-top:50px;
     }
 
 
+    /* CONTACT */
+
     .contact{
-        padding:110px 30px 90px;
+        padding:110px 25px 90px;
     }
 
     .contact-label{
@@ -1071,38 +1530,144 @@ footer{
     }
 
     .contact-title{
-        font-size:18vw;
+        font-size:17vw;
+
         letter-spacing:-4px;
+
+        line-height:.82;
     }
 
     .contact-title span{
-        margin-left:8vw;
+        margin-left:7vw;
     }
 
     .contact-bottom{
         display:block;
+
         margin-top:75px;
     }
 
     .contact-email{
         font-size:20px;
+
         word-break:break-word;
     }
 
     .contact-note{
         margin-top:45px;
+
+        line-height:1.6;
     }
 
+
+    /* BACK TO TOP */
+
+    .back-to-top{
+        right:18px;
+
+        bottom:max(
+            18px,
+            calc(env(safe-area-inset-bottom) + 12px)
+        );
+
+        width:42px;
+        height:42px;
+
+        font-size:16px;
+    }
+
+
+    /* FOOTER */
 
     footer{
         display:block;
-        padding:30px;
+
+        padding:30px 25px;
     }
 
     .footer-copy{
-        margin-top:15px;
-        flex-wrap:wrap;
+        margin-top:18px;
+
+        flex-direction:column;
+
+        align-items:flex-start;
+
         gap:12px;
+
+        line-height:1.6;
+    }
+
+}
+
+
+/* =====================================================
+   VERY SMALL MOBILE
+===================================================== */
+
+@media(max-width:380px){
+
+    .top{
+        left:18px;
+        right:18px;
+    }
+
+    .by{
+        font-size:7px;
+
+        letter-spacing:1.8px;
+    }
+
+    .top-right{
+        gap:10px;
+    }
+
+    .mobile-menu-toggle{
+        font-size:8px;
+
+        letter-spacing:1.8px;
+    }
+
+    .language button{
+        font-size:7px;
+    }
+
+    .hero{
+        padding-left:20px;
+        padding-right:20px;
+    }
+
+    h1{
+        font-size:15vw;
+    }
+
+    .mobile-menu{
+        padding-left:20px;
+        padding-right:20px;
+    }
+
+    .mobile-menu-nav a{
+        font-size:10vw;
+    }
+
+}
+
+
+/* =====================================================
+   REDUCED MOTION
+===================================================== */
+
+@media(prefers-reduced-motion:reduce){
+
+    html{
+        scroll-behavior:auto;
+    }
+
+    *,
+    *::before,
+    *::after{
+        transition-duration:.01ms !important;
+        animation-duration:.01ms !important;
+        animation-iteration-count:1 !important;
     }
 
 }
@@ -1115,9 +1680,117 @@ footer{
 <body>
 
 
-<!-- HERO -->
+<!-- =====================================================
+     MOBILE MENU
+===================================================== -->
 
-<section class="hero">
+<div
+    class="mobile-menu"
+    id="mobileMenu"
+    aria-hidden="true"
+>
+
+    <nav
+        class="mobile-menu-nav"
+        aria-label="Mobile navigation"
+    >
+
+        <a href="about.html">
+
+            <span
+                data-en="ABOUT"
+                data-gr="ΣΧΕΤΙΚΑ"
+            >
+                ABOUT
+            </span>
+
+            <span class="mobile-menu-index">
+                01
+            </span>
+
+        </a>
+
+
+        <a href="work.html">
+
+            <span
+                data-en="WORK"
+                data-gr="ΔΟΥΛΕΙΑ"
+            >
+                WORK
+            </span>
+
+            <span class="mobile-menu-index">
+                02
+            </span>
+
+        </a>
+
+
+        <a href="services.html">
+
+            <span
+                data-en="SERVICES"
+                data-gr="ΥΠΗΡΕΣΙΕΣ"
+            >
+                SERVICES
+            </span>
+
+            <span class="mobile-menu-index">
+                03
+            </span>
+
+        </a>
+
+
+        <a href="contact.html">
+
+            <span
+                data-en="CONTACT"
+                data-gr="ΕΠΙΚΟΙΝΩΝΙΑ"
+            >
+                CONTACT
+            </span>
+
+            <span class="mobile-menu-index">
+                04
+            </span>
+
+        </a>
+
+    </nav>
+
+
+    <div class="mobile-menu-bottom">
+
+        <div class="mobile-menu-brand">
+            KOFINAS VISUALS<br>
+            BY TRAVELFILMGR
+        </div>
+
+
+        <div
+            class="mobile-menu-status"
+            data-en="VISUAL PRODUCTION · GREECE"
+            data-gr="ΟΠΤΙΚΗ ΠΑΡΑΓΩΓΗ · ΕΛΛΑΔΑ"
+        >
+            VISUAL PRODUCTION · GREECE
+        </div>
+
+    </div>
+
+</div>
+
+
+
+<!-- =====================================================
+     HERO
+===================================================== -->
+
+<section
+    class="hero"
+    id="top"
+>
 
     <div class="hero-image"></div>
 
@@ -1166,6 +1839,17 @@ footer{
                 </a>
 
             </nav>
+
+
+            <button
+                class="mobile-menu-toggle"
+                id="mobileMenuToggle"
+                type="button"
+                aria-expanded="false"
+                aria-controls="mobileMenu"
+            >
+                MENU
+            </button>
 
 
             <div class="language">
@@ -1240,7 +1924,9 @@ footer{
 
 
 
-<!-- INTRO -->
+<!-- =====================================================
+     INTRO
+===================================================== -->
 
 <section class="intro">
 
@@ -1336,7 +2022,9 @@ footer{
 
 
 
-<!-- MANIFESTO -->
+<!-- =====================================================
+     MANIFESTO
+===================================================== -->
 
 <section class="manifesto">
 
@@ -1403,7 +2091,9 @@ footer{
 
 
 
-<!-- ABOUT -->
+<!-- =====================================================
+     ABOUT
+===================================================== -->
 
 <section class="about-home">
 
@@ -1468,7 +2158,9 @@ footer{
 
 
 
-<!-- WORK -->
+<!-- =====================================================
+     WORK
+===================================================== -->
 
 <section class="work">
 
@@ -1701,7 +2393,9 @@ footer{
 
 
 
-<!-- SERVICES -->
+<!-- =====================================================
+     SERVICES
+===================================================== -->
 
 <section class="services">
 
@@ -1863,7 +2557,9 @@ footer{
 
 
 
-<!-- CONTACT -->
+<!-- =====================================================
+     CONTACT
+===================================================== -->
 
 <section class="contact">
 
@@ -1947,7 +2643,25 @@ footer{
 
 
 
-<!-- FOOTER -->
+<!-- =====================================================
+     BACK TO TOP
+===================================================== -->
+
+<button
+    class="back-to-top"
+    id="backToTop"
+    type="button"
+    aria-label="Back to top"
+    title="Back to top"
+>
+    ↑
+</button>
+
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
 
 <footer>
 
@@ -1991,7 +2705,9 @@ footer{
 
 
 
-<!-- LANGUAGE SYSTEM -->
+<!-- =====================================================
+     LANGUAGE + MOBILE MENU + BACK TO TOP
+===================================================== -->
 
 <script>
 
@@ -2004,11 +2720,62 @@ const grBtn =
 const translatable =
     document.querySelectorAll("[data-en]");
 
+const mobileMenu =
+    document.getElementById("mobileMenu");
+
+const mobileMenuToggle =
+    document.getElementById("mobileMenuToggle");
+
+const mobileMenuLinks =
+    document.querySelectorAll(".mobile-menu-nav a");
+
+const backToTop =
+    document.getElementById("backToTop");
+
+
+let currentLanguage = "en";
+let menuOpen = false;
+
+
+
+/* =====================================================
+   MOBILE MENU BUTTON TEXT
+===================================================== */
+
+function updateMenuButton(){
+
+    if(menuOpen){
+
+        mobileMenuToggle.textContent =
+            currentLanguage === "gr"
+                ? "ΚΛΕΙΣΙΜΟ"
+                : "CLOSE";
+
+    }else{
+
+        mobileMenuToggle.textContent =
+            currentLanguage === "gr"
+                ? "ΜΕΝΟΥ"
+                : "MENU";
+
+    }
+
+}
+
+
+
+/* =====================================================
+   LANGUAGE
+===================================================== */
 
 function setLanguage(language){
 
+    currentLanguage = language;
+
     document.documentElement.lang =
-        language === "gr" ? "el" : "en";
+        language === "gr"
+            ? "el"
+            : "en";
 
 
     translatable.forEach(element => {
@@ -2032,17 +2799,207 @@ function setLanguage(language){
         language === "gr"
     );
 
+
+    backToTop.setAttribute(
+        "aria-label",
+        language === "gr"
+            ? "Επιστροφή στην κορυφή"
+            : "Back to top"
+    );
+
+
+    backToTop.setAttribute(
+        "title",
+        language === "gr"
+            ? "Επιστροφή στην κορυφή"
+            : "Back to top"
+    );
+
+
+    updateMenuButton();
+
 }
 
 
-enBtn.addEventListener("click", () => {
-    setLanguage("en");
+
+/* =====================================================
+   MOBILE MENU
+===================================================== */
+
+function openMobileMenu(){
+
+    menuOpen = true;
+
+    mobileMenu.classList.add("open");
+
+    mobileMenu.setAttribute(
+        "aria-hidden",
+        "false"
+    );
+
+    mobileMenuToggle.setAttribute(
+        "aria-expanded",
+        "true"
+    );
+
+    document.body.classList.add(
+        "menu-open"
+    );
+
+    updateMenuButton();
+
+}
+
+
+
+function closeMobileMenu(){
+
+    menuOpen = false;
+
+    mobileMenu.classList.remove("open");
+
+    mobileMenu.setAttribute(
+        "aria-hidden",
+        "true"
+    );
+
+    mobileMenuToggle.setAttribute(
+        "aria-expanded",
+        "false"
+    );
+
+    document.body.classList.remove(
+        "menu-open"
+    );
+
+    updateMenuButton();
+
+}
+
+
+
+function toggleMobileMenu(){
+
+    if(menuOpen){
+
+        closeMobileMenu();
+
+    }else{
+
+        openMobileMenu();
+
+    }
+
+}
+
+
+
+mobileMenuToggle.addEventListener(
+    "click",
+    toggleMobileMenu
+);
+
+
+
+mobileMenuLinks.forEach(link => {
+
+    link.addEventListener(
+        "click",
+        closeMobileMenu
+    );
+
 });
 
 
-grBtn.addEventListener("click", () => {
-    setLanguage("gr");
-});
+
+document.addEventListener(
+    "keydown",
+    event => {
+
+        if(
+            event.key === "Escape" &&
+            menuOpen
+        ){
+
+            closeMobileMenu();
+
+        }
+
+    }
+);
+
+
+
+window.addEventListener(
+    "resize",
+    () => {
+
+        if(
+            window.innerWidth > 700 &&
+            menuOpen
+        ){
+
+            closeMobileMenu();
+
+        }
+
+    }
+);
+
+
+
+/* =====================================================
+   LANGUAGE BUTTONS
+===================================================== */
+
+enBtn.addEventListener(
+    "click",
+    () => setLanguage("en")
+);
+
+
+grBtn.addEventListener(
+    "click",
+    () => setLanguage("gr")
+);
+
+
+
+/* =====================================================
+   BACK TO TOP
+===================================================== */
+
+function updateBackToTop(){
+
+    backToTop.classList.toggle(
+        "visible",
+        window.scrollY > 500
+    );
+
+}
+
+
+window.addEventListener(
+    "scroll",
+    updateBackToTop,
+    {
+        passive:true
+    }
+);
+
+
+backToTop.addEventListener(
+    "click",
+    () => {
+
+        window.scrollTo({
+            top:0,
+            behavior:"smooth"
+        });
+
+    }
+);
+
 
 
 /*
@@ -2055,6 +3012,8 @@ grBtn.addEventListener("click", () => {
 */
 
 setLanguage("en");
+
+updateBackToTop();
 
 </script>
 
