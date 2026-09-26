@@ -1,11 +1,2 @@
 User-agent: *
-
 Allow: /
-
-Disallow: /preview.html
-Disallow: /about.html
-Disallow: /work.html
-Disallow: /services.html
-Disallow: /contact.html
-Disallow: /privacy.html
-Disallow: /website-status.html
