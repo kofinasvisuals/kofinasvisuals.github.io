@@ -1,261 +1,832 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>KOFINAS VISUALS — Visual Production</title>
+<meta charset="UTF-8">
 
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+<meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+>
 
-        html, body {
-            width: 100%;
-            height: 100%;
-        }
+<title>KOFINAS VISUALS — Visual Production</title>
 
-        body {
-            background: #080808;
-            color: #ffffff;
-            font-family: Arial, Helvetica, sans-serif;
-            overflow: hidden;
-        }
+<meta
+    name="description"
+    content="KOFINAS VISUALS by TRAVELFILMGR — Visual Production based in Greece. Website currently under development."
+>
 
-        .page {
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            padding: 42px 50px;
-            position: relative;
-        }
 
-        .top {
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-start;
-            position: relative;
-            z-index: 2;
-        }
+<style>
 
-        .brand-small {
-            font-size: 11px;
-            letter-spacing: 4px;
-            opacity: 0.65;
-        }
+/* =====================================================
+   RESET
+===================================================== */
 
-        .status {
-            font-size: 10px;
-            letter-spacing: 3px;
-            text-transform: uppercase;
-            opacity: 0.55;
-        }
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
 
-        .center {
-            position: relative;
-            z-index: 2;
-        }
+html,
+body{
+    width:100%;
+    min-height:100%;
+}
 
-        .eyebrow {
-            font-size: 11px;
-            letter-spacing: 5px;
-            opacity: 0.55;
-            margin-bottom: 28px;
-        }
+body{
+    background:#080808;
+    color:#ffffff;
 
-        h1 {
-            font-size: clamp(55px, 11vw, 160px);
-            line-height: 0.82;
-            letter-spacing: -7px;
-            font-weight: 700;
-        }
+    font-family:Arial, Helvetica, sans-serif;
 
-        .descriptor {
-            margin-top: 35px;
-            font-size: 13px;
-            letter-spacing: 5px;
-            text-transform: uppercase;
-            opacity: 0.7;
-        }
+    overflow-x:hidden;
+}
 
-        .construction {
-            margin-top: 55px;
-            display: flex;
-            align-items: center;
-            gap: 18px;
-        }
+a{
+    color:inherit;
+    text-decoration:none;
+}
 
-        .line {
-            width: 55px;
-            height: 1px;
-            background: rgba(255,255,255,0.5);
-        }
+button{
+    font:inherit;
+}
 
-        .construction span {
-            font-size: 10px;
-            letter-spacing: 4px;
-            opacity: 0.5;
-        }
 
-        .bottom {
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-end;
-            position: relative;
-            z-index: 2;
-        }
+/* =====================================================
+   PAGE
+===================================================== */
 
-        .location {
-            font-size: 10px;
-            letter-spacing: 3px;
-            opacity: 0.4;
-            text-transform: uppercase;
-        }
+.page{
+    min-height:100svh;
 
-        .loading {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            font-size: 9px;
-            letter-spacing: 3px;
-            opacity: 0.45;
-        }
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
 
-        .dot {
-            width: 5px;
-            height: 5px;
-            border-radius: 50%;
-            background: white;
-            animation: pulse 1.5s infinite ease-in-out;
-        }
+    padding:42px 50px;
 
-        @keyframes pulse {
-            0%, 100% {
-                opacity: 0.2;
-                transform: scale(0.8);
-            }
+    position:relative;
 
-            50% {
-                opacity: 1;
-                transform: scale(1);
-            }
-        }
+    overflow:hidden;
+}
 
-        .background-number {
-            position: absolute;
-            right: 35px;
-            top: 50%;
-            transform: translateY(-50%);
-            font-size: 28vw;
-            font-weight: 700;
-            line-height: 1;
-            color: rgba(255,255,255,0.025);
-            user-select: none;
-        }
 
-        @media (max-width: 700px) {
+/* =====================================================
+   TOP
+===================================================== */
 
-            .page {
-                padding: 30px;
-            }
+.top{
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-start;
 
-            .top {
-                align-items: center;
-            }
+    position:relative;
 
-            .status {
-                display: none;
-            }
+    z-index:3;
+}
 
-            h1 {
-                letter-spacing: -4px;
-            }
+.brand-small{
+    font-size:11px;
+    letter-spacing:4px;
 
-            .descriptor {
-                font-size: 10px;
-                letter-spacing: 3px;
-                line-height: 1.8;
-                max-width: 250px;
-            }
+    opacity:.65;
+}
 
-            .construction {
-                margin-top: 40px;
-            }
+.top-right{
+    display:flex;
+    align-items:center;
 
-            .bottom {
-                align-items: flex-end;
-            }
+    gap:28px;
+}
 
-            .location {
-                font-size: 8px;
-            }
+.status{
+    font-size:10px;
+    letter-spacing:3px;
 
-            .background-number {
-                right: -10px;
-                font-size: 45vw;
-            }
-        }
-    </style>
+    text-transform:uppercase;
+
+    opacity:.55;
+}
+
+
+/* =====================================================
+   LANGUAGE
+===================================================== */
+
+.language{
+    display:flex;
+    align-items:center;
+
+    gap:7px;
+
+    font-size:9px;
+    letter-spacing:2px;
+}
+
+.language button{
+    border:0;
+    background:none;
+
+    color:#fff;
+
+    cursor:pointer;
+
+    font-size:9px;
+    letter-spacing:2px;
+
+    opacity:.35;
+
+    padding:5px 0;
+
+    transition:opacity .25s ease;
+}
+
+.language button:hover,
+.language button.active{
+    opacity:1;
+}
+
+.language-separator{
+    opacity:.25;
+}
+
+
+/* =====================================================
+   CENTER
+===================================================== */
+
+.center{
+    position:relative;
+
+    z-index:2;
+
+    max-width:1300px;
+}
+
+.eyebrow{
+    font-size:11px;
+    letter-spacing:5px;
+
+    opacity:.55;
+
+    margin-bottom:28px;
+}
+
+h1{
+    font-size:clamp(55px,11vw,160px);
+
+    line-height:.82;
+
+    letter-spacing:-7px;
+
+    font-weight:700;
+}
+
+.descriptor{
+    margin-top:35px;
+
+    font-size:13px;
+    letter-spacing:5px;
+
+    text-transform:uppercase;
+
+    opacity:.7;
+}
+
+
+/* =====================================================
+   CONSTRUCTION
+===================================================== */
+
+.construction{
+    margin-top:55px;
+
+    display:flex;
+    align-items:center;
+
+    gap:18px;
+}
+
+.line{
+    width:55px;
+    height:1px;
+
+    background:rgba(255,255,255,.5);
+}
+
+.construction span{
+    font-size:10px;
+    letter-spacing:4px;
+
+    opacity:.5;
+}
+
+
+/* =====================================================
+   BOTTOM
+===================================================== */
+
+.bottom{
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-end;
+
+    gap:40px;
+
+    position:relative;
+
+    z-index:2;
+}
+
+.bottom-left{
+    display:flex;
+    flex-direction:column;
+
+    gap:16px;
+}
+
+.location{
+    font-size:10px;
+    letter-spacing:3px;
+
+    opacity:.4;
+
+    text-transform:uppercase;
+}
+
+.footer-links{
+    display:flex;
+    align-items:center;
+
+    gap:20px;
+
+    flex-wrap:wrap;
+}
+
+.footer-link{
+    font-size:8px;
+    letter-spacing:2px;
+
+    opacity:.35;
+
+    transition:opacity .3s ease;
+}
+
+.footer-link:hover{
+    opacity:1;
+}
+
+.copyright{
+    font-size:8px;
+    letter-spacing:2px;
+
+    opacity:.25;
+}
+
+
+/* =====================================================
+   LOADING
+===================================================== */
+
+.loading{
+    display:flex;
+    align-items:center;
+
+    gap:12px;
+
+    font-size:9px;
+    letter-spacing:3px;
+
+    opacity:.45;
+}
+
+.dot{
+    width:5px;
+    height:5px;
+
+    border-radius:50%;
+
+    background:white;
+
+    animation:pulse 1.5s infinite ease-in-out;
+}
+
+@keyframes pulse{
+
+    0%,
+    100%{
+        opacity:.2;
+        transform:scale(.8);
+    }
+
+    50%{
+        opacity:1;
+        transform:scale(1);
+    }
+
+}
+
+
+/* =====================================================
+   BACKGROUND NUMBER
+===================================================== */
+
+.background-number{
+    position:absolute;
+
+    right:35px;
+    top:50%;
+
+    transform:translateY(-50%);
+
+    font-size:28vw;
+    font-weight:700;
+
+    line-height:1;
+
+    color:rgba(255,255,255,.025);
+
+    user-select:none;
+
+    pointer-events:none;
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media(max-width:700px){
+
+    .page{
+        min-height:100svh;
+
+        padding:
+            max(28px, env(safe-area-inset-top))
+            25px
+            max(28px, env(safe-area-inset-bottom));
+    }
+
+
+    .top{
+        align-items:center;
+    }
+
+    .brand-small{
+        font-size:8px;
+
+        letter-spacing:2.5px;
+    }
+
+    .top-right{
+        gap:14px;
+    }
+
+    .status{
+        display:none;
+    }
+
+    .language,
+    .language button{
+        font-size:8px;
+    }
+
+
+    .eyebrow{
+        font-size:8px;
+
+        letter-spacing:3.5px;
+
+        margin-bottom:22px;
+    }
+
+    h1{
+        font-size:16vw;
+
+        line-height:.84;
+
+        letter-spacing:-4px;
+    }
+
+    .descriptor{
+        margin-top:28px;
+
+        font-size:9px;
+        letter-spacing:2.8px;
+
+        line-height:1.8;
+
+        max-width:290px;
+    }
+
+
+    .construction{
+        margin-top:40px;
+
+        gap:14px;
+    }
+
+    .line{
+        width:35px;
+    }
+
+    .construction span{
+        font-size:8px;
+
+        letter-spacing:2.5px;
+
+        line-height:1.6;
+    }
+
+
+    .bottom{
+        align-items:flex-end;
+
+        gap:20px;
+    }
+
+    .bottom-left{
+        gap:13px;
+
+        max-width:70%;
+    }
+
+    .location{
+        font-size:8px;
+
+        letter-spacing:2px;
+    }
+
+    .footer-links{
+        gap:10px 14px;
+    }
+
+    .footer-link{
+        font-size:7px;
+
+        letter-spacing:1.5px;
+    }
+
+    .copyright{
+        font-size:7px;
+
+        letter-spacing:1.3px;
+
+        line-height:1.6;
+    }
+
+
+    .loading{
+        flex-shrink:0;
+
+        font-size:7px;
+
+        letter-spacing:2px;
+
+        gap:8px;
+    }
+
+    .dot{
+        width:4px;
+        height:4px;
+    }
+
+
+    .background-number{
+        right:-15px;
+
+        font-size:45vw;
+    }
+
+}
+
+
+/* =====================================================
+   VERY SMALL MOBILE
+===================================================== */
+
+@media(max-width:380px){
+
+    .page{
+        padding-left:20px;
+        padding-right:20px;
+    }
+
+    .brand-small{
+        font-size:7px;
+
+        letter-spacing:2px;
+    }
+
+    h1{
+        font-size:15vw;
+    }
+
+    .descriptor{
+        font-size:8px;
+
+        letter-spacing:2px;
+    }
+
+    .construction span{
+        font-size:7px;
+
+        letter-spacing:2px;
+    }
+
+    .footer-link,
+    .copyright,
+    .loading{
+        font-size:6.5px;
+    }
+
+}
+
+
+/* =====================================================
+   REDUCED MOTION
+===================================================== */
+
+@media(prefers-reduced-motion:reduce){
+
+    .dot{
+        animation:none;
+
+        opacity:1;
+    }
+
+}
+
+</style>
+
 </head>
+
 
 <body>
 
-    <main class="page">
 
-        <div class="background-number">01</div>
+<main class="page">
 
-        <header class="top">
-            <div class="brand-small">
-                BY TRAVELFILMGR
+
+    <!-- BACKGROUND -->
+
+    <div
+        class="background-number"
+        aria-hidden="true"
+    >
+        01
+    </div>
+
+
+
+    <!-- TOP -->
+
+    <header class="top">
+
+        <div class="brand-small">
+            BY TRAVELFILMGR
+        </div>
+
+
+        <div class="top-right">
+
+            <div
+                class="status"
+                data-en="NEW WEBSITE"
+                data-gr="ΝΕΑ ΙΣΤΟΣΕΛΙΔΑ"
+            >
+                NEW WEBSITE
             </div>
 
-            <div class="status">
-                New website
+
+            <div class="language">
+
+                <button
+                    id="enBtn"
+                    class="active"
+                    type="button"
+                    aria-label="English"
+                >
+                    EN
+                </button>
+
+
+                <span class="language-separator">
+                    ·
+                </span>
+
+
+                <button
+                    id="grBtn"
+                    type="button"
+                    aria-label="Ελληνικά"
+                >
+                    GR
+                </button>
+
             </div>
-        </header>
+
+        </div>
+
+    </header>
 
 
-        <section class="center">
 
-            <div class="eyebrow">
-                VISUAL PRODUCTION
-            </div>
+    <!-- CENTER -->
 
-            <h1>
-                KOFINAS<br>
-                VISUALS
-            </h1>
+    <section class="center">
 
-            <div class="descriptor">
-                Photography · Real Estate · Events
-            </div>
-
-            <div class="construction">
-                <div class="line"></div>
-                <span>WEBSITE UNDER CONSTRUCTION</span>
-            </div>
-
-        </section>
+        <div
+            class="eyebrow"
+            data-en="VISUAL PRODUCTION"
+            data-gr="ΟΠΤΙΚΗ ΠΑΡΑΓΩΓΗ"
+        >
+            VISUAL PRODUCTION
+        </div>
 
 
-        <footer class="bottom">
+        <h1>
+            KOFINAS<br>
+            VISUALS
+        </h1>
 
-            <div class="location">
+
+        <div
+            class="descriptor"
+            data-en="Photography · Real Estate · Events"
+            data-gr="Φωτογραφία · Ακίνητα · Εκδηλώσεις"
+        >
+            Photography · Real Estate · Events
+        </div>
+
+
+        <div class="construction">
+
+            <div class="line"></div>
+
+
+            <span
+                data-en="WEBSITE UNDER CONSTRUCTION"
+                data-gr="Η ΙΣΤΟΣΕΛΙΔΑ ΕΙΝΑΙ ΥΠΟ ΚΑΤΑΣΚΕΥΗ"
+            >
+                WEBSITE UNDER CONSTRUCTION
+            </span>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- BOTTOM -->
+
+    <footer class="bottom">
+
+        <div class="bottom-left">
+
+            <div
+                class="location"
+                data-en="Greece · 2026"
+                data-gr="Ελλάδα · 2026"
+            >
                 Greece · 2026
             </div>
 
-            <div class="loading">
-                <div class="dot"></div>
-                <span>COMING SOON</span>
+
+            <div class="footer-links">
+
+                <a
+                    href="privacy.html"
+                    class="footer-link"
+                    data-en="PRIVACY POLICY"
+                    data-gr="ΠΟΛΙΤΙΚΗ ΑΠΟΡΡΗΤΟΥ"
+                >
+                    PRIVACY POLICY
+                </a>
+
+
+                <a
+                    href="website-status.html"
+                    class="footer-link"
+                    data-en="WEBSITE STATUS"
+                    data-gr="ΚΑΤΑΣΤΑΣΗ ΙΣΤΟΣΕΛΙΔΑΣ"
+                >
+                    WEBSITE STATUS
+                </a>
+
             </div>
 
-        </footer>
 
-    </main>
+            <div
+                class="copyright"
+                data-en="© 2026 KOFINAS VISUALS · ALL RIGHTS RESERVED"
+                data-gr="© 2026 KOFINAS VISUALS · ΜΕ ΕΠΙΦΥΛΑΞΗ ΠΑΝΤΟΣ ΔΙΚΑΙΩΜΑΤΟΣ"
+            >
+                © 2026 KOFINAS VISUALS · ALL RIGHTS RESERVED
+            </div>
+
+        </div>
+
+
+
+        <div class="loading">
+
+            <div class="dot"></div>
+
+
+            <span
+                data-en="COMING SOON"
+                data-gr="ΣΥΝΤΟΜΑ"
+            >
+                COMING SOON
+            </span>
+
+        </div>
+
+    </footer>
+
+
+</main>
+
+
+
+<!-- =====================================================
+     LANGUAGE
+===================================================== -->
+
+<script>
+
+const enBtn =
+    document.getElementById("enBtn");
+
+const grBtn =
+    document.getElementById("grBtn");
+
+const translatable =
+    document.querySelectorAll("[data-en]");
+
+
+function setLanguage(language){
+
+    document.documentElement.lang =
+        language === "gr"
+            ? "el"
+            : "en";
+
+
+    translatable.forEach(element => {
+
+        element.textContent =
+            language === "gr"
+                ? element.getAttribute("data-gr")
+                : element.getAttribute("data-en");
+
+    });
+
+
+    enBtn.classList.toggle(
+        "active",
+        language === "en"
+    );
+
+
+    grBtn.classList.toggle(
+        "active",
+        language === "gr"
+    );
+
+}
+
+
+enBtn.addEventListener(
+    "click",
+    () => setLanguage("en")
+);
+
+
+grBtn.addEventListener(
+    "click",
+    () => setLanguage("gr")
+);
+
+
+/*
+    English is always the default language.
+
+    No language preference is stored.
+    No localStorage.
+    No sessionStorage.
+    No cookies.
+*/
+
+setLanguage("en");
+
+</script>
+
 
 </body>
+
 </html>
