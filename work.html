@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Work — KOFINAS VISUALS</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background: #080808;
+            color: #f5f5f5;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        /* NAV */
+
+        .nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 28px 45px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 10;
+        }
+
+        .logo {
+            font-size: 13px;
+            font-weight: 700;
+            letter-spacing: 3px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 35px;
+            font-size: 10px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        .nav-links a {
+            opacity: .6;
+            transition: .3s;
+        }
+
+        .nav-links a:hover {
+            opacity: 1;
+        }
+
+        /* HEADER */
+
+        .header {
+            padding: 190px 7vw 100px;
+        }
+
+        .small {
+            font-size: 10px;
+            letter-spacing: 5px;
+            text-transform: uppercase;
+            opacity: .45;
+            margin-bottom: 25px;
+        }
+
+        h1 {
+            font-size: clamp(65px, 12vw, 170px);
+            line-height: .8;
+            letter-spacing: -7px;
+            font-weight: 700;
+        }
+
+        .intro {
+            max-width: 520px;
+            margin-top: 55px;
+            font-size: 15px;
+            line-height: 1.8;
+            opacity: .55;
+        }
+
+        /* WORK */
+
+        .work {
+            padding: 40px 6vw 160px;
+        }
+
+        .project {
+            margin-bottom: 150px;
+        }
+
+        .project-image {
+            overflow: hidden;
+            background: #111;
+        }
+
+        .project-image img {
+            width: 100%;
+            display: block;
+            object-fit: cover;
+            transition: transform 1s cubic-bezier(.2,.7,.2,1);
+        }
+
+        .project:hover img {
+            transform: scale(1.025);
+        }
+
+        .large img {
+            aspect-ratio: 16 / 9;
+        }
+
+        .portrait {
+            width: 70%;
+            margin-left: auto;
+        }
+
+        .portrait img {
+            aspect-ratio: 4 / 5;
+        }
+
+        .wide {
+            width: 82%;
+        }
+
+        .wide img {
+            aspect-ratio: 16 / 10;
+        }
+
+        .project-info {
+            display: flex;
+            justify-content: space-between;
+            padding-top: 18px;
+            margin-top: 15px;
+            border-top: 1px solid rgba(255,255,255,.18);
+        }
+
+        .project-name {
+            font-size: 14px;
+            letter-spacing: 1px;
+        }
+
+        .project-category {
+            font-size: 9px;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            opacity: .4;
+        }
+
+        /* FOOTER */
+
+        footer {
+            padding: 45px;
+            border-top: 1px solid rgba(255,255,255,.15);
+            display: flex;
+            justify-content: space-between;
+            font-size: 9px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            opacity: .45;
+        }
+
+        @media (max-width: 800px) {
+
+            .nav {
+                padding: 22px 25px;
+            }
+
+            .nav-links {
+                gap: 15px;
+            }
+
+            .header {
+                padding: 150px 25px 80px;
+            }
+
+            h1 {
+                letter-spacing: -4px;
+            }
+
+            .work {
+                padding: 20px 25px 100px;
+            }
+
+            .project {
+                margin-bottom: 100px;
+            }
+
+            .portrait,
+            .wide {
+                width: 100%;
+            }
+
+            footer {
+                padding: 30px 25px;
+                flex-direction: column;
+                gap: 15px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="nav">
+
+        <a href="index.html" class="logo">
+            KOFINAS VISUALS
+        </a>
+
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="work.html">Work</a>
+        </div>
+
+    </nav>
+
+
+    <header class="header">
+
+        <div class="small">
+            KOFINAS VISUALS / 01
+        </div>
+
+        <h1>
+            SELECTED<br>
+            WORK
+        </h1>
+
+        <p class="intro">
+            A selection of visual work created across
+            architecture, places, people and moments.
+        </p>
+
+    </header>
+
+
+    <main class="work">
+
+
+        <article class="project large">
+
+            <div class="project-image">
+
+                <img
+                    src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=2200&q=90"
+                    alt="Architecture photography"
+                >
+
+            </div>
+
+            <div class="project-info">
+
+                <span class="project-name">
+                    Space / Structure
+                </span>
+
+                <span class="project-category">
+                    Real Estate
+                </span>
+
+            </div>
+
+        </article>
+
+
+        <article class="project portrait">
+
+            <div class="project-image">
+
+                <img
+                    src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=1600&q=90"
+                    alt="Portrait photography"
+                >
+
+            </div>
+
+            <div class="project-info">
+
+                <span class="project-name">
+                    Human / Character
+                </span>
+
+                <span class="project-category">
+                    Portrait
+                </span>
+
+            </div>
+
+        </article>
+
+
+        <article class="project wide">
+
+            <div class="project-image">
+
+                <img
+                    src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=2200&q=90"
+                    alt="Outdoor photography"
+                >
+
+            </div>
+
+            <div class="project-info">
+
+                <span class="project-name">
+                    Open / Outside
+                </span>
+
+                <span class="project-category">
+                    Outdoor
+                </span>
+
+            </div>
+
+        </article>
+
+
+        <article class="project large">
+
+            <div class="project-image">
+
+                <img
+                    src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&w=2200&q=90"
+                    alt="Event photography"
+                >
+
+            </div>
+
+            <div class="project-info">
+
+                <span class="project-name">
+                    Energy / Moment
+                </span>
+
+                <span class="project-category">
+                    Events
+                </span>
+
+            </div>
+
+        </article>
+
+
+    </main>
+
+
+    <footer>
+
+        <span>KOFINAS VISUALS</span>
+
+        <span>by TRAVELFILMGR</span>
+
+        <span>Visual Production</span>
+
+    </footer>
+
+</body>
+</html>
