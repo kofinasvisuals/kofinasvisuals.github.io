@@ -1,12 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>KOFINAS VISUALS — Visual Production</title>
 
+<meta
+    name="description"
+    content="KOFINAS VISUALS by TRAVELFILMGR — Photography and visual production based in Greece."
+>
+
 <style>
+
+/* =====================================================
+   RESET
+===================================================== */
 
 *{
     margin:0;
@@ -30,6 +41,10 @@ a{
     text-decoration:none;
 }
 
+button{
+    font:inherit;
+}
+
 
 /* =====================================================
    HERO
@@ -38,9 +53,12 @@ a{
 .hero{
     min-height:100vh;
     position:relative;
+
     display:flex;
     align-items:flex-end;
+
     padding:55px;
+
     overflow:hidden;
 }
 
@@ -68,6 +86,7 @@ a{
     content:"COMING SOON";
 
     position:absolute;
+
     top:50%;
     left:50%;
 
@@ -75,15 +94,15 @@ a{
 
     font-size:10px;
     letter-spacing:6px;
-    text-transform:uppercase;
 
-    color:rgba(255,255,255,.22);
+    color:rgba(255,255,255,.20);
 
     z-index:1;
 }
 
 .hero-image:after{
     content:"";
+
     position:absolute;
     inset:0;
 
@@ -94,78 +113,172 @@ a{
             transparent 45%,
             rgba(0,0,0,.55)
         );
-
-    border:1px solid rgba(255,255,255,.025);
 }
+
+
+/* =====================================================
+   TOP NAVIGATION
+===================================================== */
 
 .top{
     position:absolute;
+
     top:40px;
     left:55px;
     right:55px;
 
     display:flex;
     justify-content:space-between;
+    align-items:center;
 
-    z-index:3;
+    z-index:10;
 }
 
-.by,
-.menu{
+.by{
     font-size:10px;
     letter-spacing:4px;
+
     opacity:.65;
 }
 
+.top-right{
+    display:flex;
+    align-items:center;
+
+    gap:32px;
+}
+
+.main-nav{
+    display:flex;
+    align-items:center;
+
+    gap:27px;
+}
+
+.main-nav a{
+    font-size:9px;
+    letter-spacing:2.5px;
+
+    opacity:.55;
+
+    transition:opacity .3s ease;
+}
+
+.main-nav a:hover{
+    opacity:1;
+}
+
+
+/* =====================================================
+   LANGUAGE
+===================================================== */
+
+.language{
+    display:flex;
+    align-items:center;
+
+    gap:7px;
+
+    font-size:9px;
+    letter-spacing:2px;
+}
+
+.language button{
+    border:0;
+    background:none;
+
+    color:#fff;
+
+    cursor:pointer;
+
+    font-size:9px;
+    letter-spacing:2px;
+
+    opacity:.35;
+
+    padding:5px 0;
+
+    transition:opacity .25s ease;
+}
+
+.language button:hover,
+.language button.active{
+    opacity:1;
+}
+
+.language-separator{
+    opacity:.25;
+}
+
+
+/* =====================================================
+   HERO CONTENT
+===================================================== */
+
 .hero-content{
     position:relative;
+
     z-index:2;
+
     max-width:1200px;
 }
 
 .eyebrow{
     font-size:10px;
     letter-spacing:5px;
+
     margin-bottom:25px;
+
     opacity:.65;
 }
 
 h1{
     font-size:clamp(60px,11vw,165px);
+
     line-height:.82;
+
     letter-spacing:-7px;
+
     font-weight:700;
 }
 
 .descriptor{
     margin-top:32px;
+
     font-size:12px;
     letter-spacing:5px;
+
     text-transform:uppercase;
+
     opacity:.75;
 }
 
 .bottom{
     position:absolute;
+
     right:55px;
     bottom:55px;
+
     z-index:2;
 
     writing-mode:vertical-rl;
 
     font-size:9px;
     letter-spacing:4px;
+
     opacity:.55;
 }
 
 
 /* =====================================================
-   INTRO — VISUAL STATEMENT
+   INTRO
 ===================================================== */
 
 .intro{
     position:relative;
+
     padding:170px 8vw 190px;
+
     background:#080808;
 }
 
@@ -180,13 +293,16 @@ h1{
 .intro-label{
     font-size:10px;
     letter-spacing:4px;
+
     opacity:.4;
 }
 
 .intro-location{
     font-size:9px;
     letter-spacing:3px;
+
     opacity:.35;
+
     text-transform:uppercase;
 }
 
@@ -196,8 +312,11 @@ h1{
 
 .intro-title{
     font-size:clamp(55px,8.8vw,145px);
+
     line-height:.88;
+
     letter-spacing:-7px;
+
     font-weight:500;
 }
 
@@ -207,6 +326,7 @@ h1{
 
 .intro-title .indent{
     display:block;
+
     margin-left:15vw;
 }
 
@@ -215,20 +335,25 @@ h1{
 
     display:grid;
     grid-template-columns:1fr 1fr;
+
     gap:8vw;
 }
 
 .intro-line{
     width:100%;
     height:1px;
+
     background:rgba(255,255,255,.16);
+
     margin-bottom:25px;
 }
 
 .intro-small{
     max-width:390px;
+
     font-size:11px;
     line-height:1.8;
+
     color:rgba(255,255,255,.48);
 }
 
@@ -239,6 +364,7 @@ h1{
 
 .manifesto{
     background:#e9e7e1;
+
     color:#0a0a0a;
 
     padding:150px 7vw 170px;
@@ -249,58 +375,151 @@ h1{
 .manifesto-number{
     font-size:10px;
     letter-spacing:4px;
+
     opacity:.4;
+
     margin-bottom:80px;
 }
 
 .manifesto-title{
     font-size:clamp(55px,9vw,145px);
+
     line-height:.84;
+
     letter-spacing:-7px;
+
     font-weight:500;
 }
 
 .manifesto-title span{
     display:block;
+
     margin-left:17vw;
 }
 
 .manifesto-copy{
     max-width:400px;
+
     margin-left:auto;
     margin-top:100px;
 
     font-size:13px;
     line-height:1.8;
+
     color:rgba(0,0,0,.55);
 }
 
 .manifesto-mark{
     position:absolute;
+
     right:7vw;
     top:150px;
 
     width:9px;
     height:9px;
+
     border-radius:50%;
+
     background:#0a0a0a;
 }
 
 
 /* =====================================================
-   WORK INTRO
+   ABOUT HOME SECTION
+===================================================== */
+
+.about-home{
+    background:#080808;
+
+    padding:160px 7vw 180px;
+}
+
+.about-grid{
+    display:grid;
+
+    grid-template-columns:1fr 2fr;
+
+    gap:8vw;
+}
+
+.about-label{
+    font-size:10px;
+    letter-spacing:4px;
+
+    opacity:.4;
+}
+
+.about-content{
+    max-width:900px;
+}
+
+.about-title{
+    font-size:clamp(48px,7vw,105px);
+
+    line-height:.9;
+
+    letter-spacing:-6px;
+
+    font-weight:500;
+
+    text-transform:uppercase;
+}
+
+.about-copy{
+    max-width:590px;
+
+    margin-top:55px;
+
+    font-size:14px;
+    line-height:1.9;
+
+    color:rgba(255,255,255,.48);
+}
+
+.section-link{
+    display:inline-flex;
+    align-items:center;
+
+    gap:25px;
+
+    margin-top:55px;
+
+    padding:17px 0;
+
+    border-top:1px solid rgba(255,255,255,.24);
+    border-bottom:1px solid rgba(255,255,255,.24);
+
+    font-size:9px;
+    letter-spacing:3.5px;
+
+    transition:.35s ease;
+}
+
+.section-link:hover{
+    padding-left:22px;
+    padding-right:22px;
+}
+
+
+/* =====================================================
+   WORK
 ===================================================== */
 
 .work{
     background:#080808;
+
     color:#f4f3ef;
 
     padding:160px 6vw 180px;
+
+    border-top:1px solid rgba(255,255,255,.08);
 }
 
 .work-head{
     display:grid;
+
     grid-template-columns:1fr 1fr;
+
     gap:8vw;
 
     margin-bottom:120px;
@@ -309,22 +528,28 @@ h1{
 .work-number{
     font-size:10px;
     letter-spacing:4px;
+
     opacity:.4;
 }
 
 .work-title{
     font-size:clamp(70px,12vw,180px);
+
     line-height:.75;
+
     letter-spacing:-9px;
+
     font-weight:600;
 }
 
 .work-description{
     max-width:380px;
+
     align-self:end;
 
     font-size:13px;
     line-height:1.8;
+
     color:rgba(255,255,255,.45);
 }
 
@@ -339,19 +564,21 @@ h1{
 
 .project-visual{
     position:relative;
+
     overflow:hidden;
+
     background:#111;
 }
 
 .project-placeholder{
+    position:relative;
+
     width:100%;
     height:100%;
 
     display:flex;
     align-items:center;
     justify-content:center;
-
-    position:relative;
 
     background:
         radial-gradient(
@@ -370,6 +597,7 @@ h1{
     content:"";
 
     position:absolute;
+
     inset:20px;
 
     border:1px solid rgba(255,255,255,.045);
@@ -395,10 +623,12 @@ h1{
 
 .project-coming-soon{
     position:relative;
+
     z-index:1;
 
     font-size:9px;
     letter-spacing:6px;
+
     text-transform:uppercase;
 
     color:rgba(255,255,255,.28);
@@ -420,6 +650,7 @@ h1{
 
 .project-two{
     width:72%;
+
     margin-left:auto;
 }
 
@@ -432,6 +663,7 @@ h1{
 
 .project-three{
     width:84%;
+
     margin-left:4vw;
 }
 
@@ -444,7 +676,9 @@ h1{
 
 .project-meta{
     display:flex;
+
     justify-content:space-between;
+
     align-items:flex-start;
 
     padding-top:25px;
@@ -452,6 +686,7 @@ h1{
 
 .project-name{
     font-size:25px;
+
     letter-spacing:-1px;
 }
 
@@ -460,6 +695,7 @@ h1{
 
     font-size:9px;
     letter-spacing:3px;
+
     text-transform:uppercase;
 
     color:rgba(255,255,255,.4);
@@ -468,6 +704,7 @@ h1{
 .project-index{
     font-size:9px;
     letter-spacing:3px;
+
     opacity:.4;
 }
 
@@ -480,12 +717,15 @@ h1{
     margin-top:40px;
 
     display:flex;
+
     justify-content:center;
 }
 
 .work-cta a{
     display:inline-flex;
+
     align-items:center;
+
     gap:30px;
 
     padding:18px 0;
@@ -511,12 +751,15 @@ h1{
 
 .services{
     background:#111;
+
     padding:160px 8vw 180px;
 }
 
 .services-head{
     display:grid;
+
     grid-template-columns:1fr 2fr;
+
     gap:8vw;
 
     margin-bottom:110px;
@@ -525,14 +768,30 @@ h1{
 .services-label{
     font-size:10px;
     letter-spacing:4px;
+
     opacity:.4;
 }
 
 .services-title{
     font-size:clamp(60px,9vw,135px);
+
     line-height:.78;
+
     letter-spacing:-7px;
+
     font-weight:500;
+}
+
+.services-intro{
+    max-width:550px;
+
+    margin-left:auto;
+    margin-bottom:75px;
+
+    font-size:13px;
+    line-height:1.9;
+
+    color:rgba(255,255,255,.45);
 }
 
 .services-list{
@@ -541,7 +800,9 @@ h1{
 
 .service{
     display:grid;
+
     grid-template-columns:70px 1fr 80px;
+
     align-items:center;
 
     padding:32px 0;
@@ -558,18 +819,30 @@ h1{
 .service-number{
     font-size:9px;
     letter-spacing:3px;
+
     opacity:.35;
 }
 
 .service-name{
     font-size:clamp(22px,3vw,42px);
+
     letter-spacing:-1.5px;
 }
 
 .service-arrow{
     text-align:right;
+
     font-size:18px;
+
     opacity:.35;
+}
+
+.services-cta{
+    margin-top:65px;
+
+    display:flex;
+
+    justify-content:flex-end;
 }
 
 
@@ -579,6 +852,7 @@ h1{
 
 .contact{
     background:#e9e7e1;
+
     color:#080808;
 
     padding:160px 7vw 110px;
@@ -587,21 +861,29 @@ h1{
 .contact-label{
     font-size:10px;
     letter-spacing:4px;
+
     opacity:.4;
+
     margin-bottom:90px;
 }
 
 .contact-title{
     font-size:clamp(60px,10vw,155px);
+
     line-height:.78;
+
     letter-spacing:-8px;
+
     font-weight:600;
 }
 
 .contact-title span{
     display:block;
+
     margin-left:14vw;
+
     font-family:Georgia,serif;
+
     font-weight:400;
 }
 
@@ -609,21 +891,60 @@ h1{
     margin-top:120px;
 
     display:flex;
+
     justify-content:space-between;
     align-items:flex-end;
+
+    gap:50px;
+}
+
+.contact-details{
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:flex-start;
+
+    gap:28px;
 }
 
 .contact-email{
     font-size:clamp(18px,3vw,34px);
+
     letter-spacing:-1px;
 
     border-bottom:1px solid rgba(0,0,0,.3);
+
     padding-bottom:10px;
+}
+
+.contact-page-link{
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:20px;
+
+    font-size:9px;
+    letter-spacing:3px;
+
+    border-top:1px solid rgba(0,0,0,.25);
+    border-bottom:1px solid rgba(0,0,0,.25);
+
+    padding:14px 0;
+
+    transition:.35s ease;
+}
+
+.contact-page-link:hover{
+    padding-left:20px;
+    padding-right:20px;
 }
 
 .contact-note{
     font-size:9px;
     letter-spacing:3px;
+
     opacity:.4;
 }
 
@@ -634,11 +955,13 @@ h1{
 
 footer{
     background:#080808;
+
     color:#fff;
 
     padding:35px 6vw;
 
     display:flex;
+
     justify-content:space-between;
     align-items:center;
 }
@@ -651,6 +974,7 @@ footer{
 .footer-copy{
     font-size:8px;
     letter-spacing:2px;
+
     opacity:.35;
 }
 
@@ -666,32 +990,57 @@ footer{
     }
 
     .top{
-        top:30px;
-        left:30px;
-        right:30px;
+        top:27px;
+        left:25px;
+        right:25px;
     }
 
-    .menu{
+    .by{
+        font-size:8px;
+        letter-spacing:2.5px;
+    }
+
+    .main-nav{
         display:none;
     }
 
+    .top-right{
+        gap:15px;
+    }
+
+    .language{
+        font-size:8px;
+    }
+
+    .language button{
+        font-size:8px;
+    }
+
+
     h1{
         font-size:16vw;
+
         letter-spacing:-4px;
     }
 
     .descriptor{
         font-size:8px;
+
         letter-spacing:2.5px;
+
         line-height:1.8;
-        max-width:260px;
+
+        max-width:280px;
     }
 
     .bottom{
         right:25px;
+
         bottom:30px;
     }
 
+
+    /* INTRO */
 
     .intro{
         padding:110px 30px 120px;
@@ -707,6 +1056,7 @@ footer{
 
     .intro-title{
         font-size:15vw;
+
         letter-spacing:-4px;
     }
 
@@ -716,14 +1066,18 @@ footer{
 
     .intro-bottom{
         display:block;
+
         margin-top:65px;
     }
 
     .intro-small{
         margin-top:30px;
+
         font-size:12px;
     }
 
+
+    /* MANIFESTO */
 
     .manifesto{
         padding:110px 25px 120px;
@@ -735,6 +1089,7 @@ footer{
 
     .manifesto-title{
         font-size:16vw;
+
         letter-spacing:-4px;
     }
 
@@ -744,14 +1099,45 @@ footer{
 
     .manifesto-copy{
         margin-top:65px;
+
         margin-left:8vw;
     }
 
     .manifesto-mark{
         top:110px;
+
         right:25px;
     }
 
+
+    /* ABOUT */
+
+    .about-home{
+        padding:110px 25px 130px;
+    }
+
+    .about-grid{
+        display:block;
+    }
+
+    .about-content{
+        margin-top:50px;
+    }
+
+    .about-title{
+        font-size:15vw;
+
+        letter-spacing:-4px;
+    }
+
+    .about-copy{
+        margin-top:40px;
+
+        font-size:13px;
+    }
+
+
+    /* WORK */
 
     .work{
         padding:110px 25px 130px;
@@ -759,12 +1145,15 @@ footer{
 
     .work-head{
         display:block;
+
         margin-bottom:75px;
     }
 
     .work-title{
         margin-top:35px;
+
         font-size:20vw;
+
         letter-spacing:-5px;
     }
 
@@ -780,6 +1169,7 @@ footer{
     .project-two,
     .project-three{
         width:100%;
+
         margin-left:0;
     }
 
@@ -798,23 +1188,35 @@ footer{
     }
 
 
+    /* SERVICES */
+
     .services{
         padding:110px 30px 130px;
     }
 
     .services-head{
         display:block;
-        margin-bottom:70px;
+
+        margin-bottom:55px;
     }
 
     .services-title{
         margin-top:35px;
+
         font-size:18vw;
+
         letter-spacing:-4px;
+    }
+
+    .services-intro{
+        margin:0 0 55px;
+
+        font-size:12px;
     }
 
     .service{
         grid-template-columns:42px 1fr 35px;
+
         padding:25px 0;
     }
 
@@ -826,6 +1228,14 @@ footer{
         font-size:22px;
     }
 
+    .services-cta{
+        justify-content:flex-start;
+
+        margin-top:50px;
+    }
+
+
+    /* CONTACT */
 
     .contact{
         padding:110px 30px 90px;
@@ -837,6 +1247,7 @@ footer{
 
     .contact-title{
         font-size:18vw;
+
         letter-spacing:-4px;
     }
 
@@ -846,21 +1257,26 @@ footer{
 
     .contact-bottom{
         display:block;
+
         margin-top:75px;
     }
 
     .contact-email{
         font-size:20px;
+
         word-break:break-word;
     }
 
     .contact-note{
-        margin-top:30px;
+        margin-top:45px;
     }
 
 
+    /* FOOTER */
+
     footer{
         display:block;
+
         padding:30px;
     }
 
@@ -871,6 +1287,7 @@ footer{
 }
 
 </style>
+
 </head>
 
 
@@ -885,38 +1302,118 @@ footer{
 
     <div class="hero-image"></div>
 
+
     <header class="top">
 
         <div class="by">
             BY TRAVELFILMGR
         </div>
 
-        <div class="menu">
-            MENU
+
+        <div class="top-right">
+
+            <nav class="main-nav">
+
+                <a
+                    href="about.html"
+                    data-en="ABOUT"
+                    data-gr="ΣΧΕΤΙΚΑ"
+                >
+                    ABOUT
+                </a>
+
+                <a
+                    href="work.html"
+                    data-en="WORK"
+                    data-gr="ΔΟΥΛΕΙΑ"
+                >
+                    WORK
+                </a>
+
+                <a
+                    href="services.html"
+                    data-en="SERVICES"
+                    data-gr="ΥΠΗΡΕΣΙΕΣ"
+                >
+                    SERVICES
+                </a>
+
+                <a
+                    href="contact.html"
+                    data-en="CONTACT"
+                    data-gr="ΕΠΙΚΟΙΝΩΝΙΑ"
+                >
+                    CONTACT
+                </a>
+
+            </nav>
+
+
+            <div class="language">
+
+                <button
+                    id="enBtn"
+                    class="active"
+                    type="button"
+                    aria-label="English"
+                >
+                    EN
+                </button>
+
+                <span class="language-separator">
+                    ·
+                </span>
+
+                <button
+                    id="grBtn"
+                    type="button"
+                    aria-label="Ελληνικά"
+                >
+                    GR
+                </button>
+
+            </div>
+
         </div>
 
     </header>
 
 
+
     <div class="hero-content">
 
-        <div class="eyebrow">
+        <div
+            class="eyebrow"
+            data-en="VISUAL PRODUCTION"
+            data-gr="ΟΠΤΙΚΗ ΠΑΡΑΓΩΓΗ"
+        >
             VISUAL PRODUCTION
         </div>
+
 
         <h1>
             KOFINAS<br>
             VISUALS
         </h1>
 
-        <div class="descriptor">
-            Photography · Real Estate · Events
+
+        <div
+            class="descriptor"
+            data-en="Photography · Visual Content · Greece"
+            data-gr="Φωτογραφία · Οπτικό Περιεχόμενο · Ελλάδα"
+        >
+            Photography · Visual Content · Greece
         </div>
 
     </div>
 
 
-    <div class="bottom">
+
+    <div
+        class="bottom"
+        data-en="SCROLL TO EXPLORE"
+        data-gr="SCROLL ΓΙΑ ΕΞΕΡΕΥΝΗΣΗ"
+    >
         SCROLL TO EXPLORE
     </div>
 
@@ -932,30 +1429,68 @@ footer{
 
     <div class="intro-top">
 
-        <div class="intro-label">
+        <div
+            class="intro-label"
+            data-en="01 / THE APPROACH"
+            data-gr="01 / Η ΠΡΟΣΕΓΓΙΣΗ"
+        >
             01 / THE APPROACH
         </div>
 
-        <div class="intro-location">
+
+        <div
+            class="intro-location"
+            data-en="Greece · Visual Production"
+            data-gr="Ελλάδα · Οπτική Παραγωγή"
+        >
             Greece · Visual Production
         </div>
 
     </div>
 
 
+
     <div class="intro-main">
 
         <h2 class="intro-title">
 
-            Visuals with
-            <span class="soft">purpose.</span>
+            <span
+                data-en="Visuals with"
+                data-gr="Εικόνες με"
+            >
+                Visuals with
+            </span>
+
+            <span
+                class="soft"
+                data-en="purpose."
+                data-gr="σκοπό."
+            >
+                purpose.
+            </span>
+
 
             <span class="indent">
-                Built to be
-                <span class="soft">remembered.</span>
+
+                <span
+                    data-en="Built to be"
+                    data-gr="Φτιαγμένες για να"
+                >
+                    Built to be
+                </span>
+
+                <span
+                    class="soft"
+                    data-en="remembered."
+                    data-gr="μένουν."
+                >
+                    remembered.
+                </span>
+
             </span>
 
         </h2>
+
 
 
         <div class="intro-bottom">
@@ -964,9 +1499,14 @@ footer{
                 <div class="intro-line"></div>
             </div>
 
-            <p class="intro-small">
-                KOFINAS VISUALS creates photography and visual
-                content for spaces, people and experiences.
+
+            <p
+                class="intro-small"
+                data-en="KOFINAS VISUALS creates photography and visual content for people, places, businesses and experiences. Every project is approached with precision, atmosphere and a clear visual intention."
+                data-gr="Το KOFINAS VISUALS δημιουργεί φωτογραφία και οπτικό περιεχόμενο για ανθρώπους, χώρους, επιχειρήσεις και εμπειρίες. Κάθε project προσεγγίζεται με ακρίβεια, ατμόσφαιρα και ξεκάθαρη οπτική κατεύθυνση."
+            >
+                KOFINAS VISUALS creates photography and visual content
+                for people, places, businesses and experiences.
                 Every project is approached with precision,
                 atmosphere and a clear visual intention.
             </p>
@@ -987,28 +1527,129 @@ footer{
 
     <div class="manifesto-mark"></div>
 
-    <div class="manifesto-number">
+
+    <div
+        class="manifesto-number"
+        data-en="02 / VISUAL LANGUAGE"
+        data-gr="02 / ΟΠΤΙΚΗ ΤΑΥΤΟΤΗΤΑ"
+    >
         02 / VISUAL LANGUAGE
     </div>
 
 
+
     <h2 class="manifesto-title">
 
-        NOT MORE
-        <span>IMAGES.</span>
+        <span
+            style="margin-left:0"
+            data-en="NOT MORE"
+            data-gr="ΟΧΙ ΠΕΡΙΣΣΟΤΕΡΕΣ"
+        >
+            NOT MORE
+        </span>
 
-        <span>THE RIGHT</span>
-        <span>ONES.</span>
+        <span
+            data-en="IMAGES."
+            data-gr="ΕΙΚΟΝΕΣ."
+        >
+            IMAGES.
+        </span>
+
+        <span
+            data-en="THE RIGHT"
+            data-gr="ΟΙ ΣΩΣΤΕΣ"
+        >
+            THE RIGHT
+        </span>
+
+        <span
+            data-en="ONES."
+            data-gr="ΕΙΚΟΝΕΣ."
+        >
+            ONES.
+        </span>
 
     </h2>
 
 
-    <p class="manifesto-copy">
-        From a property prepared for the market to an event
+
+    <p
+        class="manifesto-copy"
+        data-en="From a space prepared for the market to a moment that happens once, the image has a job to do. It should attract attention, communicate value and leave something behind."
+        data-gr="Από έναν χώρο που προετοιμάζεται για την αγορά μέχρι μια στιγμή που συμβαίνει μόνο μία φορά, η εικόνα έχει έναν σκοπό. Πρέπει να τραβά την προσοχή, να επικοινωνεί αξία και να αφήνει κάτι πίσω της."
+    >
+        From a space prepared for the market to a moment
         that happens once, the image has a job to do.
         It should attract attention, communicate value
         and leave something behind.
     </p>
+
+</section>
+
+
+
+<!-- =====================================================
+     ABOUT
+===================================================== -->
+
+<section class="about-home">
+
+    <div class="about-grid">
+
+        <div
+            class="about-label"
+            data-en="03 / ABOUT"
+            data-gr="03 / ΣΧΕΤΙΚΑ"
+        >
+            03 / ABOUT
+        </div>
+
+
+
+        <div class="about-content">
+
+            <h2
+                class="about-title"
+                data-en="THE PERSON BEHIND THE WORK."
+                data-gr="Ο ΑΝΘΡΩΠΟΣ ΠΙΣΩ ΑΠΟ ΤΗ ΔΟΥΛΕΙΑ."
+            >
+                THE PERSON BEHIND THE WORK.
+            </h2>
+
+
+            <p
+                class="about-copy"
+                data-en="I’m Stathis Kofinas, a photographer based in Greece. KOFINAS VISUALS is the beginning of a professional visual journey built around photography, creative direction and the evolution of visual production."
+                data-gr="Είμαι ο Στάθης Κοφινάς, φωτογράφος με βάση την Ελλάδα. Το KOFINAS VISUALS είναι η αρχή μιας επαγγελματικής οπτικής πορείας που βασίζεται στη φωτογραφία, τη δημιουργική κατεύθυνση και την εξέλιξη της οπτικής παραγωγής."
+            >
+                I’m Stathis Kofinas, a photographer based in Greece.
+                KOFINAS VISUALS is the beginning of a professional
+                visual journey built around photography, creative
+                direction and the evolution of visual production.
+            </p>
+
+
+            <a
+                href="about.html"
+                class="section-link"
+            >
+
+                <span
+                    data-en="DISCOVER ABOUT"
+                    data-gr="ΠΕΡΙΣΣΟΤΕΡΑ"
+                >
+                    DISCOVER ABOUT
+                </span>
+
+                <span>
+                    →
+                </span>
+
+            </a>
+
+        </div>
+
+    </div>
 
 </section>
 
@@ -1024,20 +1665,34 @@ footer{
 
         <div>
 
-            <div class="work-number">
-                03 / SELECTED WORK
+            <div
+                class="work-number"
+                data-en="04 / SELECTED WORK"
+                data-gr="04 / ΕΠΙΛΕΓΜΕΝΗ ΔΟΥΛΕΙΑ"
+            >
+                04 / SELECTED WORK
             </div>
 
-            <h2 class="work-title">
+
+            <h2
+                class="work-title"
+                data-en="WORK"
+                data-gr="WORK"
+            >
                 WORK
             </h2>
 
         </div>
 
 
-        <p class="work-description">
-            A visual selection across architecture,
-            people, environments and experiences.
+
+        <p
+            class="work-description"
+            data-en="A developing visual selection across people, places, products and experiences."
+            data-gr="Μια εξελισσόμενη οπτική συλλογή από ανθρώπους, χώρους, προϊόντα και εμπειρίες."
+        >
+            A developing visual selection across people,
+            places, products and experiences.
         </p>
 
     </div>
@@ -1051,27 +1706,44 @@ footer{
         <div class="project-visual">
 
             <div class="project-placeholder">
-                <span class="project-coming-soon">
+
+                <span
+                    class="project-coming-soon"
+                    data-en="COMING SOON"
+                    data-gr="ΣΥΝΤΟΜΑ"
+                >
                     COMING SOON
                 </span>
+
             </div>
 
         </div>
+
 
 
         <div class="project-meta">
 
             <div>
 
-                <div class="project-name">
-                    REAL ESTATE
+                <div
+                    class="project-name"
+                    data-en="SPACES"
+                    data-gr="ΧΩΡΟΙ"
+                >
+                    SPACES
                 </div>
 
-                <div class="project-type">
-                    Spaces / Architecture
+
+                <div
+                    class="project-type"
+                    data-en="Places / Architecture"
+                    data-gr="Χώροι / Αρχιτεκτονική"
+                >
+                    Places / Architecture
                 </div>
 
             </div>
+
 
             <div class="project-index">
                 01
@@ -1090,27 +1762,44 @@ footer{
         <div class="project-visual">
 
             <div class="project-placeholder">
-                <span class="project-coming-soon">
+
+                <span
+                    class="project-coming-soon"
+                    data-en="COMING SOON"
+                    data-gr="ΣΥΝΤΟΜΑ"
+                >
                     COMING SOON
                 </span>
+
             </div>
 
         </div>
+
 
 
         <div class="project-meta">
 
             <div>
 
-                <div class="project-name">
-                    EVENTS
+                <div
+                    class="project-name"
+                    data-en="PEOPLE"
+                    data-gr="ΑΝΘΡΩΠΟΙ"
+                >
+                    PEOPLE
                 </div>
 
-                <div class="project-type">
-                    People / Atmosphere
+
+                <div
+                    class="project-type"
+                    data-en="Portraits / Moments"
+                    data-gr="Πορτρέτα / Στιγμές"
+                >
+                    Portraits / Moments
                 </div>
 
             </div>
+
 
             <div class="project-index">
                 02
@@ -1129,27 +1818,44 @@ footer{
         <div class="project-visual">
 
             <div class="project-placeholder">
-                <span class="project-coming-soon">
+
+                <span
+                    class="project-coming-soon"
+                    data-en="COMING SOON"
+                    data-gr="ΣΥΝΤΟΜΑ"
+                >
                     COMING SOON
                 </span>
+
             </div>
 
         </div>
+
 
 
         <div class="project-meta">
 
             <div>
 
-                <div class="project-name">
-                    OUTDOOR
+                <div
+                    class="project-name"
+                    data-en="EXPERIENCES"
+                    data-gr="ΕΜΠΕΙΡΙΕΣ"
+                >
+                    EXPERIENCES
                 </div>
 
-                <div class="project-type">
-                    Landscape / Lifestyle
+
+                <div
+                    class="project-type"
+                    data-en="Atmosphere / Environment"
+                    data-gr="Ατμόσφαιρα / Περιβάλλον"
+                >
+                    Atmosphere / Environment
                 </div>
 
             </div>
+
 
             <div class="project-index">
                 03
@@ -1164,8 +1870,18 @@ footer{
     <div class="work-cta">
 
         <a href="work.html">
-            VIEW FULL WORK
-            <span>→</span>
+
+            <span
+                data-en="VIEW FULL WORK"
+                data-gr="ΔΕΣ ΟΛΟ ΤΟ PORTFOLIO"
+            >
+                VIEW FULL WORK
+            </span>
+
+            <span>
+                →
+            </span>
+
         </a>
 
     </div>
@@ -1182,29 +1898,71 @@ footer{
 
     <div class="services-head">
 
-        <div class="services-label">
-            04 / SERVICES
+        <div
+            class="services-label"
+            data-en="05 / SERVICES"
+            data-gr="05 / ΥΠΗΡΕΣΙΕΣ"
+        >
+            05 / SERVICES
         </div>
 
+
         <h2 class="services-title">
-            WHAT<br>
-            WE DO
+
+            <span
+                data-en="WHAT"
+                data-gr="ΤΙ"
+            >
+                WHAT
+            </span>
+
+            <br>
+
+            <span
+                data-en="WE DO"
+                data-gr="ΚΑΝΟΥΜΕ"
+            >
+                WE DO
+            </span>
+
         </h2>
 
     </div>
 
 
+
+    <p
+        class="services-intro"
+        data-en="Photography is where the journey begins. The direction remains open, allowing KOFINAS VISUALS to evolve naturally into wider forms of visual production."
+        data-gr="Η φωτογραφία είναι το σημείο από όπου ξεκινά η πορεία. Η κατεύθυνση παραμένει ανοιχτή, επιτρέποντας στο KOFINAS VISUALS να εξελιχθεί φυσικά σε ευρύτερες μορφές οπτικής παραγωγής."
+    >
+        Photography is where the journey begins.
+        The direction remains open, allowing KOFINAS VISUALS
+        to evolve naturally into wider forms of visual production.
+    </p>
+
+
+
     <div class="services-list">
 
-        <a href="work.html" class="service">
+        <a
+            href="services.html"
+            class="service"
+        >
 
             <div class="service-number">
                 01
             </div>
 
-            <div class="service-name">
+
+            <div
+                class="service-name"
+                data-en="Photography"
+                data-gr="Φωτογραφία"
+            >
                 Photography
             </div>
+
 
             <div class="service-arrow">
                 ↗
@@ -1213,15 +1971,25 @@ footer{
         </a>
 
 
-        <a href="work.html" class="service">
+
+        <a
+            href="services.html"
+            class="service"
+        >
 
             <div class="service-number">
                 02
             </div>
 
-            <div class="service-name">
-                Real Estate
+
+            <div
+                class="service-name"
+                data-en="Visual Content"
+                data-gr="Οπτικό Περιεχόμενο"
+            >
+                Visual Content
             </div>
+
 
             <div class="service-arrow">
                 ↗
@@ -1230,15 +1998,25 @@ footer{
         </a>
 
 
-        <a href="work.html" class="service">
+
+        <a
+            href="services.html"
+            class="service"
+        >
 
             <div class="service-number">
                 03
             </div>
 
-            <div class="service-name">
-                Events
+
+            <div
+                class="service-name"
+                data-en="More to come"
+                data-gr="Περισσότερα σύντομα"
+            >
+                More to come
             </div>
+
 
             <div class="service-arrow">
                 ↗
@@ -1246,20 +2024,27 @@ footer{
 
         </a>
 
+    </div>
 
-        <a href="work.html" class="service">
 
-            <div class="service-number">
-                04
-            </div>
 
-            <div class="service-name">
-                Outdoor & Lifestyle
-            </div>
+    <div class="services-cta">
 
-            <div class="service-arrow">
-                ↗
-            </div>
+        <a
+            href="services.html"
+            class="section-link"
+        >
+
+            <span
+                data-en="EXPLORE SERVICES"
+                data-gr="ΔΕΣ ΤΙΣ ΥΠΗΡΕΣΙΕΣ"
+            >
+                EXPLORE SERVICES
+            </span>
+
+            <span>
+                →
+            </span>
 
         </a>
 
@@ -1275,31 +2060,78 @@ footer{
 
 <section class="contact">
 
-    <div class="contact-label">
-        05 / CONTACT
+    <div
+        class="contact-label"
+        data-en="06 / CONTACT"
+        data-gr="06 / ΕΠΙΚΟΙΝΩΝΙΑ"
+    >
+        06 / CONTACT
     </div>
+
 
 
     <h2 class="contact-title">
 
-        LET'S MAKE
-        <span>IT VISIBLE.</span>
+        <span
+            style="margin-left:0; font-family:Arial, Helvetica, sans-serif; font-weight:600;"
+            data-en="LET'S MAKE"
+            data-gr="ΑΣ ΤΟ ΚΑΝΟΥΜΕ"
+        >
+            LET'S MAKE
+        </span>
+
+
+        <span
+            data-en="IT VISIBLE."
+            data-gr="ΟΡΑΤΟ."
+        >
+            IT VISIBLE.
+        </span>
 
     </h2>
 
 
+
     <div class="contact-bottom">
 
-        <a
-            href="mailto:kofinasvisuals@gmail.com"
-            class="contact-email"
+        <div class="contact-details">
+
+            <a
+                href="mailto:kofinasvisuals@gmail.com"
+                class="contact-email"
+            >
+                kofinasvisuals@gmail.com
+            </a>
+
+
+            <a
+                href="contact.html"
+                class="contact-page-link"
+            >
+
+                <span
+                    data-en="CONTACT PAGE"
+                    data-gr="ΣΕΛΙΔΑ ΕΠΙΚΟΙΝΩΝΙΑΣ"
+                >
+                    CONTACT PAGE
+                </span>
+
+                <span>
+                    →
+                </span>
+
+            </a>
+
+        </div>
+
+
+
+        <div
+            class="contact-note"
+            data-en="PROFESSIONAL SERVICES · COMING SOON"
+            data-gr="ΕΠΑΓΓΕΛΜΑΤΙΚΕΣ ΥΠΗΡΕΣΙΕΣ · ΣΥΝΤΟΜΑ"
         >
-            kofinasvisuals@gmail.com
-        </a>
-
-
-        <div class="contact-note">
-            AVAILABLE FOR SELECT PROJECTS
+            PROFESSIONAL SERVICES · COMING SOON
         </div>
 
     </div>
@@ -1318,6 +2150,7 @@ footer{
         KOFINAS VISUALS
     </div>
 
+
     <div class="footer-copy">
         © 2026 KOFINAS VISUALS · BY TRAVELFILMGR
     </div>
@@ -1325,5 +2158,78 @@ footer{
 </footer>
 
 
+
+<!-- =====================================================
+     LANGUAGE SYSTEM
+===================================================== -->
+
+<script>
+
+const enBtn = document.getElementById("enBtn");
+const grBtn = document.getElementById("grBtn");
+
+const translatable =
+    document.querySelectorAll("[data-en]");
+
+
+function setLanguage(language){
+
+    document.documentElement.lang =
+        language === "gr" ? "el" : "en";
+
+
+    translatable.forEach(element => {
+
+        element.textContent =
+            language === "gr"
+                ? element.getAttribute("data-gr")
+                : element.getAttribute("data-en");
+
+    });
+
+
+    enBtn.classList.toggle(
+        "active",
+        language === "en"
+    );
+
+
+    grBtn.classList.toggle(
+        "active",
+        language === "gr"
+    );
+
+}
+
+
+enBtn.addEventListener("click", () => {
+
+    setLanguage("en");
+
+});
+
+
+grBtn.addEventListener("click", () => {
+
+    setLanguage("gr");
+
+});
+
+
+/*
+   English is always the default language.
+
+   No language preference is stored.
+   No localStorage.
+   No sessionStorage.
+   No cookies.
+*/
+
+setLanguage("en");
+
+</script>
+
+
 </body>
+
 </html>
