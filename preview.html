@@ -1,8 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -14,10 +12,6 @@
 >
 
 <style>
-
-/* =====================================================
-   RESET
-===================================================== */
 
 *{
     margin:0;
@@ -46,19 +40,14 @@ button{
 }
 
 
-/* =====================================================
-   HERO
-===================================================== */
+/* HERO */
 
 .hero{
     min-height:100vh;
     position:relative;
-
     display:flex;
     align-items:flex-end;
-
     padding:55px;
-
     overflow:hidden;
 }
 
@@ -86,7 +75,6 @@ button{
     content:"COMING SOON";
 
     position:absolute;
-
     top:50%;
     left:50%;
 
@@ -116,9 +104,7 @@ button{
 }
 
 
-/* =====================================================
-   TOP NAVIGATION
-===================================================== */
+/* TOP NAVIGATION */
 
 .top{
     position:absolute;
@@ -169,9 +155,7 @@ button{
 }
 
 
-/* =====================================================
-   LANGUAGE
-===================================================== */
+/* LANGUAGE */
 
 .language{
     display:flex;
@@ -211,51 +195,38 @@ button{
 }
 
 
-/* =====================================================
-   HERO CONTENT
-===================================================== */
+/* HERO CONTENT */
 
 .hero-content{
     position:relative;
-
     z-index:2;
-
     max-width:1200px;
 }
 
 .eyebrow{
     font-size:10px;
     letter-spacing:5px;
-
     margin-bottom:25px;
-
     opacity:.65;
 }
 
 h1{
     font-size:clamp(60px,11vw,165px);
-
     line-height:.82;
-
     letter-spacing:-7px;
-
     font-weight:700;
 }
 
 .descriptor{
     margin-top:32px;
-
     font-size:12px;
     letter-spacing:5px;
-
     text-transform:uppercase;
-
     opacity:.75;
 }
 
 .bottom{
     position:absolute;
-
     right:55px;
     bottom:55px;
 
@@ -270,9 +241,7 @@ h1{
 }
 
 
-/* =====================================================
-   INTRO
-===================================================== */
+/* INTRO */
 
 .intro{
     position:relative;
@@ -326,7 +295,6 @@ h1{
 
 .intro-title .indent{
     display:block;
-
     margin-left:15vw;
 }
 
@@ -358,13 +326,10 @@ h1{
 }
 
 
-/* =====================================================
-   MANIFESTO
-===================================================== */
+/* MANIFESTO */
 
 .manifesto{
     background:#e9e7e1;
-
     color:#0a0a0a;
 
     padding:150px 7vw 170px;
@@ -424,9 +389,7 @@ h1{
 }
 
 
-/* =====================================================
-   ABOUT HOME SECTION
-===================================================== */
+/* ABOUT */
 
 .about-home{
     background:#080808;
@@ -436,9 +399,7 @@ h1{
 
 .about-grid{
     display:grid;
-
     grid-template-columns:1fr 2fr;
-
     gap:8vw;
 }
 
@@ -501,13 +462,10 @@ h1{
 }
 
 
-/* =====================================================
-   WORK
-===================================================== */
+/* WORK */
 
 .work{
     background:#080808;
-
     color:#f4f3ef;
 
     padding:160px 6vw 180px;
@@ -517,7 +475,6 @@ h1{
 
 .work-head{
     display:grid;
-
     grid-template-columns:1fr 1fr;
 
     gap:8vw;
@@ -554,9 +511,7 @@ h1{
 }
 
 
-/* =====================================================
-   PROJECT SYSTEM
-===================================================== */
+/* PROJECT SYSTEM */
 
 .project{
     margin-bottom:180px;
@@ -634,9 +589,6 @@ h1{
     color:rgba(255,255,255,.28);
 }
 
-
-/* PROJECT 01 */
-
 .project-one{
     width:100%;
 }
@@ -644,9 +596,6 @@ h1{
 .project-one .project-visual{
     height:min(68vw,820px);
 }
-
-
-/* PROJECT 02 */
 
 .project-two{
     width:72%;
@@ -658,9 +607,6 @@ h1{
     height:min(55vw,650px);
 }
 
-
-/* PROJECT 03 */
-
 .project-three{
     width:84%;
 
@@ -671,14 +617,9 @@ h1{
     height:min(60vw,720px);
 }
 
-
-/* PROJECT META */
-
 .project-meta{
     display:flex;
-
     justify-content:space-between;
-
     align-items:flex-start;
 
     padding-top:25px;
@@ -709,9 +650,7 @@ h1{
 }
 
 
-/* =====================================================
-   WORK CTA
-===================================================== */
+/* WORK CTA */
 
 .work-cta{
     margin-top:40px;
@@ -745,9 +684,7 @@ h1{
 }
 
 
-/* =====================================================
-   SERVICES
-===================================================== */
+/* SERVICES */
 
 .services{
     background:#111;
@@ -846,9 +783,7 @@ h1{
 }
 
 
-/* =====================================================
-   CONTACT
-===================================================== */
+/* CONTACT */
 
 .contact{
     background:#e9e7e1;
@@ -949,9 +884,7 @@ h1{
 }
 
 
-/* =====================================================
-   FOOTER
-===================================================== */
+/* FOOTER */
 
 footer{
     background:#080808;
@@ -972,16 +905,27 @@ footer{
 }
 
 .footer-copy{
+    display:flex;
+    align-items:center;
+
+    gap:22px;
+
     font-size:8px;
     letter-spacing:2px;
 
-    opacity:.35;
+    opacity:.45;
+}
+
+.footer-link{
+    transition:opacity .3s ease;
+}
+
+.footer-link:hover{
+    opacity:1;
 }
 
 
-/* =====================================================
-   MOBILE
-===================================================== */
+/* MOBILE */
 
 @media(max-width:700px){
 
@@ -1016,7 +960,6 @@ footer{
         font-size:8px;
     }
 
-
     h1{
         font-size:16vw;
 
@@ -1035,12 +978,9 @@ footer{
 
     .bottom{
         right:25px;
-
         bottom:30px;
     }
 
-
-    /* INTRO */
 
     .intro{
         padding:110px 30px 120px;
@@ -1077,8 +1017,6 @@ footer{
     }
 
 
-    /* MANIFESTO */
-
     .manifesto{
         padding:110px 25px 120px;
     }
@@ -1110,8 +1048,6 @@ footer{
     }
 
 
-    /* ABOUT */
-
     .about-home{
         padding:110px 25px 130px;
     }
@@ -1136,8 +1072,6 @@ footer{
         font-size:13px;
     }
 
-
-    /* WORK */
 
     .work{
         padding:110px 25px 130px;
@@ -1188,8 +1122,6 @@ footer{
     }
 
 
-    /* SERVICES */
-
     .services{
         padding:110px 30px 130px;
     }
@@ -1235,8 +1167,6 @@ footer{
     }
 
 
-    /* CONTACT */
-
     .contact{
         padding:110px 30px 90px;
     }
@@ -1272,8 +1202,6 @@ footer{
     }
 
 
-    /* FOOTER */
-
     footer{
         display:block;
 
@@ -1282,6 +1210,10 @@ footer{
 
     .footer-copy{
         margin-top:15px;
+
+        flex-wrap:wrap;
+
+        gap:12px;
     }
 
 }
@@ -1294,9 +1226,7 @@ footer{
 <body>
 
 
-<!-- =====================================================
-     HERO
-===================================================== -->
+<!-- HERO -->
 
 <section class="hero">
 
@@ -1421,9 +1351,7 @@ footer{
 
 
 
-<!-- =====================================================
-     INTRO
-===================================================== -->
+<!-- INTRO -->
 
 <section class="intro">
 
@@ -1502,13 +1430,13 @@ footer{
 
             <p
                 class="intro-small"
-                data-en="KOFINAS VISUALS creates photography and visual content for people, places, businesses and experiences. Every project is approached with precision, atmosphere and a clear visual intention."
-                data-gr="Το KOFINAS VISUALS δημιουργεί φωτογραφία και οπτικό περιεχόμενο για ανθρώπους, χώρους, επιχειρήσεις και εμπειρίες. Κάθε project προσεγγίζεται με ακρίβεια, ατμόσφαιρα και ξεκάθαρη οπτική κατεύθυνση."
+                data-en="KOFINAS VISUALS is being developed around photography and visual content for people, places, products and experiences. The visual direction is built around precision, atmosphere and a clear creative intention."
+                data-gr="Το KOFINAS VISUALS αναπτύσσεται γύρω από τη φωτογραφία και το οπτικό περιεχόμενο για ανθρώπους, χώρους, προϊόντα και εμπειρίες. Η οπτική κατεύθυνση βασίζεται στην ακρίβεια, την ατμόσφαιρα και μια ξεκάθαρη δημιουργική πρόθεση."
             >
-                KOFINAS VISUALS creates photography and visual content
-                for people, places, businesses and experiences.
-                Every project is approached with precision,
-                atmosphere and a clear visual intention.
+                KOFINAS VISUALS is being developed around photography
+                and visual content for people, places, products
+                and experiences. The visual direction is built
+                around precision, atmosphere and a clear creative intention.
             </p>
 
         </div>
@@ -1519,9 +1447,7 @@ footer{
 
 
 
-<!-- =====================================================
-     MANIFESTO
-===================================================== -->
+<!-- MANIFESTO -->
 
 <section class="manifesto">
 
@@ -1588,9 +1514,7 @@ footer{
 
 
 
-<!-- =====================================================
-     ABOUT
-===================================================== -->
+<!-- ABOUT -->
 
 <section class="about-home">
 
@@ -1610,22 +1534,22 @@ footer{
 
             <h2
                 class="about-title"
-                data-en="THE PERSON BEHIND THE WORK."
-                data-gr="Ο ΑΝΘΡΩΠΟΣ ΠΙΣΩ ΑΠΟ ΤΗ ΔΟΥΛΕΙΑ."
+                data-en="THE STORY BEHIND THE WORK."
+                data-gr="Η ΙΔΕΑ ΠΙΣΩ ΑΠΟ ΤΗ ΔΟΥΛΕΙΑ."
             >
-                THE PERSON BEHIND THE WORK.
+                THE STORY BEHIND THE WORK.
             </h2>
 
 
             <p
                 class="about-copy"
-                data-en="I’m Stathis Kofinas, a photographer based in Greece. KOFINAS VISUALS is the beginning of a professional visual journey built around photography, creative direction and the evolution of visual production."
-                data-gr="Είμαι ο Στάθης Κοφινάς, φωτογράφος με βάση την Ελλάδα. Το KOFINAS VISUALS είναι η αρχή μιας επαγγελματικής οπτικής πορείας που βασίζεται στη φωτογραφία, τη δημιουργική κατεύθυνση και την εξέλιξη της οπτικής παραγωγής."
+                data-en="KOFINAS VISUALS is a visual project based in Greece, currently in its preparation and development stage. It is built around photography, visual content and the development of a distinctive visual identity."
+                data-gr="Το KOFINAS VISUALS είναι ένα visual project με βάση την Ελλάδα, το οποίο βρίσκεται αυτή την περίοδο σε στάδιο προετοιμασίας και ανάπτυξης. Βασίζεται στη φωτογραφία, το οπτικό περιεχόμενο και την ανάπτυξη μιας ξεχωριστής οπτικής ταυτότητας."
             >
-                I’m Stathis Kofinas, a photographer based in Greece.
-                KOFINAS VISUALS is the beginning of a professional
-                visual journey built around photography, creative
-                direction and the evolution of visual production.
+                KOFINAS VISUALS is a visual project based in Greece,
+                currently in its preparation and development stage.
+                It is built around photography, visual content and
+                the development of a distinctive visual identity.
             </p>
 
 
@@ -1655,9 +1579,7 @@ footer{
 
 
 
-<!-- =====================================================
-     WORK
-===================================================== -->
+<!-- WORK -->
 
 <section class="work">
 
@@ -1890,9 +1812,7 @@ footer{
 
 
 
-<!-- =====================================================
-     SERVICES
-===================================================== -->
+<!-- SERVICES -->
 
 <section class="services">
 
@@ -2054,9 +1974,7 @@ footer{
 
 
 
-<!-- =====================================================
-     CONTACT
-===================================================== -->
+<!-- CONTACT -->
 
 <section class="contact">
 
@@ -2074,18 +1992,18 @@ footer{
 
         <span
             style="margin-left:0; font-family:Arial, Helvetica, sans-serif; font-weight:600;"
-            data-en="LET'S MAKE"
-            data-gr="ΑΣ ΤΟ ΚΑΝΟΥΜΕ"
+            data-en="COMING"
+            data-gr="ΕΡΧΟΜΑΣΤΕ"
         >
-            LET'S MAKE
+            COMING
         </span>
 
 
         <span
-            data-en="IT VISIBLE."
-            data-gr="ΟΡΑΤΟ."
+            data-en="SOON."
+            data-gr="ΣΥΝΤΟΜΑ."
         >
-            IT VISIBLE.
+            SOON.
         </span>
 
     </h2>
@@ -2110,10 +2028,10 @@ footer{
             >
 
                 <span
-                    data-en="CONTACT PAGE"
-                    data-gr="ΣΕΛΙΔΑ ΕΠΙΚΟΙΝΩΝΙΑΣ"
+                    data-en="CONTACT INFORMATION"
+                    data-gr="ΠΛΗΡΟΦΟΡΙΕΣ ΕΠΙΚΟΙΝΩΝΙΑΣ"
                 >
-                    CONTACT PAGE
+                    CONTACT INFORMATION
                 </span>
 
                 <span>
@@ -2140,9 +2058,7 @@ footer{
 
 
 
-<!-- =====================================================
-     FOOTER
-===================================================== -->
+<!-- FOOTER -->
 
 <footer>
 
@@ -2152,16 +2068,27 @@ footer{
 
 
     <div class="footer-copy">
-        © 2026 KOFINAS VISUALS · BY TRAVELFILMGR
+
+        <a
+            href="privacy.html"
+            class="footer-link"
+            data-en="PRIVACY POLICY"
+            data-gr="ΠΟΛΙΤΙΚΗ ΑΠΟΡΡΗΤΟΥ"
+        >
+            PRIVACY POLICY
+        </a>
+
+        <span>
+            © 2026 KOFINAS VISUALS · ALL RIGHTS RESERVED
+        </span>
+
     </div>
 
 </footer>
 
 
 
-<!-- =====================================================
-     LANGUAGE SYSTEM
-===================================================== -->
+<!-- LANGUAGE SYSTEM -->
 
 <script>
 
@@ -2203,16 +2130,12 @@ function setLanguage(language){
 
 
 enBtn.addEventListener("click", () => {
-
     setLanguage("en");
-
 });
 
 
 grBtn.addEventListener("click", () => {
-
     setLanguage("gr");
-
 });
 
 
@@ -2231,5 +2154,4 @@ setLanguage("en");
 
 
 </body>
-
 </html>
