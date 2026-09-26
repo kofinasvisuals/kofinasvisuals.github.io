@@ -163,6 +163,7 @@ header{
 
 .hero-title span{
     display:block;
+
     color:#777;
 }
 
@@ -248,30 +249,45 @@ header{
 /* FOOTER */
 
 footer{
-    border-top:1px solid #202020;
+    border-top:1px solid rgba(255,255,255,.1);
 
-    padding:30px 42px;
+    padding:35px 6vw;
 
     display:flex;
     justify-content:space-between;
     align-items:center;
+}
 
-    color:#555;
-
+.footer-brand{
     font-size:9px;
-    letter-spacing:.15em;
+    letter-spacing:4px;
+}
 
-    text-transform:uppercase;
+.footer-right{
+    display:flex;
+
+    align-items:center;
+
+    gap:22px;
+
+    flex-wrap:wrap;
+
+    font-size:8px;
+    letter-spacing:2px;
+
+    color:rgba(255,255,255,.42);
 }
 
 .footer-link{
-    color:#777;
-
     transition:color .3s ease;
 }
 
 .footer-link:hover{
     color:#fff;
+}
+
+.footer-copy{
+    color:rgba(255,255,255,.32);
 }
 
 
@@ -300,6 +316,7 @@ footer{
         font-size:8px;
     }
 
+
     .hero{
         min-height:68vh;
 
@@ -315,6 +332,7 @@ footer{
 
         font-size:13px;
     }
+
 
     .content{
         padding:0 20px;
@@ -336,16 +354,17 @@ footer{
         font-size:14px;
     }
 
+
     footer{
         display:block;
 
-        padding:25px 20px;
+        padding:30px 25px;
     }
 
-    .footer-link{
-        display:inline-block;
+    .footer-right{
+        margin-top:18px;
 
-        margin-top:15px;
+        gap:12px 18px;
     }
 
 }
@@ -360,7 +379,10 @@ footer{
 
 <header>
 
-    <a href="preview.html" class="brand">
+    <a
+        href="preview.html"
+        class="brand"
+    >
         KOFINAS VISUALS
     </a>
 
@@ -443,11 +465,11 @@ footer{
 
     <p
         class="hero-text"
-        data-en="Simple information about privacy and how this website currently works."
-        data-gr="Απλές πληροφορίες σχετικά με το απόρρητο και τον τρόπο λειτουργίας της ιστοσελίδας αυτή τη στιγμή."
+        data-en="Simple information about privacy and how the KOFINAS VISUALS website currently works."
+        data-gr="Απλές πληροφορίες σχετικά με το απόρρητο και τον τρόπο λειτουργίας της ιστοσελίδας του KOFINAS VISUALS αυτή τη στιγμή."
     >
-        Simple information about privacy
-        and how this website currently works.
+        Simple information about privacy and how
+        the KOFINAS VISUALS website currently works.
     </p>
 
 </section>
@@ -558,21 +580,21 @@ footer{
     <div class="section-content">
 
         <h2
-            data-en="TECHNICAL DATA."
-            data-gr="ΤΕΧΝΙΚΑ ΔΕΔΟΜΕΝΑ."
+            data-en="TECHNICAL OPERATION."
+            data-gr="ΤΕΧΝΙΚΗ ΛΕΙΤΟΥΡΓΙΑ."
         >
-            TECHNICAL DATA.
+            TECHNICAL OPERATION.
         </h2>
 
 
         <p
-            data-en="The website is hosted through GitHub Pages. Like other web-hosting services, the hosting infrastructure may process basic technical information required to deliver and secure the website."
-            data-gr="Η ιστοσελίδα φιλοξενείται μέσω του GitHub Pages. Όπως συμβαίνει και με άλλες υπηρεσίες φιλοξενίας ιστοσελίδων, η υποδομή φιλοξενίας ενδέχεται να επεξεργάζεται βασικές τεχνικές πληροφορίες που είναι απαραίτητες για την προβολή και την ασφάλεια της ιστοσελίδας."
+            data-en="The website is hosted through GitHub Pages. The hosting infrastructure may process basic technical information required to display, operate and protect the website."
+            data-gr="Η ιστοσελίδα φιλοξενείται μέσω του GitHub Pages. Η υποδομή φιλοξενίας ενδέχεται να επεξεργάζεται βασικές τεχνικές πληροφορίες που απαιτούνται για την προβολή, τη λειτουργία και την προστασία της ιστοσελίδας."
         >
             The website is hosted through GitHub Pages.
-            Like other web-hosting services, the hosting
-            infrastructure may process basic technical information
-            required to deliver and secure the website.
+            The hosting infrastructure may process basic
+            technical information required to display,
+            operate and protect the website.
         </p>
 
     </div>
@@ -605,23 +627,25 @@ footer{
 
 
         <p
-            data-en="The website does not contain a contact form. If you choose to contact KOFINAS VISUALS by email, the information included in your message is processed through the email services used for that communication."
-            data-gr="Η ιστοσελίδα δεν διαθέτει φόρμα επικοινωνίας. Εάν επιλέξετε να επικοινωνήσετε με το KOFINAS VISUALS μέσω email, οι πληροφορίες που περιλαμβάνονται στο μήνυμά σας επεξεργάζονται μέσω των υπηρεσιών email που χρησιμοποιούνται για την επικοινωνία."
+            data-en="The website does not currently contain a contact form. If you choose to send an email, the information included in your message is handled through the email services used for that communication."
+            data-gr="Η ιστοσελίδα δεν διαθέτει αυτή τη στιγμή φόρμα επικοινωνίας. Εάν επιλέξετε να στείλετε email, οι πληροφορίες που περιλαμβάνονται στο μήνυμα διαχειρίζονται μέσω των υπηρεσιών email που χρησιμοποιούνται για την επικοινωνία."
         >
-            The website does not contain a contact form.
-            If you choose to contact KOFINAS VISUALS by email,
-            the information included in your message is processed
-            through the email services used for that communication.
+            The website does not currently contain a contact form.
+            If you choose to send an email, the information included
+            in your message is handled through the email services
+            used for that communication.
         </p>
 
 
         <p>
+
             <a
                 href="mailto:kofinasvisuals@gmail.com"
                 class="email"
             >
                 kofinasvisuals@gmail.com
             </a>
+
         </p>
 
     </div>
@@ -674,25 +698,52 @@ footer{
 
 
 
+<!-- FOOTER -->
+
 <footer>
 
-    <div>
+    <div class="footer-brand">
         KOFINAS VISUALS · BY TRAVELFILMGR
     </div>
 
 
-    <a
-        href="preview.html"
-        class="footer-link"
-        data-en="HOME"
-        data-gr="ΑΡΧΙΚΗ"
-    >
-        HOME
-    </a>
+    <div class="footer-right">
+
+        <a
+            href="privacy.html"
+            class="footer-link"
+            data-en="PRIVACY POLICY"
+            data-gr="ΠΟΛΙΤΙΚΗ ΑΠΟΡΡΗΤΟΥ"
+        >
+            PRIVACY POLICY
+        </a>
+
+
+        <a
+            href="website-status.html"
+            class="footer-link"
+            data-en="WEBSITE STATUS"
+            data-gr="ΚΑΤΑΣΤΑΣΗ ΙΣΤΟΣΕΛΙΔΑΣ"
+        >
+            WEBSITE STATUS
+        </a>
+
+
+        <span
+            class="footer-copy"
+            data-en="© 2026 KOFINAS VISUALS · ALL RIGHTS RESERVED"
+            data-gr="© 2026 KOFINAS VISUALS · ΜΕ ΕΠΙΦΥΛΑΞΗ ΠΑΝΤΟΣ ΔΙΚΑΙΩΜΑΤΟΣ"
+        >
+            © 2026 KOFINAS VISUALS · ALL RIGHTS RESERVED
+        </span>
+
+    </div>
 
 </footer>
 
 
+
+<!-- LANGUAGE -->
 
 <script>
 
@@ -709,7 +760,9 @@ const translatable =
 function setLanguage(language){
 
     document.documentElement.lang =
-        language === "gr" ? "el" : "en";
+        language === "gr"
+            ? "el"
+            : "en";
 
 
     translatable.forEach(element => {
@@ -736,24 +789,22 @@ function setLanguage(language){
 }
 
 
-enBtn.addEventListener("click", () => {
+enBtn.addEventListener(
+    "click",
+    () => setLanguage("en")
+);
 
-    setLanguage("en");
 
-});
-
-
-grBtn.addEventListener("click", () => {
-
-    setLanguage("gr");
-
-});
+grBtn.addEventListener(
+    "click",
+    () => setLanguage("gr")
+);
 
 
 /*
     English is always the default.
 
-    No language preference is stored.
+    No visitor preference is stored.
     No localStorage.
     No sessionStorage.
     No cookies.
