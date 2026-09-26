@@ -14,15 +14,10 @@
 
 <meta
     name="description"
-    content="KOFINAS VISUALS by TRAVELFILMGR — Visual Production based in Greece. Website currently under development."
+    content="KOFINAS VISUALS by TRAVELFILMGR — Visual Production based in Greece. Coming soon."
 >
 
-
 <style>
-
-/* =====================================================
-   RESET
-===================================================== */
 
 *{
     margin:0;
@@ -42,12 +37,7 @@ body{
 
     font-family:Arial, Helvetica, sans-serif;
 
-    overflow-x:hidden;
-}
-
-a{
-    color:inherit;
-    text-decoration:none;
+    overflow:hidden;
 }
 
 button{
@@ -90,6 +80,7 @@ button{
 
 .brand-small{
     font-size:11px;
+
     letter-spacing:4px;
 
     opacity:.65;
@@ -97,6 +88,7 @@ button{
 
 .top-right{
     display:flex;
+
     align-items:center;
 
     gap:28px;
@@ -104,6 +96,7 @@ button{
 
 .status{
     font-size:10px;
+
     letter-spacing:3px;
 
     text-transform:uppercase;
@@ -118,23 +111,27 @@ button{
 
 .language{
     display:flex;
+
     align-items:center;
 
     gap:7px;
 
     font-size:9px;
+
     letter-spacing:2px;
 }
 
 .language button{
     border:0;
+
     background:none;
 
-    color:#fff;
+    color:#ffffff;
 
     cursor:pointer;
 
     font-size:9px;
+
     letter-spacing:2px;
 
     opacity:.35;
@@ -168,6 +165,7 @@ button{
 
 .eyebrow{
     font-size:11px;
+
     letter-spacing:5px;
 
     opacity:.55;
@@ -189,6 +187,7 @@ h1{
     margin-top:35px;
 
     font-size:13px;
+
     letter-spacing:5px;
 
     text-transform:uppercase;
@@ -205,6 +204,7 @@ h1{
     margin-top:55px;
 
     display:flex;
+
     align-items:center;
 
     gap:18px;
@@ -212,6 +212,7 @@ h1{
 
 .line{
     width:55px;
+
     height:1px;
 
     background:rgba(255,255,255,.5);
@@ -219,6 +220,7 @@ h1{
 
 .construction span{
     font-size:10px;
+
     letter-spacing:4px;
 
     opacity:.5;
@@ -231,25 +233,21 @@ h1{
 
 .bottom{
     display:flex;
+
     justify-content:space-between;
+
     align-items:flex-end;
 
-    gap:40px;
+    gap:30px;
 
     position:relative;
 
     z-index:2;
 }
 
-.bottom-left{
-    display:flex;
-    flex-direction:column;
-
-    gap:16px;
-}
-
 .location{
     font-size:10px;
+
     letter-spacing:3px;
 
     opacity:.4;
@@ -257,47 +255,15 @@ h1{
     text-transform:uppercase;
 }
 
-.footer-links{
-    display:flex;
-    align-items:center;
-
-    gap:20px;
-
-    flex-wrap:wrap;
-}
-
-.footer-link{
-    font-size:8px;
-    letter-spacing:2px;
-
-    opacity:.35;
-
-    transition:opacity .3s ease;
-}
-
-.footer-link:hover{
-    opacity:1;
-}
-
-.copyright{
-    font-size:8px;
-    letter-spacing:2px;
-
-    opacity:.25;
-}
-
-
-/* =====================================================
-   LOADING
-===================================================== */
-
 .loading{
     display:flex;
+
     align-items:center;
 
     gap:12px;
 
     font-size:9px;
+
     letter-spacing:3px;
 
     opacity:.45;
@@ -305,11 +271,12 @@ h1{
 
 .dot{
     width:5px;
+
     height:5px;
 
     border-radius:50%;
 
-    background:white;
+    background:#ffffff;
 
     animation:pulse 1.5s infinite ease-in-out;
 }
@@ -319,11 +286,13 @@ h1{
     0%,
     100%{
         opacity:.2;
+
         transform:scale(.8);
     }
 
     50%{
         opacity:1;
+
         transform:scale(1);
     }
 
@@ -338,11 +307,13 @@ h1{
     position:absolute;
 
     right:35px;
+
     top:50%;
 
     transform:translateY(-50%);
 
     font-size:28vw;
+
     font-weight:700;
 
     line-height:1;
@@ -375,19 +346,23 @@ h1{
         align-items:center;
     }
 
+
     .brand-small{
         font-size:8px;
 
         letter-spacing:2.5px;
     }
 
+
     .top-right{
         gap:14px;
     }
 
+
     .status{
         display:none;
     }
+
 
     .language,
     .language button{
@@ -403,6 +378,7 @@ h1{
         margin-bottom:22px;
     }
 
+
     h1{
         font-size:16vw;
 
@@ -411,10 +387,12 @@ h1{
         letter-spacing:-4px;
     }
 
+
     .descriptor{
         margin-top:28px;
 
         font-size:9px;
+
         letter-spacing:2.8px;
 
         line-height:1.8;
@@ -429,9 +407,11 @@ h1{
         gap:14px;
     }
 
+
     .line{
         width:35px;
     }
+
 
     .construction span{
         font-size:8px;
@@ -442,46 +422,14 @@ h1{
     }
 
 
-    .bottom{
-        align-items:flex-end;
-
-        gap:20px;
-    }
-
-    .bottom-left{
-        gap:13px;
-
-        max-width:70%;
-    }
-
     .location{
         font-size:8px;
 
         letter-spacing:2px;
     }
 
-    .footer-links{
-        gap:10px 14px;
-    }
-
-    .footer-link{
-        font-size:7px;
-
-        letter-spacing:1.5px;
-    }
-
-    .copyright{
-        font-size:7px;
-
-        letter-spacing:1.3px;
-
-        line-height:1.6;
-    }
-
 
     .loading{
-        flex-shrink:0;
-
         font-size:7px;
 
         letter-spacing:2px;
@@ -489,8 +437,10 @@ h1{
         gap:8px;
     }
 
+
     .dot{
         width:4px;
+
         height:4px;
     }
 
@@ -512,8 +462,10 @@ h1{
 
     .page{
         padding-left:20px;
+
         padding-right:20px;
     }
+
 
     .brand-small{
         font-size:7px;
@@ -521,9 +473,11 @@ h1{
         letter-spacing:2px;
     }
 
+
     h1{
         font-size:15vw;
     }
+
 
     .descriptor{
         font-size:8px;
@@ -531,14 +485,14 @@ h1{
         letter-spacing:2px;
     }
 
+
     .construction span{
         font-size:7px;
 
         letter-spacing:2px;
     }
 
-    .footer-link,
-    .copyright,
+
     .loading{
         font-size:6.5px;
     }
@@ -571,8 +525,6 @@ h1{
 <main class="page">
 
 
-    <!-- BACKGROUND -->
-
     <div
         class="background-number"
         aria-hidden="true"
@@ -586,12 +538,15 @@ h1{
 
     <header class="top">
 
+
         <div class="brand-small">
             BY TRAVELFILMGR
         </div>
 
 
+
         <div class="top-right">
+
 
             <div
                 class="status"
@@ -602,7 +557,9 @@ h1{
             </div>
 
 
+
             <div class="language">
+
 
                 <button
                     id="enBtn"
@@ -627,9 +584,12 @@ h1{
                     GR
                 </button>
 
+
             </div>
 
+
         </div>
+
 
     </header>
 
@@ -638,6 +598,7 @@ h1{
     <!-- CENTER -->
 
     <section class="center">
+
 
         <div
             class="eyebrow"
@@ -648,22 +609,26 @@ h1{
         </div>
 
 
+
         <h1>
             KOFINAS<br>
             VISUALS
         </h1>
 
 
+
         <div
             class="descriptor"
-            data-en="Photography · Real Estate · Events"
-            data-gr="Φωτογραφία · Ακίνητα · Εκδηλώσεις"
+            data-en="Photography · Visual Content · Greece"
+            data-gr="Φωτογραφία · Οπτικό Περιεχόμενο · Ελλάδα"
         >
-            Photography · Real Estate · Events
+            Photography · Visual Content · Greece
         </div>
 
 
+
         <div class="construction">
+
 
             <div class="line"></div>
 
@@ -675,7 +640,9 @@ h1{
                 WEBSITE UNDER CONSTRUCTION
             </span>
 
+
         </div>
+
 
     </section>
 
@@ -685,54 +652,19 @@ h1{
 
     <footer class="bottom">
 
-        <div class="bottom-left">
 
-            <div
-                class="location"
-                data-en="Greece · 2026"
-                data-gr="Ελλάδα · 2026"
-            >
-                Greece · 2026
-            </div>
-
-
-            <div class="footer-links">
-
-                <a
-                    href="privacy.html"
-                    class="footer-link"
-                    data-en="PRIVACY POLICY"
-                    data-gr="ΠΟΛΙΤΙΚΗ ΑΠΟΡΡΗΤΟΥ"
-                >
-                    PRIVACY POLICY
-                </a>
-
-
-                <a
-                    href="website-status.html"
-                    class="footer-link"
-                    data-en="WEBSITE STATUS"
-                    data-gr="ΚΑΤΑΣΤΑΣΗ ΙΣΤΟΣΕΛΙΔΑΣ"
-                >
-                    WEBSITE STATUS
-                </a>
-
-            </div>
-
-
-            <div
-                class="copyright"
-                data-en="© 2026 KOFINAS VISUALS · ALL RIGHTS RESERVED"
-                data-gr="© 2026 KOFINAS VISUALS · ΜΕ ΕΠΙΦΥΛΑΞΗ ΠΑΝΤΟΣ ΔΙΚΑΙΩΜΑΤΟΣ"
-            >
-                © 2026 KOFINAS VISUALS · ALL RIGHTS RESERVED
-            </div>
-
+        <div
+            class="location"
+            data-en="Greece · 2026"
+            data-gr="Ελλάδα · 2026"
+        >
+            Greece · 2026
         </div>
 
 
 
         <div class="loading">
+
 
             <div class="dot"></div>
 
@@ -744,7 +676,9 @@ h1{
                 COMING SOON
             </span>
 
+
         </div>
+
 
     </footer>
 
@@ -752,10 +686,6 @@ h1{
 </main>
 
 
-
-<!-- =====================================================
-     LANGUAGE
-===================================================== -->
 
 <script>
 
@@ -814,9 +744,9 @@ grBtn.addEventListener(
 
 
 /*
-    English is always the default language.
+    Public under-construction page.
 
-    No language preference is stored.
+    No links to the development website.
     No localStorage.
     No sessionStorage.
     No cookies.
