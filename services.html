@@ -1,12 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>KOFINAS VISUALS — Services</title>
+<title>Services — KOFINAS VISUALS</title>
+
+<meta
+    name="description"
+    content="KOFINAS VISUALS — Photography, visual content and future visual production services. Currently in development."
+>
 
 <style>
+
 *{
     margin:0;
     padding:0;
@@ -18,10 +26,10 @@ html{
 }
 
 body{
-    background:#050505;
-    color:#f2f2f2;
+    background:#080808;
+    color:#f3f1ec;
     font-family:Arial, Helvetica, sans-serif;
-    line-height:1.5;
+    overflow-x:hidden;
 }
 
 a{
@@ -29,387 +37,790 @@ a{
     text-decoration:none;
 }
 
-::selection{
-    background:#fff;
-    color:#000;
+button{
+    font:inherit;
 }
 
-/* =========================
-   HEADER
-========================= */
 
-header{
+/* =====================================================
+   HEADER
+===================================================== */
+
+.site-header{
     position:fixed;
     top:0;
     left:0;
-    width:100%;
-    z-index:100;
+    right:0;
+
+    z-index:20;
+
+    padding:32px 5vw;
+
     display:flex;
     justify-content:space-between;
     align-items:center;
-    padding:28px 42px;
+
     mix-blend-mode:difference;
+
+    color:#fff;
 }
 
-.logo{
-    font-size:12px;
-    font-weight:700;
-    letter-spacing:.18em;
+.brand{
+    font-size:10px;
+    letter-spacing:4px;
 }
 
 .header-right{
     display:flex;
     align-items:center;
-    gap:28px;
+
+    gap:30px;
+}
+
+.header-link{
+    font-size:9px;
+    letter-spacing:3px;
+
+    opacity:.65;
 }
 
 .back{
-    font-size:10px;
-    letter-spacing:.15em;
-    text-transform:uppercase;
+    font-size:9px;
+    letter-spacing:3px;
+
+    opacity:.65;
+
+    transition:opacity .3s ease;
 }
 
-.lang{
-    display:flex;
-    align-items:center;
-    gap:8px;
-}
-
-.lang button{
-    background:none;
-    border:0;
-    color:#fff;
-    font-size:10px;
-    letter-spacing:.12em;
-    cursor:pointer;
-    opacity:.4;
-    padding:0;
-}
-
-.lang button.active{
+.back:hover{
     opacity:1;
 }
 
-/* =========================
-   HERO
-========================= */
 
-.hero{
-    min-height:78vh;
-    padding:150px 7vw 90px;
+/* LANGUAGE */
+
+.language{
+    display:flex;
+    align-items:center;
+
+    gap:7px;
+
+    font-size:9px;
+    letter-spacing:2px;
+}
+
+.language button{
+    border:0;
+    background:none;
+
+    color:inherit;
+
+    cursor:pointer;
+
+    font-size:9px;
+    letter-spacing:2px;
+
+    opacity:.35;
+
+    padding:5px 0;
+
+    transition:opacity .25s ease;
+}
+
+.language button:hover,
+.language button.active{
+    opacity:1;
+}
+
+.language-separator{
+    opacity:.25;
+}
+
+
+/* =====================================================
+   HERO
+===================================================== */
+
+.services-hero{
+    min-height:85vh;
+
+    padding:190px 6vw 110px;
+
     display:flex;
     flex-direction:column;
     justify-content:flex-end;
-    border-bottom:1px solid #222;
 }
 
-.eyebrow{
+.hero-label{
+    font-size:9px;
+    letter-spacing:4px;
+
+    opacity:.4;
+
+    margin-bottom:40px;
+}
+
+.hero-title{
+    max-width:1200px;
+
+    font-size:clamp(65px,12vw,180px);
+
+    line-height:.78;
+
+    letter-spacing:-9px;
+
+    font-weight:600;
+}
+
+.hero-title span{
+    display:block;
+
+    margin-left:15vw;
+
+    color:rgba(255,255,255,.36);
+}
+
+.hero-bottom{
+    margin-top:95px;
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:10vw;
+}
+
+.hero-line{
+    width:100%;
+    height:1px;
+
+    background:rgba(255,255,255,.16);
+}
+
+.hero-copy{
+    max-width:480px;
+
+    font-size:13px;
+    line-height:1.9;
+
+    color:rgba(255,255,255,.48);
+}
+
+
+/* =====================================================
+   STATUS
+===================================================== */
+
+.status{
+    padding:45px 6vw;
+
+    border-top:1px solid rgba(255,255,255,.1);
+    border-bottom:1px solid rgba(255,255,255,.1);
+}
+
+.status-inner{
+    display:flex;
+
+    justify-content:space-between;
+    align-items:center;
+
+    gap:40px;
+}
+
+.status-label{
+    font-size:9px;
+    letter-spacing:3px;
+
+    opacity:.35;
+}
+
+.status-value{
     font-size:10px;
-    letter-spacing:.22em;
-    color:#777;
-    margin-bottom:28px;
-    text-transform:uppercase;
+    letter-spacing:4px;
+
+    text-align:right;
 }
 
-.hero h1{
-    font-size:clamp(58px,10vw,150px);
-    line-height:.86;
-    font-weight:500;
-    letter-spacing:-.065em;
-    max-width:1100px;
-}
 
-.hero-sub{
-    margin-top:38px;
-    max-width:620px;
-    color:#999;
-    font-size:16px;
-    line-height:1.8;
-}
+/* =====================================================
+   SERVICES
+===================================================== */
 
-/* =========================
-   CONTENT
-========================= */
-
-.content{
-    padding:0 7vw;
-}
-
-.section{
-    padding:135px 0;
-    border-bottom:1px solid #222;
+.services{
+    padding:150px 7vw 180px;
 }
 
 .section-head{
     display:grid;
-    grid-template-columns:130px 1fr;
-    gap:45px;
-    margin-bottom:70px;
+
+    grid-template-columns:1fr 2fr;
+
+    gap:8vw;
+
+    margin-bottom:120px;
 }
 
-.number{
-    font-size:10px;
-    letter-spacing:.18em;
-    color:#555;
+.section-number{
+    font-size:9px;
+    letter-spacing:4px;
+
+    opacity:.35;
 }
 
 .section-title{
-    font-size:clamp(42px,6vw,82px);
-    line-height:.92;
+    font-size:clamp(48px,7vw,105px);
+
+    line-height:.88;
+
+    letter-spacing:-6px;
+
     font-weight:500;
-    letter-spacing:-.05em;
-}
 
-/* =========================
-   MAIN SERVICE
-========================= */
-
-.service-content{
-    margin-left:175px;
-    max-width:850px;
-}
-
-.service-content p{
-    color:#999;
-    font-size:19px;
-    line-height:1.85;
-    max-width:760px;
-}
-
-.service-statement{
-    margin-top:65px;
-    padding-top:30px;
-    border-top:1px solid #292929;
-    font-size:11px;
-    letter-spacing:.2em;
-    color:#777;
     text-transform:uppercase;
 }
 
-/* =========================
-   VISUAL CONTENT
-========================= */
+.service{
+    display:grid;
 
-.visual-content{
-    margin-left:175px;
-    max-width:850px;
+    grid-template-columns:90px 1fr 1fr;
+
+    gap:5vw;
+
+    padding:65px 0;
+
+    border-top:1px solid rgba(255,255,255,.14);
 }
 
-.visual-content p{
-    color:#999;
-    font-size:19px;
-    line-height:1.85;
-    max-width:760px;
+.service:last-child{
+    border-bottom:1px solid rgba(255,255,255,.14);
 }
 
-.visual-line{
-    margin-top:55px;
-    width:100%;
-    height:1px;
-    background:#292929;
+.service-number{
+    font-size:9px;
+    letter-spacing:3px;
+
+    opacity:.35;
 }
 
-/* =========================
-   MORE TO COME
-========================= */
+.service-title{
+    font-size:clamp(30px,4vw,58px);
 
-.more-content{
-    margin-left:175px;
-    max-width:850px;
-}
-
-.more-content h3{
-    font-size:clamp(36px,5vw,68px);
     line-height:1;
-    font-weight:400;
-    letter-spacing:-.05em;
-    margin-bottom:30px;
-}
 
-.more-content p{
-    color:#999;
-    font-size:18px;
-    line-height:1.85;
-    max-width:720px;
-}
+    letter-spacing:-2px;
 
-/* =========================
-   CTA
-========================= */
-
-.cta{
-    padding:165px 7vw;
-    text-align:center;
-}
-
-.cta-label{
-    font-size:10px;
-    letter-spacing:.22em;
-    color:#666;
-    margin-bottom:30px;
-    text-transform:uppercase;
-}
-
-.cta h2{
-    font-size:clamp(48px,8vw,110px);
-    line-height:.9;
     font-weight:500;
-    letter-spacing:-.065em;
 }
 
-.cta p{
-    max-width:560px;
-    margin:38px auto 48px;
-    color:#888;
-    line-height:1.8;
+.service-copy{
+    max-width:520px;
+
+    font-size:13px;
+    line-height:1.9;
+
+    color:rgba(255,255,255,.45);
 }
 
-.cta-link{
-    display:inline-block;
-    border-bottom:1px solid #fff;
-    padding-bottom:9px;
-    font-size:10px;
-    letter-spacing:.2em;
+
+/* =====================================================
+   STATEMENT
+===================================================== */
+
+.statement{
+    padding:150px 7vw 170px;
+
+    background:#e9e7e1;
+
+    color:#080808;
+}
+
+.statement-label{
+    font-size:9px;
+    letter-spacing:4px;
+
+    opacity:.4;
+
+    margin-bottom:85px;
+}
+
+.statement-title{
+    max-width:1200px;
+
+    font-size:clamp(55px,9vw,140px);
+
+    line-height:.82;
+
+    letter-spacing:-8px;
+
+    font-weight:500;
+}
+
+.statement-title span{
+    display:block;
+
+    margin-left:15vw;
+}
+
+.statement-copy{
+    max-width:450px;
+
+    margin-top:90px;
+    margin-left:auto;
+
+    font-size:13px;
+    line-height:1.9;
+
+    color:rgba(0,0,0,.52);
+}
+
+
+/* =====================================================
+   FUTURE
+===================================================== */
+
+.future{
+    padding:150px 7vw 170px;
+}
+
+.future-grid{
+    display:grid;
+
+    grid-template-columns:1fr 2fr;
+
+    gap:8vw;
+}
+
+.future-label{
+    font-size:9px;
+    letter-spacing:4px;
+
+    opacity:.35;
+}
+
+.future-content{
+    max-width:900px;
+}
+
+.future-title{
+    font-size:clamp(45px,7vw,100px);
+
+    line-height:.88;
+
+    letter-spacing:-6px;
+
+    font-weight:500;
+
     text-transform:uppercase;
-    transition:.3s ease;
 }
 
-.cta-link:hover{
-    opacity:.55;
+.future-copy{
+    max-width:600px;
+
+    margin-top:55px;
+
+    font-size:14px;
+    line-height:1.9;
+
+    color:rgba(255,255,255,.48);
 }
 
-/* =========================
+.future-tags{
+    display:flex;
+
+    flex-wrap:wrap;
+
+    gap:12px;
+
+    margin-top:55px;
+}
+
+.future-tag{
+    padding:13px 16px;
+
+    border:1px solid rgba(255,255,255,.14);
+
+    font-size:8px;
+    letter-spacing:2.5px;
+
+    color:rgba(255,255,255,.48);
+}
+
+
+/* =====================================================
+   END
+===================================================== */
+
+.services-end{
+    padding:150px 6vw 170px;
+
+    text-align:center;
+
+    border-top:1px solid rgba(255,255,255,.08);
+}
+
+.end-label{
+    font-size:9px;
+    letter-spacing:4px;
+
+    opacity:.35;
+
+    margin-bottom:45px;
+}
+
+.end-title{
+    font-size:clamp(48px,8vw,120px);
+
+    line-height:.85;
+
+    letter-spacing:-6px;
+
+    font-weight:500;
+}
+
+.end-title span{
+    display:block;
+
+    font-family:Georgia, serif;
+
+    font-weight:400;
+
+    color:rgba(255,255,255,.5);
+}
+
+.end-links{
+    margin-top:70px;
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:40px;
+
+    flex-wrap:wrap;
+}
+
+.end-link{
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:20px;
+
+    padding:18px 0;
+
+    border-top:1px solid rgba(255,255,255,.25);
+    border-bottom:1px solid rgba(255,255,255,.25);
+
+    font-size:9px;
+    letter-spacing:3px;
+
+    transition:.35s ease;
+}
+
+.end-link:hover{
+    padding-left:20px;
+    padding-right:20px;
+}
+
+
+/* =====================================================
    FOOTER
-========================= */
+===================================================== */
 
 footer{
-    border-top:1px solid #222;
-    padding:35px 42px;
+    border-top:1px solid rgba(255,255,255,.1);
+
+    padding:35px 6vw;
+
     display:flex;
+
     justify-content:space-between;
-    gap:20px;
-    color:#555;
-    font-size:9px;
-    letter-spacing:.14em;
+    align-items:center;
 }
 
-/* =========================
+.footer-brand{
+    font-size:9px;
+    letter-spacing:4px;
+}
+
+.footer-right{
+    display:flex;
+
+    align-items:center;
+
+    gap:22px;
+
+    flex-wrap:wrap;
+
+    font-size:8px;
+    letter-spacing:2px;
+
+    color:rgba(255,255,255,.42);
+}
+
+.footer-link{
+    transition:color .3s ease;
+}
+
+.footer-link:hover{
+    color:#fff;
+}
+
+.footer-copy{
+    color:rgba(255,255,255,.32);
+}
+
+
+/* =====================================================
    MOBILE
-========================= */
+===================================================== */
 
-@media(max-width:800px){
+@media(max-width:700px){
 
-    header{
-        padding:22px 20px;
+    .site-header{
+        padding:25px;
     }
 
-    .back{
+    .header-right{
+        gap:15px;
+    }
+
+    .header-link{
         display:none;
     }
 
-    .hero{
-        min-height:72vh;
-        padding:130px 20px 65px;
+    .brand{
+        font-size:8px;
+        letter-spacing:2.5px;
     }
 
-    .hero h1{
-        font-size:clamp(55px,16vw,95px);
+    .back{
+        font-size:8px;
     }
 
-    .hero-sub{
-        font-size:14px;
-        max-width:100%;
+    .language,
+    .language button{
+        font-size:8px;
     }
 
-    .content{
-        padding:0 20px;
+
+    .services-hero{
+        min-height:78vh;
+
+        padding:160px 25px 85px;
     }
 
-    .section{
-        padding:95px 0;
+    .hero-title{
+        font-size:20vw;
+
+        letter-spacing:-5px;
+    }
+
+    .hero-title span{
+        margin-left:8vw;
+    }
+
+    .hero-bottom{
+        display:block;
+
+        margin-top:65px;
+    }
+
+    .hero-copy{
+        margin-top:30px;
+
+        font-size:12px;
+    }
+
+
+    .status{
+        padding:35px 25px;
+    }
+
+    .status-inner{
+        display:block;
+    }
+
+    .status-value{
+        margin-top:12px;
+
+        text-align:left;
+    }
+
+
+    .services{
+        padding:110px 25px 130px;
     }
 
     .section-head{
-        grid-template-columns:1fr;
-        gap:18px;
-        margin-bottom:50px;
+        display:block;
+
+        margin-bottom:80px;
     }
 
     .section-title{
-        font-size:clamp(43px,13vw,75px);
+        margin-top:35px;
+
+        font-size:14vw;
+
+        letter-spacing:-4px;
     }
 
-    .service-content,
-    .visual-content,
-    .more-content{
-        margin-left:0;
+    .service{
+        display:block;
+
+        padding:55px 0;
     }
 
-    .service-content p,
-    .visual-content p{
-        font-size:16px;
+    .service-title{
+        margin-top:25px;
+
+        font-size:11vw;
     }
 
-    .more-content p{
-        font-size:16px;
+    .service-copy{
+        margin-top:30px;
+
+        font-size:12px;
     }
 
-    .service-statement{
+
+    .statement{
+        padding:110px 25px 120px;
+    }
+
+    .statement-label{
+        margin-bottom:60px;
+    }
+
+    .statement-title{
+        font-size:16vw;
+
+        letter-spacing:-4px;
+    }
+
+    .statement-title span{
+        margin-left:8vw;
+    }
+
+    .statement-copy{
+        margin-top:65px;
+
+        font-size:12px;
+    }
+
+
+    .future{
+        padding:110px 25px 130px;
+    }
+
+    .future-grid{
+        display:block;
+    }
+
+    .future-content{
         margin-top:45px;
-        font-size:9px;
-        line-height:1.8;
     }
 
-    .cta{
-        padding:110px 20px;
+    .future-title{
+        font-size:14vw;
+
+        letter-spacing:-4px;
     }
 
-    .cta h2{
-        font-size:clamp(48px,14vw,82px);
+    .future-copy{
+        margin-top:40px;
+
+        font-size:13px;
     }
+
+
+    .services-end{
+        padding:110px 25px 120px;
+    }
+
+    .end-title{
+        font-size:16vw;
+
+        letter-spacing:-4px;
+    }
+
+    .end-links{
+        margin-top:55px;
+
+        gap:25px;
+    }
+
 
     footer{
-        padding:28px 20px;
-        flex-direction:column;
-        gap:12px;
+        display:block;
+
+        padding:30px 25px;
     }
+
+    .footer-right{
+        margin-top:18px;
+
+        gap:12px 18px;
+    }
+
 }
+
 </style>
+
 </head>
+
 
 <body>
 
-<header>
 
-    <a href="preview.html" class="logo">
+<!-- HEADER -->
+
+<header class="site-header">
+
+    <a
+        href="preview.html"
+        class="brand"
+    >
         KOFINAS VISUALS
     </a>
+
 
     <div class="header-right">
 
         <a
             href="preview.html"
             class="back"
-            data-en="Back"
-            data-gr="Πίσω"
+            data-en="BACK"
+            data-gr="ΠΙΣΩ"
         >
-            Back
+            BACK
         </a>
 
-        <div class="lang">
+
+        <div class="header-link">
+            BY TRAVELFILMGR
+        </div>
+
+
+        <div class="language">
 
             <button
                 id="enBtn"
-                onclick="setLanguage('en')"
+                class="active"
+                type="button"
             >
                 EN
             </button>
 
-            <span>·</span>
+            <span class="language-separator">
+                ·
+            </span>
 
             <button
                 id="grBtn"
-                onclick="setLanguage('gr')"
+                type="button"
             >
                 GR
             </button>
@@ -421,250 +832,528 @@ footer{
 </header>
 
 
-<main>
 
-    <!-- HERO -->
+<!-- HERO -->
 
-    <section class="hero">
+<section class="services-hero">
 
-        <div class="eyebrow">
-            KOFINAS VISUALS / SERVICES
-        </div>
+    <div
+        class="hero-label"
+        data-en="KOFINAS VISUALS / SERVICES"
+        data-gr="KOFINAS VISUALS / ΥΠΗΡΕΣΙΕΣ"
+    >
+        KOFINAS VISUALS / SERVICES
+    </div>
 
-        <h1
-            data-en="Visual Production."
-            data-gr="Visual Production."
+
+    <h1 class="hero-title">
+
+        <span
+            style="margin-left:0; color:#f3f1ec;"
+            data-en="VISUAL"
+            data-gr="ΟΠΤΙΚΗ"
         >
-            Visual Production.
-        </h1>
+            VISUAL
+        </span>
+
+        <span
+            data-en="PRODUCTION."
+            data-gr="ΠΑΡΑΓΩΓΗ."
+        >
+            PRODUCTION.
+        </span>
+
+    </h1>
+
+
+    <div class="hero-bottom">
+
+        <div class="hero-line"></div>
+
 
         <p
-            class="hero-sub"
-            data-en="Photography is where the journey begins. The visual direction remains open to wherever the work takes it."
-            data-gr="Η φωτογραφία είναι το σημείο από όπου ξεκινά η διαδρομή. Η οπτική κατεύθυνση παραμένει ανοιχτή, όπου κι αν οδηγήσει η δουλειά."
+            class="hero-copy"
+            data-en="Photography is where the journey begins. KOFINAS VISUALS is currently developing its professional direction, with services planned to become available in the future."
+            data-gr="Η φωτογραφία είναι το σημείο από όπου ξεκινά η πορεία. Το KOFINAS VISUALS αναπτύσσει αυτή τη στιγμή την επαγγελματική του κατεύθυνση, με τις υπηρεσίες να προγραμματίζεται να γίνουν διαθέσιμες στο μέλλον."
         >
-            Photography is where the journey begins. The visual direction remains open to wherever the work takes it.
+            Photography is where the journey begins.
+            KOFINAS VISUALS is currently developing its
+            professional direction, with services planned
+            to become available in the future.
         </p>
 
-    </section>
+    </div>
+
+</section>
 
 
-    <div class="content">
 
-        <!-- PHOTOGRAPHY -->
+<!-- STATUS -->
 
-        <section class="section">
+<section class="status">
 
-            <div class="section-head">
+    <div class="status-inner">
 
-                <div class="number">
-                    01
-                </div>
-
-                <h2
-                    class="section-title"
-                    data-en="Photography."
-                    data-gr="Photography."
-                >
-                    Photography.
-                </h2>
-
-            </div>
+        <div
+            class="status-label"
+            data-en="CURRENT SERVICE STATUS"
+            data-gr="ΤΡΕΧΟΥΣΑ ΚΑΤΑΣΤΑΣΗ ΥΠΗΡΕΣΙΩΝ"
+        >
+            CURRENT SERVICE STATUS
+        </div>
 
 
-            <div class="service-content">
+        <div
+            class="status-value"
+            data-en="PROFESSIONAL SERVICES · COMING SOON"
+            data-gr="ΕΠΑΓΓΕΛΜΑΤΙΚΕΣ ΥΠΗΡΕΣΙΕΣ · ΣΥΝΤΟΜΑ"
+        >
+            PROFESSIONAL SERVICES · COMING SOON
+        </div>
 
-                <p
-                    data-en="Professional photography for people, places, products, businesses, events and experiences. Every project is approached according to its own visual needs, with attention to detail, atmosphere and purpose."
-                    data-gr="Επαγγελματική φωτογραφία για ανθρώπους, χώρους, προϊόντα, επιχειρήσεις, events και εμπειρίες. Κάθε project προσεγγίζεται σύμφωνα με τις δικές του οπτικές ανάγκες, με έμφαση στη λεπτομέρεια, την ατμόσφαιρα και τον σκοπό."
-                >
-                    Professional photography for people, places, products, businesses, events and experiences. Every project is approached according to its own visual needs, with attention to detail, atmosphere and purpose.
-                </p>
+    </div>
 
-
-                <div class="service-statement">
-
-                    <span
-                        data-en="People · Places · Products · Experiences"
-                        data-gr="Άνθρωποι · Χώροι · Προϊόντα · Εμπειρίες"
-                    >
-                        People · Places · Products · Experiences
-                    </span>
-
-                </div>
-
-            </div>
-
-        </section>
+</section>
 
 
-        <!-- VISUAL CONTENT -->
 
-        <section class="section">
+<!-- SERVICES -->
 
-            <div class="section-head">
+<section class="services">
 
-                <div class="number">
-                    02
-                </div>
+    <div class="section-head">
 
-                <h2
-                    class="section-title"
-                    data-en="Visual Content."
-                    data-gr="Visual Content."
-                >
-                    Visual Content.
-                </h2>
-
-            </div>
+        <div
+            class="section-number"
+            data-en="01 / DIRECTION"
+            data-gr="01 / ΚΑΤΕΥΘΥΝΣΗ"
+        >
+            01 / DIRECTION
+        </div>
 
 
-            <div class="visual-content">
-
-                <p
-                    data-en="Visual content for brands, businesses, spaces and digital platforms. The direction is shaped around the character, needs and identity of each project."
-                    data-gr="Οπτικό περιεχόμενο για brands, επιχειρήσεις, χώρους και ψηφιακές πλατφόρμες. Η κατεύθυνση διαμορφώνεται γύρω από τον χαρακτήρα, τις ανάγκες και την ταυτότητα κάθε project."
-                >
-                    Visual content for brands, businesses, spaces and digital platforms. The direction is shaped around the character, needs and identity of each project.
-                </p>
-
-                <div class="visual-line"></div>
-
-            </div>
-
-        </section>
-
-
-        <!-- MORE TO COME -->
-
-        <section class="section">
-
-            <div class="section-head">
-
-                <div class="number">
-                    03
-                </div>
-
-                <h2
-                    class="section-title"
-                    data-en="More to come."
-                    data-gr="Και άλλα έρχονται."
-                >
-                    More to come.
-                </h2>
-
-            </div>
-
-
-            <div class="more-content">
-
-                <h3
-                    data-en="The work will evolve."
-                    data-gr="Η δουλειά θα εξελιχθεί."
-                >
-                    The work will evolve.
-                </h3>
-
-                <p
-                    data-en="As KOFINAS VISUALS develops, the work may expand into new forms of visual production. The direction will be shaped naturally by the projects, the people and the opportunities ahead."
-                    data-gr="Καθώς το KOFINAS VISUALS εξελίσσεται, η δουλειά μπορεί να επεκταθεί σε νέες μορφές visual production. Η κατεύθυνση θα διαμορφωθεί φυσικά μέσα από τα projects, τους ανθρώπους και τις ευκαιρίες που θα έρθουν."
-                >
-                    As KOFINAS VISUALS develops, the work may expand into new forms of visual production. The direction will be shaped naturally by the projects, the people and the opportunities ahead.
-                </p>
-
-            </div>
-
-        </section>
+        <h2
+            class="section-title"
+            data-en="WHERE IT BEGINS."
+            data-gr="ΑΠΟ ΕΔΩ ΞΕΚΙΝΑ."
+        >
+            WHERE IT BEGINS.
+        </h2>
 
     </div>
 
 
-    <!-- CTA -->
 
-    <section class="cta">
+    <!-- SERVICE 01 -->
 
-        <div
-            class="cta-label"
-            data-en="KOFINAS VISUALS"
-            data-gr="KOFINAS VISUALS"
-        >
-            KOFINAS VISUALS
+    <div class="service">
+
+        <div class="service-number">
+            01
         </div>
 
-        <h2
-            data-en="Coming soon."
-            data-gr="Σύντομα."
+
+        <div
+            class="service-title"
+            data-en="Photography."
+            data-gr="Φωτογραφία."
         >
-            Coming soon.
-        </h2>
+            Photography.
+        </div>
+
 
         <p
-            data-en="The professional services of KOFINAS VISUALS are currently in preparation and will be available soon."
-            data-gr="Οι επαγγελματικές υπηρεσίες του KOFINAS VISUALS βρίσκονται αυτή τη στιγμή σε προετοιμασία και θα είναι σύντομα διαθέσιμες."
+            class="service-copy"
+            data-en="Photography is the starting point of KOFINAS VISUALS. The direction is being developed around people, places, products, businesses, events and experiences, with attention to detail, atmosphere and visual purpose."
+            data-gr="Η φωτογραφία αποτελεί το σημείο εκκίνησης του KOFINAS VISUALS. Η κατεύθυνση αναπτύσσεται γύρω από ανθρώπους, χώρους, προϊόντα, επιχειρήσεις, εκδηλώσεις και εμπειρίες, με προσοχή στη λεπτομέρεια, την ατμόσφαιρα και τον οπτικό σκοπό."
         >
-            The professional services of KOFINAS VISUALS are currently in preparation and will be available soon.
+            Photography is the starting point of KOFINAS VISUALS.
+            The direction is being developed around people,
+            places, products, businesses, events and experiences,
+            with attention to detail, atmosphere and visual purpose.
         </p>
+
+    </div>
+
+
+
+    <!-- SERVICE 02 -->
+
+    <div class="service">
+
+        <div class="service-number">
+            02
+        </div>
+
+
+        <div
+            class="service-title"
+            data-en="Visual Content."
+            data-gr="Οπτικό Περιεχόμενο."
+        >
+            Visual Content.
+        </div>
+
+
+        <p
+            class="service-copy"
+            data-en="The wider direction includes visual content for brands, businesses, spaces and digital platforms. The final form of each future service will develop around the needs and character of each project."
+            data-gr="Η ευρύτερη κατεύθυνση περιλαμβάνει οπτικό περιεχόμενο για brands, επιχειρήσεις, χώρους και ψηφιακές πλατφόρμες. Η τελική μορφή κάθε μελλοντικής υπηρεσίας θα διαμορφώνεται γύρω από τις ανάγκες και τον χαρακτήρα κάθε project."
+        >
+            The wider direction includes visual content for brands,
+            businesses, spaces and digital platforms. The final form
+            of each future service will develop around the needs
+            and character of each project.
+        </p>
+
+    </div>
+
+
+
+    <!-- SERVICE 03 -->
+
+    <div class="service">
+
+        <div class="service-number">
+            03
+        </div>
+
+
+        <div
+            class="service-title"
+            data-en="More to come."
+            data-gr="Περισσότερα στο μέλλον."
+        >
+            More to come.
+        </div>
+
+
+        <p
+            class="service-copy"
+            data-en="KOFINAS VISUALS is intentionally being built with room to evolve. Future development may extend into additional forms of visual production as the project grows."
+            data-gr="Το KOFINAS VISUALS δημιουργείται σκόπιμα με χώρο για εξέλιξη. Η μελλοντική ανάπτυξη μπορεί να επεκταθεί σε επιπλέον μορφές οπτικής παραγωγής καθώς το project εξελίσσεται."
+        >
+            KOFINAS VISUALS is intentionally being built
+            with room to evolve. Future development may extend
+            into additional forms of visual production
+            as the project grows.
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<!-- STATEMENT -->
+
+<section class="statement">
+
+    <div
+        class="statement-label"
+        data-en="02 / VISUAL DIRECTION"
+        data-gr="02 / ΟΠΤΙΚΗ ΚΑΤΕΥΘΥΝΣΗ"
+    >
+        02 / VISUAL DIRECTION
+    </div>
+
+
+    <h2 class="statement-title">
+
+        <span
+            style="margin-left:0;"
+            data-en="PEOPLE · PLACES"
+            data-gr="ΑΝΘΡΩΠΟΙ · ΧΩΡΟΙ"
+        >
+            PEOPLE · PLACES
+        </span>
+
+        <span
+            data-en="PRODUCTS · EXPERIENCES"
+            data-gr="ΠΡΟΪΟΝΤΑ · ΕΜΠΕΙΡΙΕΣ"
+        >
+            PRODUCTS · EXPERIENCES
+        </span>
+
+    </h2>
+
+
+    <p
+        class="statement-copy"
+        data-en="The goal is not to limit KOFINAS VISUALS to a single category. The visual direction is being developed to remain flexible, distinctive and able to grow naturally over time."
+        data-gr="Ο στόχος δεν είναι να περιοριστεί το KOFINAS VISUALS σε μία μόνο κατηγορία. Η οπτική κατεύθυνση αναπτύσσεται ώστε να παραμένει ευέλικτη, ξεχωριστή και να μπορεί να εξελίσσεται φυσικά με τον χρόνο."
+    >
+        The goal is not to limit KOFINAS VISUALS
+        to a single category. The visual direction is being
+        developed to remain flexible, distinctive and able
+        to grow naturally over time.
+    </p>
+
+</section>
+
+
+
+<!-- FUTURE -->
+
+<section class="future">
+
+    <div class="future-grid">
+
+        <div
+            class="future-label"
+            data-en="03 / FUTURE"
+            data-gr="03 / ΜΕΛΛΟΝ"
+        >
+            03 / FUTURE
+        </div>
+
+
+        <div class="future-content">
+
+            <h2
+                class="future-title"
+                data-en="THE WORK WILL EVOLVE."
+                data-gr="Η ΔΟΥΛΕΙΑ ΘΑ ΕΞΕΛΙΣΣΕΤΑΙ."
+            >
+                THE WORK WILL EVOLVE.
+            </h2>
+
+
+            <p
+                class="future-copy"
+                data-en="As KOFINAS VISUALS develops, the work may expand into new forms of visual production. The direction will be shaped naturally by future projects, creative opportunities and the evolution of the brand."
+                data-gr="Καθώς το KOFINAS VISUALS εξελίσσεται, η δουλειά μπορεί να επεκταθεί σε νέες μορφές οπτικής παραγωγής. Η κατεύθυνση θα διαμορφώνεται φυσικά από μελλοντικά projects, δημιουργικές ευκαιρίες και την εξέλιξη του brand."
+            >
+                As KOFINAS VISUALS develops, the work may expand
+                into new forms of visual production. The direction
+                will be shaped naturally by future projects,
+                creative opportunities and the evolution of the brand.
+            </p>
+
+
+            <div class="future-tags">
+
+                <span
+                    class="future-tag"
+                    data-en="PHOTOGRAPHY"
+                    data-gr="ΦΩΤΟΓΡΑΦΙΑ"
+                >
+                    PHOTOGRAPHY
+                </span>
+
+                <span
+                    class="future-tag"
+                    data-en="VISUAL CONTENT"
+                    data-gr="ΟΠΤΙΚΟ ΠΕΡΙΕΧΟΜΕΝΟ"
+                >
+                    VISUAL CONTENT
+                </span>
+
+                <span
+                    class="future-tag"
+                    data-en="FUTURE VISUAL PRODUCTION"
+                    data-gr="ΜΕΛΛΟΝΤΙΚΗ ΟΠΤΙΚΗ ΠΑΡΑΓΩΓΗ"
+                >
+                    FUTURE VISUAL PRODUCTION
+                </span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- END -->
+
+<section class="services-end">
+
+    <div
+        class="end-label"
+        data-en="KOFINAS VISUALS · CURRENT STATUS"
+        data-gr="KOFINAS VISUALS · ΤΡΕΧΟΥΣΑ ΚΑΤΑΣΤΑΣΗ"
+    >
+        KOFINAS VISUALS · CURRENT STATUS
+    </div>
+
+
+    <h2 class="end-title">
+
+        <span
+            style="font-family:Arial, Helvetica, sans-serif; color:#f3f1ec;"
+            data-en="SERVICES"
+            data-gr="ΥΠΗΡΕΣΙΕΣ"
+        >
+            SERVICES
+        </span>
+
+        <span
+            data-en="COMING SOON."
+            data-gr="ΣΥΝΤΟΜΑ."
+        >
+            COMING SOON.
+        </span>
+
+    </h2>
+
+
+    <div class="end-links">
 
         <a
             href="work.html"
-            class="cta-link"
-            data-en="Explore the work →"
-            data-gr="Δες τη δουλειά →"
+            class="end-link"
         >
-            Explore the work →
+            <span
+                data-en="EXPLORE THE WORK"
+                data-gr="ΔΕΣ ΤΗ ΔΟΥΛΕΙΑ"
+            >
+                EXPLORE THE WORK
+            </span>
+
+            <span>→</span>
         </a>
 
-    </section>
 
-</main>
+        <a
+            href="website-status.html"
+            class="end-link"
+        >
+            <span
+                data-en="WEBSITE STATUS"
+                data-gr="ΚΑΤΑΣΤΑΣΗ ΙΣΤΟΣΕΛΙΔΑΣ"
+            >
+                WEBSITE STATUS
+            </span>
 
+            <span>→</span>
+        </a>
+
+    </div>
+
+</section>
+
+
+
+<!-- FOOTER -->
 
 <footer>
 
-    <span>
+    <div class="footer-brand">
         KOFINAS VISUALS · BY TRAVELFILMGR
-    </span>
+    </div>
 
-    <span>
-        © 2026 KOFINAS VISUALS
-    </span>
+
+    <div class="footer-right">
+
+        <a
+            href="privacy.html"
+            class="footer-link"
+            data-en="PRIVACY POLICY"
+            data-gr="ΠΟΛΙΤΙΚΗ ΑΠΟΡΡΗΤΟΥ"
+        >
+            PRIVACY POLICY
+        </a>
+
+
+        <a
+            href="website-status.html"
+            class="footer-link"
+            data-en="WEBSITE STATUS"
+            data-gr="ΚΑΤΑΣΤΑΣΗ ΙΣΤΟΣΕΛΙΔΑΣ"
+        >
+            WEBSITE STATUS
+        </a>
+
+
+        <span
+            class="footer-copy"
+            data-en="© 2026 KOFINAS VISUALS · ALL RIGHTS RESERVED"
+            data-gr="© 2026 KOFINAS VISUALS · ΜΕ ΕΠΙΦΥΛΑΞΗ ΠΑΝΤΟΣ ΔΙΚΑΙΩΜΑΤΟΣ"
+        >
+            © 2026 KOFINAS VISUALS · ALL RIGHTS RESERVED
+        </span>
+
+    </div>
 
 </footer>
 
 
+
+<!-- LANGUAGE -->
+
 <script>
 
-function setLanguage(lang){
+const enBtn =
+    document.getElementById("enBtn");
+
+const grBtn =
+    document.getElementById("grBtn");
+
+const translatable =
+    document.querySelectorAll("[data-en]");
+
+
+function setLanguage(language){
 
     document.documentElement.lang =
-        lang === "gr" ? "el" : "en";
+        language === "gr"
+            ? "el"
+            : "en";
 
-    document.querySelectorAll("[data-en]").forEach(element => {
+
+    translatable.forEach(element => {
 
         element.textContent =
-            lang === "gr"
+            language === "gr"
                 ? element.getAttribute("data-gr")
                 : element.getAttribute("data-en");
 
     });
 
-    document.getElementById("enBtn").classList.toggle(
+
+    enBtn.classList.toggle(
         "active",
-        lang === "en"
+        language === "en"
     );
 
-    document.getElementById("grBtn").classList.toggle(
+
+    grBtn.classList.toggle(
         "active",
-        lang === "gr"
+        language === "gr"
     );
+
 }
 
-/* EN is always the default.
-   No visitor language preference is stored. */
+
+enBtn.addEventListener(
+    "click",
+    () => setLanguage("en")
+);
+
+
+grBtn.addEventListener(
+    "click",
+    () => setLanguage("gr")
+);
+
+
+/*
+    English is always the default.
+
+    No visitor preference is stored.
+    No localStorage.
+    No sessionStorage.
+    No cookies.
+*/
 
 setLanguage("en");
 
 </script>
 
+
 </body>
+
 </html>
