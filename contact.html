@@ -1,0 +1,789 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>KOFINAS VISUALS — Contact</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#050505;
+    color:#f2f2f2;
+    font-family:Arial, Helvetica, sans-serif;
+    line-height:1.5;
+}
+
+a{
+    color:inherit;
+    text-decoration:none;
+}
+
+::selection{
+    background:#fff;
+    color:#000;
+}
+
+/* =========================
+   HEADER
+========================= */
+
+header{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    z-index:100;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:28px 42px;
+    mix-blend-mode:difference;
+}
+
+.logo{
+    font-size:12px;
+    font-weight:700;
+    letter-spacing:.18em;
+}
+
+.header-right{
+    display:flex;
+    align-items:center;
+    gap:28px;
+}
+
+.back{
+    font-size:10px;
+    letter-spacing:.15em;
+    text-transform:uppercase;
+}
+
+.lang{
+    display:flex;
+    align-items:center;
+    gap:8px;
+}
+
+.lang button{
+    background:none;
+    border:0;
+    color:#fff;
+    font-size:10px;
+    letter-spacing:.12em;
+    cursor:pointer;
+    opacity:.4;
+    padding:0;
+}
+
+.lang button.active{
+    opacity:1;
+}
+
+/* =========================
+   HERO
+========================= */
+
+.hero{
+    min-height:72vh;
+    padding:150px 7vw 90px;
+    display:flex;
+    flex-direction:column;
+    justify-content:flex-end;
+    border-bottom:1px solid #222;
+}
+
+.eyebrow{
+    font-size:10px;
+    letter-spacing:.22em;
+    color:#777;
+    margin-bottom:28px;
+    text-transform:uppercase;
+}
+
+.hero h1{
+    font-size:clamp(58px,10vw,150px);
+    line-height:.86;
+    font-weight:500;
+    letter-spacing:-.065em;
+    max-width:1100px;
+}
+
+.hero-sub{
+    margin-top:38px;
+    max-width:650px;
+    color:#999;
+    font-size:16px;
+    line-height:1.8;
+}
+
+/* =========================
+   CONTACT
+========================= */
+
+.contact{
+    padding:135px 7vw;
+    border-bottom:1px solid #222;
+}
+
+.contact-grid{
+    display:grid;
+    grid-template-columns:130px 1fr;
+    gap:45px;
+}
+
+.number{
+    font-size:10px;
+    letter-spacing:.18em;
+    color:#555;
+}
+
+.contact-main{
+    max-width:950px;
+}
+
+.contact-title{
+    font-size:clamp(44px,6vw,82px);
+    line-height:.92;
+    font-weight:500;
+    letter-spacing:-.05em;
+    margin-bottom:65px;
+}
+
+.contact-intro{
+    max-width:700px;
+    color:#999;
+    font-size:18px;
+    line-height:1.85;
+    margin-bottom:70px;
+}
+
+/* =========================
+   EMAIL
+========================= */
+
+.email-label{
+    font-size:10px;
+    letter-spacing:.2em;
+    color:#666;
+    text-transform:uppercase;
+    margin-bottom:18px;
+}
+
+.email{
+    display:inline-block;
+    font-size:clamp(24px,4vw,48px);
+    font-weight:400;
+    letter-spacing:-.035em;
+    border-bottom:1px solid #555;
+    padding-bottom:10px;
+    transition:.3s ease;
+}
+
+.email:hover{
+    border-color:#fff;
+    opacity:.7;
+}
+
+/* =========================
+   DETAILS
+========================= */
+
+.details{
+    margin-top:100px;
+    display:grid;
+    grid-template-columns:repeat(2, minmax(0,1fr));
+    gap:0;
+    border-top:1px solid #292929;
+    border-left:1px solid #292929;
+}
+
+.detail{
+    min-height:170px;
+    padding:30px;
+    border-right:1px solid #292929;
+    border-bottom:1px solid #292929;
+}
+
+.detail-label{
+    font-size:9px;
+    letter-spacing:.18em;
+    color:#555;
+    text-transform:uppercase;
+    margin-bottom:25px;
+}
+
+.detail-value{
+    font-size:15px;
+    color:#888;
+    line-height:1.7;
+}
+
+.detail-value.placeholder{
+    color:#444;
+}
+
+/* =========================
+   SOCIALS
+========================= */
+
+.socials{
+    margin-top:100px;
+}
+
+.social-title{
+    font-size:10px;
+    letter-spacing:.2em;
+    color:#666;
+    text-transform:uppercase;
+    margin-bottom:30px;
+}
+
+.social-list{
+    display:flex;
+    flex-wrap:wrap;
+    gap:35px;
+}
+
+.social-list a{
+    font-size:13px;
+    letter-spacing:.12em;
+    text-transform:uppercase;
+    color:#888;
+    transition:.3s ease;
+}
+
+.social-list a:hover{
+    color:#fff;
+}
+
+.social-list a.disabled{
+    color:#333;
+    cursor:default;
+    pointer-events:none;
+}
+
+/* =========================
+   CTA
+========================= */
+
+.cta{
+    padding:165px 7vw;
+    text-align:center;
+}
+
+.cta-label{
+    font-size:10px;
+    letter-spacing:.22em;
+    color:#666;
+    margin-bottom:30px;
+    text-transform:uppercase;
+}
+
+.cta h2{
+    font-size:clamp(48px,8vw,110px);
+    line-height:.9;
+    font-weight:500;
+    letter-spacing:-.065em;
+}
+
+.cta p{
+    max-width:570px;
+    margin:38px auto 48px;
+    color:#888;
+    line-height:1.8;
+}
+
+.cta-links{
+    display:flex;
+    justify-content:center;
+    gap:38px;
+    flex-wrap:wrap;
+}
+
+.cta-link{
+    display:inline-block;
+    border-bottom:1px solid #fff;
+    padding-bottom:9px;
+    font-size:10px;
+    letter-spacing:.2em;
+    text-transform:uppercase;
+    transition:.3s ease;
+}
+
+.cta-link:hover{
+    opacity:.55;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+footer{
+    border-top:1px solid #222;
+    padding:35px 42px;
+    display:flex;
+    justify-content:space-between;
+    gap:20px;
+    color:#555;
+    font-size:9px;
+    letter-spacing:.14em;
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width:800px){
+
+    header{
+        padding:22px 20px;
+    }
+
+    .back{
+        display:none;
+    }
+
+    .hero{
+        min-height:70vh;
+        padding:130px 20px 65px;
+    }
+
+    .hero h1{
+        font-size:clamp(55px,16vw,95px);
+    }
+
+    .hero-sub{
+        font-size:14px;
+    }
+
+    .contact{
+        padding:95px 20px;
+    }
+
+    .contact-grid{
+        grid-template-columns:1fr;
+        gap:18px;
+    }
+
+    .contact-title{
+        font-size:clamp(43px,13vw,75px);
+        margin-bottom:45px;
+    }
+
+    .contact-intro{
+        font-size:16px;
+        margin-bottom:55px;
+    }
+
+    .email{
+        font-size:clamp(21px,6vw,34px);
+        word-break:break-word;
+    }
+
+    .details{
+        grid-template-columns:1fr;
+        margin-top:75px;
+    }
+
+    .detail{
+        min-height:145px;
+        padding:25px;
+    }
+
+    .socials{
+        margin-top:75px;
+    }
+
+    .social-list{
+        gap:24px;
+    }
+
+    .cta{
+        padding:110px 20px;
+    }
+
+    .cta h2{
+        font-size:clamp(48px,14vw,82px);
+    }
+
+    footer{
+        padding:28px 20px;
+        flex-direction:column;
+        gap:12px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+
+    <a href="preview.html" class="logo">
+        KOFINAS VISUALS
+    </a>
+
+    <div class="header-right">
+
+        <a
+            href="preview.html"
+            class="back"
+            data-en="Back"
+            data-gr="Πίσω"
+        >
+            Back
+        </a>
+
+        <div class="lang">
+
+            <button
+                id="enBtn"
+                onclick="setLanguage('en')"
+            >
+                EN
+            </button>
+
+            <span>·</span>
+
+            <button
+                id="grBtn"
+                onclick="setLanguage('gr')"
+            >
+                GR
+            </button>
+
+        </div>
+
+    </div>
+
+</header>
+
+
+<main>
+
+    <!-- HERO -->
+
+    <section class="hero">
+
+        <div class="eyebrow">
+            KOFINAS VISUALS / CONTACT
+        </div>
+
+        <h1
+            data-en="Let's make it visible."
+            data-gr="Ας το κάνουμε ορατό."
+        >
+            Let's make it visible.
+        </h1>
+
+        <p
+            class="hero-sub"
+            data-en="For future projects, collaborations or general enquiries, get in touch."
+            data-gr="Για μελλοντικά projects, συνεργασίες ή γενικές πληροφορίες, επικοινωνήστε μαζί μας."
+        >
+            For future projects, collaborations or general enquiries, get in touch.
+        </p>
+
+    </section>
+
+
+    <!-- CONTACT DETAILS -->
+
+    <section class="contact">
+
+        <div class="contact-grid">
+
+            <div class="number">
+                01
+            </div>
+
+
+            <div class="contact-main">
+
+                <h2
+                    class="contact-title"
+                    data-en="Get in touch."
+                    data-gr="Επικοινωνία."
+                >
+                    Get in touch.
+                </h2>
+
+
+                <p
+                    class="contact-intro"
+                    data-en="KOFINAS VISUALS is currently in preparation. Professional services and project enquiries will be available soon."
+                    data-gr="Το KOFINAS VISUALS βρίσκεται αυτή τη στιγμή σε προετοιμασία. Οι επαγγελματικές υπηρεσίες και οι 문의τήσεις για projects θα είναι σύντομα διαθέσιμες."
+                >
+                    KOFINAS VISUALS is currently in preparation. Professional services and project enquiries will be available soon.
+                </p>
+
+
+                <div class="email-label">
+                    Email
+                </div>
+
+                <a
+                    href="mailto:kofinasvisuals@gmail.com"
+                    class="email"
+                >
+                    kofinasvisuals@gmail.com
+                </a>
+
+
+                <!-- FUTURE DETAILS -->
+
+                <div class="details">
+
+                    <div class="detail">
+
+                        <div
+                            class="detail-label"
+                            data-en="Phone"
+                            data-gr="Τηλέφωνο"
+                        >
+                            Phone
+                        </div>
+
+                        <div
+                            class="detail-value placeholder"
+                            data-en="Coming soon"
+                            data-gr="Σύντομα"
+                        >
+                            Coming soon
+                        </div>
+
+                    </div>
+
+
+                    <div class="detail">
+
+                        <div
+                            class="detail-label"
+                            data-en="Location"
+                            data-gr="Τοποθεσία"
+                        >
+                            Location
+                        </div>
+
+                        <div
+                            class="detail-value placeholder"
+                            data-en="Coming soon"
+                            data-gr="Σύντομα"
+                        >
+                            Coming soon
+                        </div>
+
+                    </div>
+
+
+                    <div class="detail">
+
+                        <div
+                            class="detail-label"
+                            data-en="Instagram"
+                            data-gr="Instagram"
+                        >
+                            Instagram
+                        </div>
+
+                        <div
+                            class="detail-value placeholder"
+                            data-en="Coming soon"
+                            data-gr="Σύντομα"
+                        >
+                            Coming soon
+                        </div>
+
+                    </div>
+
+
+                    <div class="detail">
+
+                        <div
+                            class="detail-label"
+                            data-en="Facebook"
+                            data-gr="Facebook"
+                        >
+                            Facebook
+                        </div>
+
+                        <div
+                            class="detail-value placeholder"
+                            data-en="Coming soon"
+                            data-gr="Σύντομα"
+                        >
+                            Coming soon
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- SOCIAL MEDIA -->
+
+                <div class="socials">
+
+                    <div
+                        class="social-title"
+                        data-en="Social"
+                        data-gr="Social"
+                    >
+                        Social
+                    </div>
+
+
+                    <div class="social-list">
+
+                        <a
+                            href="#"
+                            class="disabled"
+                            aria-disabled="true"
+                        >
+                            Instagram
+                        </a>
+
+                        <a
+                            href="#"
+                            class="disabled"
+                            aria-disabled="true"
+                        >
+                            Facebook
+                        </a>
+
+                        <a
+                            href="#"
+                            class="disabled"
+                            aria-disabled="true"
+                        >
+                            TikTok
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- CTA -->
+
+    <section class="cta">
+
+        <div
+            class="cta-label"
+            data-en="KOFINAS VISUALS"
+            data-gr="KOFINAS VISUALS"
+        >
+            KOFINAS VISUALS
+        </div>
+
+        <h2
+            data-en="Coming soon."
+            data-gr="Σύντομα."
+        >
+            Coming soon.
+        </h2>
+
+        <p
+            data-en="The professional side of KOFINAS VISUALS is currently being prepared. Until then, you can explore the visual direction behind the brand."
+            data-gr="Η επαγγελματική δραστηριότητα του KOFINAS VISUALS βρίσκεται αυτή τη στιγμή σε προετοιμασία. Μέχρι τότε, μπορείς να εξερευνήσεις την οπτική κατεύθυνση του brand."
+        >
+            The professional side of KOFINAS VISUALS is currently being prepared. Until then, you can explore the visual direction behind the brand.
+        </p>
+
+
+        <div class="cta-links">
+
+            <a
+                href="work.html"
+                class="cta-link"
+                data-en="Explore the work →"
+                data-gr="Δες τη δουλειά →"
+            >
+                Explore the work →
+            </a>
+
+            <a
+                href="preview.html"
+                class="cta-link"
+                data-en="Back to home →"
+                data-gr="Αρχική →"
+            >
+                Back to home →
+            </a>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+<footer>
+
+    <span>
+        KOFINAS VISUALS · BY TRAVELFILMGR
+    </span>
+
+    <span>
+        © 2026 KOFINAS VISUALS
+    </span>
+
+</footer>
+
+
+<script>
+
+function setLanguage(lang){
+
+    document.documentElement.lang =
+        lang === "gr" ? "el" : "en";
+
+    document.querySelectorAll("[data-en]").forEach(element => {
+
+        element.textContent =
+            lang === "gr"
+                ? element.getAttribute("data-gr")
+                : element.getAttribute("data-en");
+
+    });
+
+    document.getElementById("enBtn").classList.toggle(
+        "active",
+        lang === "en"
+    );
+
+    document.getElementById("grBtn").classList.toggle(
+        "active",
+        lang === "gr"
+    );
+
+    localStorage.setItem("siteLanguage", lang);
+}
+
+
+const savedLanguage =
+    localStorage.getItem("siteLanguage") || "en";
+
+setLanguage(savedLanguage);
+
+</script>
+
+</body>
+</html>
