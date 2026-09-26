@@ -397,6 +397,7 @@ footer{
         </a>
 
         <div class="lang">
+
             <button
                 id="enBtn"
                 onclick="setLanguage('en')"
@@ -412,6 +413,7 @@ footer{
             >
                 GR
             </button>
+
         </div>
 
     </div>
@@ -655,15 +657,12 @@ function setLanguage(lang){
         "active",
         lang === "gr"
     );
-
-    localStorage.setItem("siteLanguage", lang);
 }
 
+/* EN is always the default.
+   No visitor language preference is stored. */
 
-const savedLanguage =
-    localStorage.getItem("siteLanguage") || "en";
-
-setLanguage(savedLanguage);
+setLanguage("en");
 
 </script>
 
