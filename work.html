@@ -1,373 +1,1325 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Work — KOFINAS VISUALS</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+<title>Work — KOFINAS VISUALS</title>
 
-        html {
-            scroll-behavior: smooth;
-        }
+<meta name="description" content="Selected work by KOFINAS VISUALS — photography and visual production.">
 
-        body {
-            background: #080808;
-            color: #f5f5f5;
-            font-family: Arial, Helvetica, sans-serif;
-        }
+<style>
 
-        a {
-            color: inherit;
-            text-decoration: none;
-        }
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
 
-        /* NAV */
+html{
+    scroll-behavior:smooth;
+}
 
-        .nav {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            padding: 28px 45px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            z-index: 10;
-        }
+body{
+    background:#080808;
+    color:#f3f1ec;
+    font-family:Arial, Helvetica, sans-serif;
+    overflow-x:hidden;
+}
 
-        .logo {
-            font-size: 13px;
-            font-weight: 700;
-            letter-spacing: 3px;
-        }
+a{
+    color:inherit;
+    text-decoration:none;
+}
 
-        .nav-links {
-            display: flex;
-            gap: 35px;
-            font-size: 10px;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-        }
+button{
+    font:inherit;
+}
 
-        .nav-links a {
-            opacity: .6;
-            transition: .3s;
-        }
+img{
+    display:block;
+    width:100%;
+}
 
-        .nav-links a:hover {
-            opacity: 1;
-        }
 
-        /* HEADER */
+/* =====================================================
+   HEADER
+===================================================== */
 
-        .header {
-            padding: 190px 7vw 100px;
-        }
+.site-header{
+    position:fixed;
+    top:0;
+    left:0;
+    right:0;
 
-        .small {
-            font-size: 10px;
-            letter-spacing: 5px;
-            text-transform: uppercase;
-            opacity: .45;
-            margin-bottom: 25px;
-        }
+    z-index:20;
 
-        h1 {
-            font-size: clamp(65px, 12vw, 170px);
-            line-height: .8;
-            letter-spacing: -7px;
-            font-weight: 700;
-        }
+    padding:32px 5vw;
 
-        .intro {
-            max-width: 520px;
-            margin-top: 55px;
-            font-size: 15px;
-            line-height: 1.8;
-            opacity: .55;
-        }
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
 
-        /* WORK */
+    mix-blend-mode:difference;
+}
 
-        .work {
-            padding: 40px 6vw 160px;
-        }
+.brand{
+    font-size:10px;
+    letter-spacing:4px;
+}
 
-        .project {
-            margin-bottom: 150px;
-        }
+.header-right{
+    display:flex;
+    align-items:center;
+    gap:35px;
+}
 
-        .project-image {
-            overflow: hidden;
-            background: #111;
-        }
+.header-link{
+    font-size:9px;
+    letter-spacing:3px;
+    opacity:.65;
+}
 
-        .project-image img {
-            width: 100%;
-            display: block;
-            object-fit: cover;
-            transition: transform 1s cubic-bezier(.2,.7,.2,1);
-        }
+.back{
+    font-size:9px;
+    letter-spacing:3px;
+    opacity:.65;
+}
 
-        .project:hover img {
-            transform: scale(1.025);
-        }
 
-        .large img {
-            aspect-ratio: 16 / 9;
-        }
+/* =====================================================
+   INTRO
+===================================================== */
 
-        .portrait {
-            width: 70%;
-            margin-left: auto;
-        }
+.work-intro{
+    min-height:72vh;
 
-        .portrait img {
-            aspect-ratio: 4 / 5;
-        }
+    padding:190px 6vw 100px;
 
-        .wide {
-            width: 82%;
-        }
+    display:flex;
+    flex-direction:column;
+    justify-content:flex-end;
+}
 
-        .wide img {
-            aspect-ratio: 16 / 10;
-        }
+.work-label{
+    font-size:9px;
+    letter-spacing:4px;
+    opacity:.4;
 
-        .project-info {
-            display: flex;
-            justify-content: space-between;
-            padding-top: 18px;
-            margin-top: 15px;
-            border-top: 1px solid rgba(255,255,255,.18);
-        }
+    margin-bottom:35px;
+}
 
-        .project-name {
-            font-size: 14px;
-            letter-spacing: 1px;
-        }
+.work-heading{
+    font-size:clamp(80px,15vw,220px);
+    line-height:.73;
+    letter-spacing:-11px;
+    font-weight:600;
+}
 
-        .project-category {
-            font-size: 9px;
-            letter-spacing: 3px;
-            text-transform: uppercase;
-            opacity: .4;
-        }
+.work-heading span{
+    display:block;
+    margin-left:15vw;
+}
 
-        /* FOOTER */
+.work-intro-bottom{
+    margin-top:90px;
 
-        footer {
-            padding: 45px;
-            border-top: 1px solid rgba(255,255,255,.15);
-            display: flex;
-            justify-content: space-between;
-            font-size: 9px;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-            opacity: .45;
-        }
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:10vw;
+}
 
-        @media (max-width: 800px) {
+.work-intro-line{
+    width:100%;
+    height:1px;
+    background:rgba(255,255,255,.17);
+}
 
-            .nav {
-                padding: 22px 25px;
-            }
+.work-intro-copy{
+    max-width:430px;
 
-            .nav-links {
-                gap: 15px;
-            }
+    font-size:12px;
+    line-height:1.9;
 
-            .header {
-                padding: 150px 25px 80px;
-            }
+    color:rgba(255,255,255,.46);
+}
 
-            h1 {
-                letter-spacing: -4px;
-            }
 
-            .work {
-                padding: 20px 25px 100px;
-            }
+/* =====================================================
+   CATEGORY NAVIGATION
+===================================================== */
 
-            .project {
-                margin-bottom: 100px;
-            }
+.category-wrap{
+    padding:0 6vw 90px;
+}
 
-            .portrait,
-            .wide {
-                width: 100%;
-            }
+.category-top{
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-end;
 
-            footer {
-                padding: 30px 25px;
-                flex-direction: column;
-                gap: 15px;
-            }
-        }
-    </style>
+    margin-bottom:28px;
+}
+
+.category-label{
+    font-size:9px;
+    letter-spacing:4px;
+    opacity:.35;
+}
+
+.category-count{
+    font-size:9px;
+    letter-spacing:3px;
+    opacity:.3;
+}
+
+.categories{
+    border-top:1px solid rgba(255,255,255,.16);
+    border-bottom:1px solid rgba(255,255,255,.16);
+
+    display:flex;
+    flex-wrap:wrap;
+}
+
+.category{
+    appearance:none;
+    border:0;
+    background:none;
+    color:#f3f1ec;
+
+    cursor:pointer;
+
+    padding:19px 24px 19px 0;
+    margin-right:28px;
+
+    font-size:9px;
+    letter-spacing:2.5px;
+
+    opacity:.4;
+
+    transition:.3s ease;
+}
+
+.category:hover{
+    opacity:1;
+}
+
+.category.active{
+    opacity:1;
+}
+
+.category.active:before{
+    content:"";
+    display:inline-block;
+
+    width:5px;
+    height:5px;
+
+    border-radius:50%;
+    background:#f3f1ec;
+
+    margin-right:10px;
+    vertical-align:middle;
+}
+
+
+/* =====================================================
+   PROJECT GRID
+===================================================== */
+
+.portfolio{
+    padding:20px 6vw 170px;
+}
+
+.project-grid{
+    display:grid;
+    grid-template-columns:repeat(12,1fr);
+    column-gap:2.5vw;
+    row-gap:130px;
+}
+
+.project{
+    position:relative;
+}
+
+.project.hidden{
+    display:none;
+}
+
+
+/* PROJECT IMAGE */
+
+.project-image{
+    position:relative;
+    overflow:hidden;
+    background:#151515;
+}
+
+.project-image img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+
+    transition:
+        transform 1.1s cubic-bezier(.2,.7,.2,1),
+        filter .6s ease;
+}
+
+.project:hover .project-image img{
+    transform:scale(1.045);
+    filter:brightness(.78);
+}
+
+
+/* IMAGE NUMBER */
+
+.project-number{
+    position:absolute;
+
+    top:20px;
+    left:20px;
+
+    z-index:2;
+
+    font-size:8px;
+    letter-spacing:3px;
+
+    color:#fff;
+    opacity:.7;
+}
+
+
+/* PROJECT OVERLAY */
+
+.project-overlay{
+    position:absolute;
+
+    left:20px;
+    right:20px;
+    bottom:20px;
+
+    z-index:2;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-end;
+
+    opacity:0;
+
+    transition:.45s ease;
+}
+
+.project:hover .project-overlay{
+    opacity:1;
+}
+
+.project-overlay-title{
+    font-size:10px;
+    letter-spacing:3px;
+}
+
+.project-overlay-arrow{
+    font-size:18px;
+}
+
+
+/* =====================================================
+   PROJECT SIZES
+===================================================== */
+
+.project-a{
+    grid-column:1 / 8;
+}
+
+.project-a .project-image{
+    height:620px;
+}
+
+
+.project-b{
+    grid-column:9 / 13;
+    margin-top:180px;
+}
+
+.project-b .project-image{
+    height:520px;
+}
+
+
+.project-c{
+    grid-column:3 / 10;
+}
+
+.project-c .project-image{
+    height:720px;
+}
+
+
+.project-d{
+    grid-column:1 / 6;
+    margin-top:100px;
+}
+
+.project-d .project-image{
+    height:580px;
+}
+
+
+.project-e{
+    grid-column:7 / 13;
+    margin-top:230px;
+}
+
+.project-e .project-image{
+    height:500px;
+}
+
+
+.project-f{
+    grid-column:2 / 9;
+}
+
+.project-f .project-image{
+    height:650px;
+}
+
+
+/* =====================================================
+   PROJECT INFO
+===================================================== */
+
+.project-info{
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-start;
+
+    padding-top:18px;
+}
+
+.project-title{
+    font-size:19px;
+    letter-spacing:-.5px;
+}
+
+.project-category{
+    margin-top:7px;
+
+    font-size:8px;
+    letter-spacing:2.5px;
+
+    color:rgba(255,255,255,.38);
+}
+
+.project-year{
+    font-size:8px;
+    letter-spacing:2px;
+
+    opacity:.3;
+}
+
+
+/* =====================================================
+   STATEMENT
+===================================================== */
+
+.statement{
+    padding:130px 7vw 170px;
+
+    background:#e9e7e1;
+    color:#080808;
+}
+
+.statement-label{
+    font-size:9px;
+    letter-spacing:4px;
+    opacity:.4;
+
+    margin-bottom:80px;
+}
+
+.statement-title{
+    font-size:clamp(55px,9vw,145px);
+    line-height:.82;
+    letter-spacing:-8px;
+    font-weight:500;
+}
+
+.statement-title span{
+    display:block;
+    margin-left:17vw;
+}
+
+.statement-bottom{
+    margin-top:100px;
+
+    display:flex;
+    justify-content:flex-end;
+}
+
+.statement-copy{
+    max-width:410px;
+
+    font-size:12px;
+    line-height:1.9;
+
+    color:rgba(0,0,0,.5);
+}
+
+
+/* =====================================================
+   CTA
+===================================================== */
+
+.work-end{
+    padding:150px 6vw 170px;
+
+    text-align:center;
+}
+
+.work-end-label{
+    font-size:9px;
+    letter-spacing:4px;
+    opacity:.35;
+
+    margin-bottom:45px;
+}
+
+.work-end-title{
+    font-size:clamp(45px,8vw,120px);
+    line-height:.85;
+    letter-spacing:-6px;
+    font-weight:500;
+}
+
+.work-end-title span{
+    font-family:Georgia,serif;
+    font-weight:400;
+}
+
+.work-end-link{
+    display:inline-flex;
+    align-items:center;
+    gap:25px;
+
+    margin-top:70px;
+
+    padding:18px 0;
+
+    border-top:1px solid rgba(255,255,255,.25);
+    border-bottom:1px solid rgba(255,255,255,.25);
+
+    font-size:9px;
+    letter-spacing:4px;
+
+    transition:.35s ease;
+}
+
+.work-end-link:hover{
+    padding-left:30px;
+    padding-right:30px;
+}
+
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+footer{
+    border-top:1px solid rgba(255,255,255,.1);
+
+    padding:32px 6vw;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.footer-brand{
+    font-size:9px;
+    letter-spacing:4px;
+}
+
+.footer-copy{
+    font-size:8px;
+    letter-spacing:2px;
+    opacity:.3;
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media(max-width:700px){
+
+    .site-header{
+        padding:25px 25px;
+    }
+
+    .header-right{
+        gap:15px;
+    }
+
+    .header-link{
+        display:none;
+    }
+
+
+    .work-intro{
+        min-height:70vh;
+
+        padding:160px 25px 80px;
+    }
+
+    .work-label{
+        margin-bottom:28px;
+    }
+
+    .work-heading{
+        font-size:22vw;
+        letter-spacing:-6px;
+    }
+
+    .work-heading span{
+        margin-left:9vw;
+    }
+
+    .work-intro-bottom{
+        display:block;
+        margin-top:70px;
+    }
+
+    .work-intro-copy{
+        margin-top:28px;
+        font-size:11px;
+    }
+
+
+    .category-wrap{
+        padding:0 25px 70px;
+    }
+
+    .category-top{
+        margin-bottom:20px;
+    }
+
+    .categories{
+        padding:5px 0;
+    }
+
+    .category{
+        padding:15px 15px 15px 0;
+        margin-right:12px;
+        font-size:8px;
+    }
+
+
+    .portfolio{
+        padding:0 25px 120px;
+    }
+
+    .project-grid{
+        display:block;
+    }
+
+    .project{
+        width:100%;
+        margin:0 0 85px 0;
+    }
+
+    .project-a .project-image,
+    .project-b .project-image,
+    .project-c .project-image,
+    .project-d .project-image,
+    .project-e .project-image,
+    .project-f .project-image{
+        height:115vw;
+    }
+
+    .project-overlay{
+        opacity:1;
+    }
+
+    .project-title{
+        font-size:18px;
+    }
+
+
+    .statement{
+        padding:110px 25px 120px;
+    }
+
+    .statement-label{
+        margin-bottom:60px;
+    }
+
+    .statement-title{
+        font-size:16vw;
+        letter-spacing:-4px;
+    }
+
+    .statement-title span{
+        margin-left:8vw;
+    }
+
+    .statement-bottom{
+        margin-top:65px;
+    }
+
+    .statement-copy{
+        font-size:11px;
+    }
+
+
+    .work-end{
+        padding:110px 25px 120px;
+    }
+
+    .work-end-title{
+        font-size:16vw;
+        letter-spacing:-4px;
+    }
+
+    .work-end-link{
+        margin-top:55px;
+    }
+
+
+    footer{
+        display:block;
+        padding:28px 25px;
+    }
+
+    .footer-copy{
+        margin-top:15px;
+    }
+
+}
+
+</style>
+
 </head>
+
 
 <body>
 
-    <nav class="nav">
 
-        <a href="index.html" class="logo">
-            KOFINAS VISUALS
+<!-- =====================================================
+     HEADER
+===================================================== -->
+
+<header class="site-header">
+
+    <a href="preview.html" class="brand">
+        KOFINAS VISUALS
+    </a>
+
+    <div class="header-right">
+
+        <a href="preview.html" class="back">
+            BACK
         </a>
 
-        <div class="nav-links">
-            <a href="index.html">Home</a>
-            <a href="work.html">Work</a>
+        <div class="header-link">
+            BY TRAVELFILMGR
         </div>
 
-    </nav>
+    </div>
+
+</header>
 
 
-    <header class="header">
 
-        <div class="small">
-            KOFINAS VISUALS / 01
-        </div>
+<!-- =====================================================
+     INTRO
+===================================================== -->
 
-        <h1>
-            SELECTED<br>
-            WORK
-        </h1>
+<section class="work-intro">
 
-        <p class="intro">
-            A selection of visual work created across
-            architecture, places, people and moments.
+    <div class="work-label">
+        KOFINAS VISUALS / PORTFOLIO
+    </div>
+
+    <h1 class="work-heading">
+        SELECTED
+        <span>WORK.</span>
+    </h1>
+
+    <div class="work-intro-bottom">
+
+        <div class="work-intro-line"></div>
+
+        <p class="work-intro-copy">
+            Photography and visual production across people,
+            places, products, brands and experiences.
+            The portfolio evolves with every project.
         </p>
 
-    </header>
+    </div>
+
+</section>
 
 
-    <main class="work">
+
+<!-- =====================================================
+     CATEGORIES
+===================================================== -->
+
+<section class="category-wrap">
+
+    <div class="category-top">
+
+        <div class="category-label">
+            EXPLORE BY CATEGORY
+        </div>
+
+        <div class="category-count">
+            06 PROJECTS
+        </div>
+
+    </div>
 
 
-        <article class="project large">
+    <div class="categories">
+
+        <button class="category active" data-filter="all">
+            ALL
+        </button>
+
+        <button class="category" data-filter="real-estate">
+            REAL ESTATE
+        </button>
+
+        <button class="category" data-filter="food">
+            FOOD
+        </button>
+
+        <button class="category" data-filter="products">
+            PRODUCTS
+        </button>
+
+        <button class="category" data-filter="commercial">
+            COMMERCIAL
+        </button>
+
+        <button class="category" data-filter="events">
+            EVENTS
+        </button>
+
+        <button class="category" data-filter="weddings">
+            WEDDINGS
+        </button>
+
+        <button class="category" data-filter="baptisms">
+            BAPTISMS
+        </button>
+
+        <button class="category" data-filter="portraits">
+            PORTRAITS
+        </button>
+
+        <button class="category" data-filter="outdoor">
+            OUTDOOR
+        </button>
+
+        <button class="category" data-filter="automotive">
+            AUTOMOTIVE
+        </button>
+
+        <button class="category" data-filter="sport">
+            SPORT
+        </button>
+
+        <button class="category" data-filter="architecture">
+            ARCHITECTURE
+        </button>
+
+        <button class="category" data-filter="aerial">
+            AERIAL
+        </button>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     PORTFOLIO
+===================================================== -->
+
+<main class="portfolio">
+
+    <div class="project-grid">
+
+
+        <!-- PROJECT 01 -->
+
+        <article class="project project-a"
+                 data-category="real-estate architecture">
 
             <div class="project-image">
+
+                <span class="project-number">
+                    01
+                </span>
 
                 <img
                     src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=2200&q=90"
-                    alt="Architecture photography"
+                    alt="Modern interior placeholder"
                 >
+
+                <div class="project-overlay">
+
+                    <div class="project-overlay-title">
+                        REAL ESTATE
+                    </div>
+
+                    <div class="project-overlay-arrow">
+                        ↗
+                    </div>
+
+                </div>
 
             </div>
 
+
             <div class="project-info">
 
-                <span class="project-name">
-                    Space / Structure
-                </span>
+                <div>
 
-                <span class="project-category">
-                    Real Estate
-                </span>
+                    <div class="project-title">
+                        Spaces in focus
+                    </div>
+
+                    <div class="project-category">
+                        Real Estate / Architecture
+                    </div>
+
+                </div>
+
+                <div class="project-year">
+                    01
+                </div>
 
             </div>
 
         </article>
 
 
-        <article class="project portrait">
+
+        <!-- PROJECT 02 -->
+
+        <article class="project project-b"
+                 data-category="food commercial">
 
             <div class="project-image">
 
+                <span class="project-number">
+                    02
+                </span>
+
                 <img
-                    src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=1600&q=90"
-                    alt="Portrait photography"
+                    src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=1800&q=90"
+                    alt="Food photography placeholder"
                 >
+
+                <div class="project-overlay">
+
+                    <div class="project-overlay-title">
+                        FOOD
+                    </div>
+
+                    <div class="project-overlay-arrow">
+                        ↗
+                    </div>
+
+                </div>
 
             </div>
 
+
             <div class="project-info">
 
-                <span class="project-name">
-                    Human / Character
-                </span>
+                <div>
 
-                <span class="project-category">
-                    Portrait
-                </span>
+                    <div class="project-title">
+                        Made to be seen
+                    </div>
+
+                    <div class="project-category">
+                        Food / Hospitality
+                    </div>
+
+                </div>
+
+                <div class="project-year">
+                    02
+                </div>
 
             </div>
 
         </article>
 
 
-        <article class="project wide">
+
+        <!-- PROJECT 03 -->
+
+        <article class="project project-c"
+                 data-category="events weddings baptisms">
 
             <div class="project-image">
 
+                <span class="project-number">
+                    03
+                </span>
+
                 <img
-                    src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=2200&q=90"
-                    alt="Outdoor photography"
+                    src="https://images.unsplash.com/photo-1519167758481-83f550bb49b3?auto=format&fit=crop&w=2200&q=90"
+                    alt="Event photography placeholder"
                 >
+
+                <div class="project-overlay">
+
+                    <div class="project-overlay-title">
+                        EVENTS
+                    </div>
+
+                    <div class="project-overlay-arrow">
+                        ↗
+                    </div>
+
+                </div>
 
             </div>
 
+
             <div class="project-info">
 
-                <span class="project-name">
-                    Open / Outside
-                </span>
+                <div>
 
-                <span class="project-category">
-                    Outdoor
-                </span>
+                    <div class="project-title">
+                        Moments in motion
+                    </div>
+
+                    <div class="project-category">
+                        Events / Weddings / Baptisms
+                    </div>
+
+                </div>
+
+                <div class="project-year">
+                    03
+                </div>
 
             </div>
 
         </article>
 
 
-        <article class="project large">
+
+        <!-- PROJECT 04 -->
+
+        <article class="project project-d"
+                 data-category="products commercial">
 
             <div class="project-image">
 
+                <span class="project-number">
+                    04
+                </span>
+
                 <img
-                    src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&w=2200&q=90"
-                    alt="Event photography"
+                    src="https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f?auto=format&fit=crop&w=1800&q=90"
+                    alt="Camera product photography placeholder"
                 >
+
+                <div class="project-overlay">
+
+                    <div class="project-overlay-title">
+                        PRODUCTS
+                    </div>
+
+                    <div class="project-overlay-arrow">
+                        ↗
+                    </div>
+
+                </div>
 
             </div>
 
+
             <div class="project-info">
 
-                <span class="project-name">
-                    Energy / Moment
-                </span>
+                <div>
 
-                <span class="project-category">
-                    Events
-                </span>
+                    <div class="project-title">
+                        Objects with presence
+                    </div>
+
+                    <div class="project-category">
+                        Products / Commercial
+                    </div>
+
+                </div>
+
+                <div class="project-year">
+                    04
+                </div>
 
             </div>
 
         </article>
 
 
-    </main>
+
+        <!-- PROJECT 05 -->
+
+        <article class="project project-e"
+                 data-category="portraits outdoor">
+
+            <div class="project-image">
+
+                <span class="project-number">
+                    05
+                </span>
+
+                <img
+                    src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=1800&q=90"
+                    alt="Portrait photography placeholder"
+                >
+
+                <div class="project-overlay">
+
+                    <div class="project-overlay-title">
+                        PORTRAITS
+                    </div>
+
+                    <div class="project-overlay-arrow">
+                        ↗
+                    </div>
+
+                </div>
+
+            </div>
 
 
-    <footer>
+            <div class="project-info">
 
-        <span>KOFINAS VISUALS</span>
+                <div>
 
-        <span>by TRAVELFILMGR</span>
+                    <div class="project-title">
+                        People, naturally
+                    </div>
 
-        <span>Visual Production</span>
+                    <div class="project-category">
+                        Portraits / Lifestyle
+                    </div>
 
-    </footer>
+                </div>
+
+                <div class="project-year">
+                    05
+                </div>
+
+            </div>
+
+        </article>
+
+
+
+        <!-- PROJECT 06 -->
+
+        <article class="project project-f"
+                 data-category="outdoor automotive sport aerial">
+
+            <div class="project-image">
+
+                <span class="project-number">
+                    06
+                </span>
+
+                <img
+                    src="https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=2200&q=90"
+                    alt="Outdoor photography placeholder"
+                >
+
+                <div class="project-overlay">
+
+                    <div class="project-overlay-title">
+                        OUTDOOR
+                    </div>
+
+                    <div class="project-overlay-arrow">
+                        ↗
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="project-info">
+
+                <div>
+
+                    <div class="project-title">
+                        Beyond the frame
+                    </div>
+
+                    <div class="project-category">
+                        Outdoor / Automotive / Sport
+                    </div>
+
+                </div>
+
+                <div class="project-year">
+                    06
+                </div>
+
+            </div>
+
+        </article>
+
+
+    </div>
+
+</main>
+
+
+
+<!-- =====================================================
+     STATEMENT
+===================================================== -->
+
+<section class="statement">
+
+    <div class="statement-label">
+        KOFINAS VISUALS / APPROACH
+    </div>
+
+
+    <h2 class="statement-title">
+
+        EVERY PROJECT
+        <span>HAS A STORY.</span>
+
+    </h2>
+
+
+    <div class="statement-bottom">
+
+        <p class="statement-copy">
+            From a product and a plate to a property,
+            a person or a once-in-a-lifetime event,
+            the goal remains the same:
+            create images with purpose, character
+            and lasting visual value.
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     END CTA
+===================================================== -->
+
+<section class="work-end">
+
+    <div class="work-end-label">
+        HAVE A PROJECT IN MIND?
+    </div>
+
+
+    <h2 class="work-end-title">
+        LET'S MAKE
+        <span>IT VISIBLE.</span>
+    </h2>
+
+
+    <a
+        href="mailto:kofinasvisuals@gmail.com"
+        class="work-end-link"
+    >
+        START A PROJECT
+        <span>→</span>
+    </a>
+
+</section>
+
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer>
+
+    <div class="footer-brand">
+        KOFINAS VISUALS · BY TRAVELFILMGR
+    </div>
+
+    <div class="footer-copy">
+        © 2026 KOFINAS VISUALS
+    </div>
+
+</footer>
+
+
+
+<!-- =====================================================
+     FILTER SYSTEM
+===================================================== -->
+
+<script>
+
+const buttons = document.querySelectorAll(".category");
+const projects = document.querySelectorAll(".project");
+
+buttons.forEach(button => {
+
+    button.addEventListener("click", () => {
+
+        const filter = button.dataset.filter;
+
+
+        buttons.forEach(item => {
+            item.classList.remove("active");
+        });
+
+        button.classList.add("active");
+
+
+        projects.forEach(project => {
+
+            const categories = project.dataset.category.split(" ");
+
+
+            if(
+                filter === "all" ||
+                categories.includes(filter)
+            ){
+
+                project.classList.remove("hidden");
+
+            }else{
+
+                project.classList.add("hidden");
+
+            }
+
+        });
+
+    });
+
+});
+
+</script>
+
 
 </body>
 </html>
