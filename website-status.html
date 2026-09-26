@@ -75,6 +75,7 @@ header{
     font-size:10px;
     letter-spacing:.18em;
     text-transform:uppercase;
+
     opacity:.65;
 
     transition:opacity .3s ease;
@@ -90,6 +91,7 @@ header{
 .language{
     display:flex;
     align-items:center;
+
     gap:8px;
 
     font-size:10px;
@@ -163,6 +165,7 @@ header{
 
 .hero-title span{
     display:block;
+
     color:#777;
 }
 
@@ -252,6 +255,7 @@ header{
 .status-line{
     display:flex;
     justify-content:space-between;
+
     gap:30px;
 
     padding:16px 0;
@@ -287,41 +291,45 @@ header{
 /* FOOTER */
 
 footer{
-    background:#080808;
-
-    color:#fff;
+    border-top:1px solid rgba(255,255,255,.1);
 
     padding:35px 6vw;
 
     display:flex;
-
     justify-content:space-between;
     align-items:center;
 }
 
 .footer-brand{
-    font-size:10px;
+    font-size:9px;
     letter-spacing:4px;
 }
 
-.footer-copy{
+.footer-right{
     display:flex;
+
     align-items:center;
 
     gap:22px;
 
+    flex-wrap:wrap;
+
     font-size:8px;
     letter-spacing:2px;
 
-    opacity:.45;
+    color:rgba(255,255,255,.42);
 }
 
 .footer-link{
-    transition:opacity .3s ease;
+    transition:color .3s ease;
 }
 
 .footer-link:hover{
-    opacity:1;
+    color:#fff;
+}
+
+.footer-copy{
+    color:rgba(255,255,255,.32);
 }
 
 
@@ -350,6 +358,7 @@ footer{
         font-size:8px;
     }
 
+
     .hero{
         min-height:68vh;
 
@@ -365,6 +374,7 @@ footer{
 
         font-size:13px;
     }
+
 
     .content{
         padding:0 20px;
@@ -386,6 +396,7 @@ footer{
         font-size:14px;
     }
 
+
     .status-line{
         display:block;
     }
@@ -396,18 +407,17 @@ footer{
         text-align:left;
     }
 
+
     footer{
         display:block;
 
-        padding:30px;
+        padding:30px 25px;
     }
 
-    .footer-copy{
-        margin-top:15px;
+    .footer-right{
+        margin-top:18px;
 
-        flex-wrap:wrap;
-
-        gap:12px;
+        gap:12px 18px;
     }
 
 }
@@ -422,7 +432,10 @@ footer{
 
 <header>
 
-    <a href="preview.html" class="brand">
+    <a
+        href="preview.html"
+        class="brand"
+    >
         KOFINAS VISUALS
     </a>
 
@@ -505,11 +518,11 @@ footer{
 
     <p
         class="hero-text"
-        data-en="Information about the current development and professional status of KOFINAS VISUALS."
-        data-gr="Πληροφορίες σχετικά με την τρέχουσα κατάσταση ανάπτυξης και επαγγελματικής λειτουργίας του KOFINAS VISUALS."
+        data-en="Simple information about the current stage of KOFINAS VISUALS and this website."
+        data-gr="Απλές πληροφορίες σχετικά με το τρέχον στάδιο του KOFINAS VISUALS και της ιστοσελίδας."
     >
-        Information about the current development and
-        professional status of KOFINAS VISUALS.
+        Simple information about the current stage
+        of KOFINAS VISUALS and this website.
     </p>
 
 </section>
@@ -535,10 +548,10 @@ footer{
     <div class="section-content">
 
         <h2
-            data-en="IN PREPARATION."
-            data-gr="ΣΕ ΠΡΟΕΤΟΙΜΑΣΙΑ."
+            data-en="IN DEVELOPMENT."
+            data-gr="ΥΠΟ ΑΝΑΠΤΥΞΗ."
         >
-            IN PREPARATION.
+            IN DEVELOPMENT.
         </h2>
 
 
@@ -552,12 +565,12 @@ footer{
 
 
         <p
-            data-en="The website is currently used to develop and present the visual identity, structure and future direction of the project."
-            data-gr="Η ιστοσελίδα χρησιμοποιείται αυτή τη στιγμή για την ανάπτυξη και παρουσίαση της οπτικής ταυτότητας, της δομής και της μελλοντικής κατεύθυνσης του project."
+            data-en="The website is currently being used to develop and present the identity, portfolio structure and future direction of the project."
+            data-gr="Η ιστοσελίδα χρησιμοποιείται αυτή τη στιγμή για την ανάπτυξη και παρουσίαση της ταυτότητας, της δομής του portfolio και της μελλοντικής κατεύθυνσης του project."
         >
-            The website is currently used to develop and present
-            the visual identity, structure and future direction
-            of the project.
+            The website is currently being used to develop
+            and present the identity, portfolio structure
+            and future direction of the project.
         </p>
 
     </div>
@@ -572,10 +585,10 @@ footer{
 
     <div
         class="section-number"
-        data-en="02 / SERVICES"
-        data-gr="02 / ΥΠΗΡΕΣΙΕΣ"
+        data-en="02 / PROFESSIONAL SERVICES"
+        data-gr="02 / ΕΠΑΓΓΕΛΜΑΤΙΚΕΣ ΥΠΗΡΕΣΙΕΣ"
     >
-        02 / SERVICES
+        02 / PROFESSIONAL SERVICES
     </div>
 
 
@@ -599,10 +612,10 @@ footer{
 
 
         <p
-            data-en="The website does not currently operate as an online store, booking platform or payment platform."
-            data-gr="Η ιστοσελίδα δεν λειτουργεί αυτή τη στιγμή ως ηλεκτρονικό κατάστημα, πλατφόρμα κρατήσεων ή πλατφόρμα πληρωμών."
+            data-en="The current website does not operate as an online store, booking platform or payment platform."
+            data-gr="Η παρούσα ιστοσελίδα δεν λειτουργεί ως ηλεκτρονικό κατάστημα, πλατφόρμα κρατήσεων ή πλατφόρμα πληρωμών."
         >
-            The website does not currently operate as an online
+            The current website does not operate as an online
             store, booking platform or payment platform.
         </p>
 
@@ -618,33 +631,35 @@ footer{
 
     <div
         class="section-number"
-        data-en="03 / WEBSITE"
-        data-gr="03 / ΙΣΤΟΣΕΛΙΔΑ"
+        data-en="03 / CURRENT WEBSITE"
+        data-gr="03 / ΤΡΕΧΟΥΣΑ ΙΣΤΟΣΕΛΙΔΑ"
     >
-        03 / WEBSITE
+        03 / CURRENT WEBSITE
     </div>
 
 
     <div class="section-content">
 
         <h2
-            data-en="PRESENTATION ONLY."
-            data-gr="ΠΑΡΟΥΣΙΑΣΗ."
+            data-en="PRESENTATION & DEVELOPMENT."
+            data-gr="ΠΑΡΟΥΣΙΑΣΗ & ΑΝΑΠΤΥΞΗ."
         >
-            PRESENTATION ONLY.
+            PRESENTATION & DEVELOPMENT.
         </h2>
 
 
         <p
-            data-en="The current website mainly serves as a presentation and development preview of KOFINAS VISUALS."
-            data-gr="Η παρούσα ιστοσελίδα λειτουργεί κυρίως ως χώρος παρουσίασης και προεπισκόπησης της ανάπτυξης του KOFINAS VISUALS."
+            data-en="At this stage, the website mainly serves as a presentation and development preview of KOFINAS VISUALS."
+            data-gr="Σε αυτό το στάδιο, η ιστοσελίδα λειτουργεί κυρίως ως χώρος παρουσίασης και προεπισκόπησης της ανάπτυξης του KOFINAS VISUALS."
         >
-            The current website mainly serves as a presentation
-            and development preview of KOFINAS VISUALS.
+            At this stage, the website mainly serves
+            as a presentation and development preview
+            of KOFINAS VISUALS.
         </p>
 
 
         <div class="status-block">
+
 
             <div class="status-line">
 
@@ -655,6 +670,7 @@ footer{
                 >
                     PROJECT
                 </div>
+
 
                 <div
                     class="status-value"
@@ -667,6 +683,30 @@ footer{
             </div>
 
 
+
+            <div class="status-line">
+
+                <div
+                    class="status-label"
+                    data-en="PORTFOLIO"
+                    data-gr="PORTFOLIO"
+                >
+                    PORTFOLIO
+                </div>
+
+
+                <div
+                    class="status-value"
+                    data-en="IN DEVELOPMENT"
+                    data-gr="ΥΠΟ ΑΝΑΠΤΥΞΗ"
+                >
+                    IN DEVELOPMENT
+                </div>
+
+            </div>
+
+
+
             <div class="status-line">
 
                 <div
@@ -676,6 +716,7 @@ footer{
                 >
                     PROFESSIONAL SERVICES
                 </div>
+
 
                 <div
                     class="status-value"
@@ -688,15 +729,17 @@ footer{
             </div>
 
 
+
             <div class="status-line">
 
                 <div
                     class="status-label"
-                    data-en="ONLINE PAYMENTS"
-                    data-gr="ONLINE ΠΛΗΡΩΜΕΣ"
+                    data-en="ONLINE BOOKINGS"
+                    data-gr="ONLINE ΚΡΑΤΗΣΕΙΣ"
                 >
-                    ONLINE PAYMENTS
+                    ONLINE BOOKINGS
                 </div>
+
 
                 <div
                     class="status-value"
@@ -707,6 +750,30 @@ footer{
                 </div>
 
             </div>
+
+
+
+            <div class="status-line">
+
+                <div
+                    class="status-label"
+                    data-en="ONLINE PAYMENTS"
+                    data-gr="ONLINE ΠΛΗΡΩΜΕΣ"
+                >
+                    ONLINE PAYMENTS
+                </div>
+
+
+                <div
+                    class="status-value"
+                    data-en="NOT AVAILABLE"
+                    data-gr="ΜΗ ΔΙΑΘΕΣΙΜΕΣ"
+                >
+                    NOT AVAILABLE
+                </div>
+
+            </div>
+
 
         </div>
 
@@ -740,10 +807,11 @@ footer{
 
 
         <p
-            data-en="The website will be updated as KOFINAS VISUALS develops and professional services become available."
-            data-gr="Η ιστοσελίδα θα ενημερώνεται καθώς εξελίσσεται το KOFINAS VISUALS και γίνονται διαθέσιμες οι επαγγελματικές υπηρεσίες."
+            data-en="The website will continue to be updated as KOFINAS VISUALS develops, the portfolio grows and professional services become available."
+            data-gr="Η ιστοσελίδα θα συνεχίσει να ενημερώνεται καθώς εξελίσσεται το KOFINAS VISUALS, αναπτύσσεται το portfolio και γίνονται διαθέσιμες οι επαγγελματικές υπηρεσίες."
         >
-            The website will be updated as KOFINAS VISUALS develops
+            The website will continue to be updated
+            as KOFINAS VISUALS develops, the portfolio grows
             and professional services become available.
         </p>
 
@@ -758,14 +826,16 @@ footer{
 
 
 
+<!-- FOOTER -->
+
 <footer>
 
     <div class="footer-brand">
-        KOFINAS VISUALS
+        KOFINAS VISUALS · BY TRAVELFILMGR
     </div>
 
 
-    <div class="footer-copy">
+    <div class="footer-right">
 
         <a
             href="privacy.html"
@@ -776,7 +846,22 @@ footer{
             PRIVACY POLICY
         </a>
 
-        <span>
+
+        <a
+            href="website-status.html"
+            class="footer-link"
+            data-en="WEBSITE STATUS"
+            data-gr="ΚΑΤΑΣΤΑΣΗ ΙΣΤΟΣΕΛΙΔΑΣ"
+        >
+            WEBSITE STATUS
+        </a>
+
+
+        <span
+            class="footer-copy"
+            data-en="© 2026 KOFINAS VISUALS · ALL RIGHTS RESERVED"
+            data-gr="© 2026 KOFINAS VISUALS · ΜΕ ΕΠΙΦΥΛΑΞΗ ΠΑΝΤΟΣ ΔΙΚΑΙΩΜΑΤΟΣ"
+        >
             © 2026 KOFINAS VISUALS · ALL RIGHTS RESERVED
         </span>
 
@@ -785,6 +870,8 @@ footer{
 </footer>
 
 
+
+<!-- LANGUAGE -->
 
 <script>
 
@@ -801,7 +888,9 @@ const translatable =
 function setLanguage(language){
 
     document.documentElement.lang =
-        language === "gr" ? "el" : "en";
+        language === "gr"
+            ? "el"
+            : "en";
 
 
     translatable.forEach(element => {
@@ -828,24 +917,22 @@ function setLanguage(language){
 }
 
 
-enBtn.addEventListener("click", () => {
+enBtn.addEventListener(
+    "click",
+    () => setLanguage("en")
+);
 
-    setLanguage("en");
 
-});
-
-
-grBtn.addEventListener("click", () => {
-
-    setLanguage("gr");
-
-});
+grBtn.addEventListener(
+    "click",
+    () => setLanguage("gr")
+);
 
 
 /*
     English is always the default.
 
-    No language preference is stored.
+    No visitor preference is stored.
     No localStorage.
     No sessionStorage.
     No cookies.
