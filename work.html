@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 
 <meta charset="UTF-8">
@@ -7,7 +8,10 @@
 
 <title>Work — KOFINAS VISUALS</title>
 
-<meta name="description" content="Selected work by KOFINAS VISUALS — photography and visual production.">
+<meta
+    name="description"
+    content="Selected work by KOFINAS VISUALS — photography and visual production."
+>
 
 <style>
 
@@ -67,7 +71,19 @@ button{
 .header-right{
     display:flex;
     align-items:center;
-    gap:35px;
+    gap:28px;
+}
+
+.back{
+    font-size:9px;
+    letter-spacing:3px;
+    opacity:.65;
+
+    transition:opacity .3s ease;
+}
+
+.back:hover{
+    opacity:1;
 }
 
 .header-link{
@@ -76,10 +92,44 @@ button{
     opacity:.65;
 }
 
-.back{
+
+/* LANGUAGE */
+
+.language{
+    display:flex;
+    align-items:center;
+    gap:7px;
+
     font-size:9px;
-    letter-spacing:3px;
-    opacity:.65;
+    letter-spacing:2px;
+}
+
+.language button{
+    appearance:none;
+    border:0;
+    background:none;
+
+    color:#fff;
+
+    cursor:pointer;
+
+    font-size:9px;
+    letter-spacing:2px;
+
+    opacity:.35;
+
+    padding:4px 0;
+
+    transition:opacity .25s ease;
+}
+
+.language button:hover,
+.language button.active{
+    opacity:1;
+}
+
+.language-separator{
+    opacity:.25;
 }
 
 
@@ -128,6 +178,7 @@ button{
 .work-intro-line{
     width:100%;
     height:1px;
+
     background:rgba(255,255,255,.17);
 }
 
@@ -160,12 +211,14 @@ button{
 .category-label{
     font-size:9px;
     letter-spacing:4px;
+
     opacity:.35;
 }
 
 .category-count{
     font-size:9px;
     letter-spacing:3px;
+
     opacity:.3;
 }
 
@@ -179,13 +232,16 @@ button{
 
 .category{
     appearance:none;
+
     border:0;
     background:none;
+
     color:#f3f1ec;
 
     cursor:pointer;
 
     padding:19px 24px 19px 0;
+
     margin-right:28px;
 
     font-size:9px;
@@ -206,15 +262,18 @@ button{
 
 .category.active:before{
     content:"";
+
     display:inline-block;
 
     width:5px;
     height:5px;
 
     border-radius:50%;
+
     background:#f3f1ec;
 
     margin-right:10px;
+
     vertical-align:middle;
 }
 
@@ -229,7 +288,9 @@ button{
 
 .project-grid{
     display:grid;
+
     grid-template-columns:repeat(12,1fr);
+
     column-gap:2.5vw;
     row-gap:130px;
 }
@@ -243,11 +304,15 @@ button{
 }
 
 
-/* PROJECT IMAGE / COMING SOON PLACEHOLDER */
+/* =====================================================
+   PROJECT IMAGE / COMING SOON
+===================================================== */
 
 .project-image{
     position:relative;
+
     overflow:hidden;
+
     background:#111;
 }
 
@@ -256,6 +321,7 @@ button{
     height:100%;
 
     display:flex;
+
     align-items:center;
     justify-content:center;
 
@@ -278,6 +344,7 @@ button{
     content:"";
 
     position:absolute;
+
     inset:18px;
 
     border:1px solid rgba(255,255,255,.045);
@@ -287,6 +354,7 @@ button{
 
 .project:hover .project-placeholder{
     transform:scale(1.015);
+
     background:
         radial-gradient(
             circle at 50% 45%,
@@ -302,17 +370,21 @@ button{
 
 .coming-soon{
     position:relative;
+
     z-index:1;
 
     font-size:9px;
     letter-spacing:5px;
+
     text-transform:uppercase;
 
     color:rgba(255,255,255,.3);
 }
 
 
-/* IMAGE NUMBER */
+/* =====================================================
+   IMAGE NUMBER
+===================================================== */
 
 .project-number{
     position:absolute;
@@ -326,11 +398,14 @@ button{
     letter-spacing:3px;
 
     color:#fff;
+
     opacity:.7;
 }
 
 
-/* PROJECT OVERLAY */
+/* =====================================================
+   PROJECT OVERLAY
+===================================================== */
 
 .project-overlay{
     position:absolute;
@@ -342,6 +417,7 @@ button{
     z-index:2;
 
     display:flex;
+
     justify-content:space-between;
     align-items:flex-end;
 
@@ -379,6 +455,7 @@ button{
 
 .project-b{
     grid-column:9 / 13;
+
     margin-top:180px;
 }
 
@@ -398,6 +475,7 @@ button{
 
 .project-d{
     grid-column:1 / 6;
+
     margin-top:100px;
 }
 
@@ -408,6 +486,7 @@ button{
 
 .project-e{
     grid-column:7 / 13;
+
     margin-top:230px;
 }
 
@@ -431,6 +510,7 @@ button{
 
 .project-info{
     display:flex;
+
     justify-content:space-between;
     align-items:flex-start;
 
@@ -439,6 +519,7 @@ button{
 
 .project-title{
     font-size:19px;
+
     letter-spacing:-.5px;
 }
 
@@ -467,12 +548,14 @@ button{
     padding:130px 7vw 170px;
 
     background:#e9e7e1;
+
     color:#080808;
 }
 
 .statement-label{
     font-size:9px;
     letter-spacing:4px;
+
     opacity:.4;
 
     margin-bottom:80px;
@@ -480,13 +563,17 @@ button{
 
 .statement-title{
     font-size:clamp(55px,9vw,145px);
+
     line-height:.82;
+
     letter-spacing:-8px;
+
     font-weight:500;
 }
 
 .statement-title span{
     display:block;
+
     margin-left:17vw;
 }
 
@@ -494,6 +581,7 @@ button{
     margin-top:100px;
 
     display:flex;
+
     justify-content:flex-end;
 }
 
@@ -520,6 +608,7 @@ button{
 .work-end-label{
     font-size:9px;
     letter-spacing:4px;
+
     opacity:.35;
 
     margin-bottom:45px;
@@ -527,19 +616,25 @@ button{
 
 .work-end-title{
     font-size:clamp(45px,8vw,120px);
+
     line-height:.85;
+
     letter-spacing:-6px;
+
     font-weight:500;
 }
 
 .work-end-title span{
     font-family:Georgia,serif;
+
     font-weight:400;
 }
 
 .work-end-link{
     display:inline-flex;
+
     align-items:center;
+
     gap:25px;
 
     margin-top:70px;
@@ -571,6 +666,7 @@ footer{
     padding:32px 6vw;
 
     display:flex;
+
     justify-content:space-between;
     align-items:center;
 }
@@ -583,6 +679,7 @@ footer{
 .footer-copy{
     font-size:8px;
     letter-spacing:2px;
+
     opacity:.3;
 }
 
@@ -594,15 +691,31 @@ footer{
 @media(max-width:700px){
 
     .site-header{
-        padding:25px 25px;
+        padding:25px;
     }
 
+
     .header-right{
-        gap:15px;
+        gap:14px;
     }
+
 
     .header-link{
         display:none;
+    }
+
+
+    .back{
+        font-size:8px;
+
+        letter-spacing:2px;
+    }
+
+
+    .language button{
+        font-size:8px;
+
+        letter-spacing:1.5px;
     }
 
 
@@ -612,26 +725,34 @@ footer{
         padding:160px 25px 80px;
     }
 
+
     .work-label{
         margin-bottom:28px;
     }
 
+
     .work-heading{
         font-size:22vw;
+
         letter-spacing:-6px;
     }
+
 
     .work-heading span{
         margin-left:9vw;
     }
 
+
     .work-intro-bottom{
         display:block;
+
         margin-top:70px;
     }
 
+
     .work-intro-copy{
         margin-top:28px;
+
         font-size:11px;
     }
 
@@ -640,17 +761,22 @@ footer{
         padding:0 25px 70px;
     }
 
+
     .category-top{
         margin-bottom:20px;
     }
+
 
     .categories{
         padding:5px 0;
     }
 
+
     .category{
         padding:15px 15px 15px 0;
+
         margin-right:12px;
+
         font-size:8px;
     }
 
@@ -659,14 +785,18 @@ footer{
         padding:0 25px 120px;
     }
 
+
     .project-grid{
         display:block;
     }
 
+
     .project{
         width:100%;
+
         margin:0 0 85px 0;
     }
+
 
     .project-a .project-image,
     .project-b .project-image,
@@ -677,9 +807,11 @@ footer{
         height:115vw;
     }
 
+
     .project-overlay{
         opacity:1;
     }
+
 
     .project-title{
         font-size:18px;
@@ -690,22 +822,28 @@ footer{
         padding:110px 25px 120px;
     }
 
+
     .statement-label{
         margin-bottom:60px;
     }
 
+
     .statement-title{
         font-size:16vw;
+
         letter-spacing:-4px;
     }
+
 
     .statement-title span{
         margin-left:8vw;
     }
 
+
     .statement-bottom{
         margin-top:65px;
     }
+
 
     .statement-copy{
         font-size:11px;
@@ -716,10 +854,13 @@ footer{
         padding:110px 25px 120px;
     }
 
+
     .work-end-title{
         font-size:16vw;
+
         letter-spacing:-4px;
     }
+
 
     .work-end-link{
         margin-top:55px;
@@ -728,8 +869,10 @@ footer{
 
     footer{
         display:block;
+
         padding:28px 25px;
     }
+
 
     .footer-copy{
         margin-top:15px;
@@ -751,18 +894,57 @@ footer{
 
 <header class="site-header">
 
-    <a href="preview.html" class="brand">
+    <a
+        href="preview.html"
+        class="brand"
+    >
         KOFINAS VISUALS
     </a>
 
+
     <div class="header-right">
 
-        <a href="preview.html" class="back">
+
+        <a
+            href="preview.html"
+            class="back"
+            data-en="BACK"
+            data-gr="ΠΙΣΩ"
+        >
             BACK
         </a>
 
+
         <div class="header-link">
             BY TRAVELFILMGR
+        </div>
+
+
+        <div class="language">
+
+            <button
+                id="enBtn"
+                class="active"
+                type="button"
+                aria-label="English"
+            >
+                EN
+            </button>
+
+
+            <span class="language-separator">
+                ·
+            </span>
+
+
+            <button
+                id="grBtn"
+                type="button"
+                aria-label="Ελληνικά"
+            >
+                GR
+            </button>
+
         </div>
 
     </div>
@@ -777,20 +959,48 @@ footer{
 
 <section class="work-intro">
 
-    <div class="work-label">
+
+    <div
+        class="work-label"
+        data-en="KOFINAS VISUALS / PORTFOLIO"
+        data-gr="KOFINAS VISUALS / ΧΑΡΤΟΦΥΛΑΚΙΟ"
+    >
         KOFINAS VISUALS / PORTFOLIO
     </div>
 
+
+
     <h1 class="work-heading">
-        SELECTED
-        <span>WORK.</span>
+
+        <span
+            style="margin-left:0;"
+            data-en="SELECTED"
+            data-gr="ΕΠΙΛΕΓΜΕΝΗ"
+        >
+            SELECTED
+        </span>
+
+        <span
+            data-en="WORK."
+            data-gr="ΔΟΥΛΕΙΑ."
+        >
+            WORK.
+        </span>
+
     </h1>
+
+
 
     <div class="work-intro-bottom">
 
         <div class="work-intro-line"></div>
 
-        <p class="work-intro-copy">
+
+        <p
+            class="work-intro-copy"
+            data-en="Photography and visual production across people, places, products, brands and experiences. The portfolio evolves with every project."
+            data-gr="Φωτογραφία και οπτική παραγωγή γύρω από ανθρώπους, χώρους, προϊόντα, επιχειρήσεις και εμπειρίες. Το portfolio εξελίσσεται με κάθε νέο project."
+        >
             Photography and visual production across people,
             places, products, brands and experiences.
             The portfolio evolves with every project.
@@ -808,74 +1018,170 @@ footer{
 
 <section class="category-wrap">
 
+
     <div class="category-top">
 
-        <div class="category-label">
+
+        <div
+            class="category-label"
+            data-en="EXPLORE BY CATEGORY"
+            data-gr="ΕΞΕΡΕΥΝΗΣΗ ΑΝΑ ΚΑΤΗΓΟΡΙΑ"
+        >
             EXPLORE BY CATEGORY
         </div>
 
-        <div class="category-count">
+
+        <div
+            class="category-count"
+            data-en="06 PROJECTS"
+            data-gr="06 PROJECTS"
+        >
             06 PROJECTS
         </div>
 
     </div>
 
 
+
     <div class="categories">
 
-        <button class="category active" data-filter="all">
+
+        <button
+            class="category active"
+            data-filter="all"
+            data-en="ALL"
+            data-gr="ΟΛΑ"
+        >
             ALL
         </button>
 
-        <button class="category" data-filter="real-estate">
+
+        <button
+            class="category"
+            data-filter="real-estate"
+            data-en="REAL ESTATE"
+            data-gr="ΑΚΙΝΗΤΑ"
+        >
             REAL ESTATE
         </button>
 
-        <button class="category" data-filter="food">
+
+        <button
+            class="category"
+            data-filter="food"
+            data-en="FOOD"
+            data-gr="ΦΑΓΗΤΟ"
+        >
             FOOD
         </button>
 
-        <button class="category" data-filter="products">
+
+        <button
+            class="category"
+            data-filter="products"
+            data-en="PRODUCTS"
+            data-gr="ΠΡΟΪΟΝΤΑ"
+        >
             PRODUCTS
         </button>
 
-        <button class="category" data-filter="commercial">
+
+        <button
+            class="category"
+            data-filter="commercial"
+            data-en="COMMERCIAL"
+            data-gr="ΕΜΠΟΡΙΚΗ"
+        >
             COMMERCIAL
         </button>
 
-        <button class="category" data-filter="events">
+
+        <button
+            class="category"
+            data-filter="events"
+            data-en="EVENTS"
+            data-gr="ΕΚΔΗΛΩΣΕΙΣ"
+        >
             EVENTS
         </button>
 
-        <button class="category" data-filter="weddings">
+
+        <button
+            class="category"
+            data-filter="weddings"
+            data-en="WEDDINGS"
+            data-gr="ΓΑΜΟΙ"
+        >
             WEDDINGS
         </button>
 
-        <button class="category" data-filter="baptisms">
+
+        <button
+            class="category"
+            data-filter="baptisms"
+            data-en="BAPTISMS"
+            data-gr="ΒΑΠΤΙΣΕΙΣ"
+        >
             BAPTISMS
         </button>
 
-        <button class="category" data-filter="portraits">
+
+        <button
+            class="category"
+            data-filter="portraits"
+            data-en="PORTRAITS"
+            data-gr="ΠΟΡΤΡΕΤΑ"
+        >
             PORTRAITS
         </button>
 
-        <button class="category" data-filter="outdoor">
+
+        <button
+            class="category"
+            data-filter="outdoor"
+            data-en="OUTDOOR"
+            data-gr="ΕΞΩΤΕΡΙΚΟΙ ΧΩΡΟΙ"
+        >
             OUTDOOR
         </button>
 
-        <button class="category" data-filter="automotive">
+
+        <button
+            class="category"
+            data-filter="automotive"
+            data-en="AUTOMOTIVE"
+            data-gr="ΑΥΤΟΚΙΝΗΣΗ"
+        >
             AUTOMOTIVE
         </button>
 
-        <button class="category" data-filter="sport">
+
+        <button
+            class="category"
+            data-filter="sport"
+            data-en="SPORT"
+            data-gr="ΑΘΛΗΤΙΣΜΟΣ"
+        >
             SPORT
         </button>
 
-        <button class="category" data-filter="architecture">
+
+        <button
+            class="category"
+            data-filter="architecture"
+            data-en="ARCHITECTURE"
+            data-gr="ΑΡΧΙΤΕΚΤΟΝΙΚΗ"
+        >
             ARCHITECTURE
         </button>
 
-        <button class="category" data-filter="aerial">
+
+        <button
+            class="category"
+            data-filter="aerial"
+            data-en="AERIAL"
+            data-gr="ΕΝΑΕΡΙΑ"
+        >
             AERIAL
         </button>
 
@@ -894,28 +1200,48 @@ footer{
     <div class="project-grid">
 
 
-        <!-- PROJECT 01 -->
 
-        <article class="project project-a"
-                 data-category="real-estate architecture">
+        <!-- =================================================
+             PROJECT 01
+        ================================================== -->
+
+        <article
+            class="project project-a"
+            data-category="real-estate architecture"
+        >
 
             <div class="project-image">
+
 
                 <span class="project-number">
                     01
                 </span>
 
+
                 <div class="project-placeholder">
-                    <span class="coming-soon">
+
+                    <span
+                        class="coming-soon"
+                        data-en="COMING SOON"
+                        data-gr="ΣΥΝΤΟΜΑ"
+                    >
                         COMING SOON
                     </span>
+
                 </div>
+
 
                 <div class="project-overlay">
 
-                    <div class="project-overlay-title">
+
+                    <div
+                        class="project-overlay-title"
+                        data-en="REAL ESTATE"
+                        data-gr="ΑΚΙΝΗΤΑ"
+                    >
                         REAL ESTATE
                     </div>
+
 
                     <div class="project-overlay-arrow">
                         ↗
@@ -926,20 +1252,32 @@ footer{
             </div>
 
 
+
             <div class="project-info">
 
                 <div>
 
-                    <div class="project-title">
+
+                    <div
+                        class="project-title"
+                        data-en="Spaces in focus"
+                        data-gr="Χώροι στο επίκεντρο"
+                    >
                         Spaces in focus
                     </div>
 
-                    <div class="project-category">
+
+                    <div
+                        class="project-category"
+                        data-en="Real Estate / Architecture"
+                        data-gr="Ακίνητα / Αρχιτεκτονική"
+                    >
                         Real Estate / Architecture
                     </div>
 
                 </div>
 
+
                 <div class="project-year">
                     01
                 </div>
@@ -950,28 +1288,47 @@ footer{
 
 
 
-        <!-- PROJECT 02 -->
+        <!-- =================================================
+             PROJECT 02
+        ================================================== -->
 
-        <article class="project project-b"
-                 data-category="food commercial">
+        <article
+            class="project project-b"
+            data-category="food commercial"
+        >
 
             <div class="project-image">
+
 
                 <span class="project-number">
                     02
                 </span>
 
+
                 <div class="project-placeholder">
-                    <span class="coming-soon">
+
+                    <span
+                        class="coming-soon"
+                        data-en="COMING SOON"
+                        data-gr="ΣΥΝΤΟΜΑ"
+                    >
                         COMING SOON
                     </span>
+
                 </div>
+
 
                 <div class="project-overlay">
 
-                    <div class="project-overlay-title">
+
+                    <div
+                        class="project-overlay-title"
+                        data-en="FOOD"
+                        data-gr="ΦΑΓΗΤΟ"
+                    >
                         FOOD
                     </div>
+
 
                     <div class="project-overlay-arrow">
                         ↗
@@ -982,20 +1339,32 @@ footer{
             </div>
 
 
+
             <div class="project-info">
 
                 <div>
 
-                    <div class="project-title">
+
+                    <div
+                        class="project-title"
+                        data-en="Made to be seen"
+                        data-gr="Φτιαγμένο για να ξεχωρίζει"
+                    >
                         Made to be seen
                     </div>
 
-                    <div class="project-category">
+
+                    <div
+                        class="project-category"
+                        data-en="Food / Hospitality"
+                        data-gr="Φαγητό / Φιλοξενία"
+                    >
                         Food / Hospitality
                     </div>
 
                 </div>
 
+
                 <div class="project-year">
                     02
                 </div>
@@ -1006,28 +1375,47 @@ footer{
 
 
 
-        <!-- PROJECT 03 -->
+        <!-- =================================================
+             PROJECT 03
+        ================================================== -->
 
-        <article class="project project-c"
-                 data-category="events weddings baptisms">
+        <article
+            class="project project-c"
+            data-category="events weddings baptisms"
+        >
 
             <div class="project-image">
+
 
                 <span class="project-number">
                     03
                 </span>
 
+
                 <div class="project-placeholder">
-                    <span class="coming-soon">
+
+                    <span
+                        class="coming-soon"
+                        data-en="COMING SOON"
+                        data-gr="ΣΥΝΤΟΜΑ"
+                    >
                         COMING SOON
                     </span>
+
                 </div>
+
 
                 <div class="project-overlay">
 
-                    <div class="project-overlay-title">
+
+                    <div
+                        class="project-overlay-title"
+                        data-en="EVENTS"
+                        data-gr="ΕΚΔΗΛΩΣΕΙΣ"
+                    >
                         EVENTS
                     </div>
+
 
                     <div class="project-overlay-arrow">
                         ↗
@@ -1038,20 +1426,32 @@ footer{
             </div>
 
 
+
             <div class="project-info">
 
                 <div>
 
-                    <div class="project-title">
+
+                    <div
+                        class="project-title"
+                        data-en="Moments in motion"
+                        data-gr="Στιγμές σε κίνηση"
+                    >
                         Moments in motion
                     </div>
 
-                    <div class="project-category">
+
+                    <div
+                        class="project-category"
+                        data-en="Events / Weddings / Baptisms"
+                        data-gr="Εκδηλώσεις / Γάμοι / Βαπτίσεις"
+                    >
                         Events / Weddings / Baptisms
                     </div>
 
                 </div>
 
+
                 <div class="project-year">
                     03
                 </div>
@@ -1062,28 +1462,47 @@ footer{
 
 
 
-        <!-- PROJECT 04 -->
+        <!-- =================================================
+             PROJECT 04
+        ================================================== -->
 
-        <article class="project project-d"
-                 data-category="products commercial">
+        <article
+            class="project project-d"
+            data-category="products commercial"
+        >
 
             <div class="project-image">
+
 
                 <span class="project-number">
                     04
                 </span>
 
+
                 <div class="project-placeholder">
-                    <span class="coming-soon">
+
+                    <span
+                        class="coming-soon"
+                        data-en="COMING SOON"
+                        data-gr="ΣΥΝΤΟΜΑ"
+                    >
                         COMING SOON
                     </span>
+
                 </div>
+
 
                 <div class="project-overlay">
 
-                    <div class="project-overlay-title">
+
+                    <div
+                        class="project-overlay-title"
+                        data-en="PRODUCTS"
+                        data-gr="ΠΡΟΪΟΝΤΑ"
+                    >
                         PRODUCTS
                     </div>
+
 
                     <div class="project-overlay-arrow">
                         ↗
@@ -1094,20 +1513,32 @@ footer{
             </div>
 
 
+
             <div class="project-info">
 
                 <div>
 
-                    <div class="project-title">
+
+                    <div
+                        class="project-title"
+                        data-en="Objects with presence"
+                        data-gr="Αντικείμενα με παρουσία"
+                    >
                         Objects with presence
                     </div>
 
-                    <div class="project-category">
+
+                    <div
+                        class="project-category"
+                        data-en="Products / Commercial"
+                        data-gr="Προϊόντα / Εμπορική Φωτογραφία"
+                    >
                         Products / Commercial
                     </div>
 
                 </div>
 
+
                 <div class="project-year">
                     04
                 </div>
@@ -1118,28 +1549,47 @@ footer{
 
 
 
-        <!-- PROJECT 05 -->
+        <!-- =================================================
+             PROJECT 05
+        ================================================== -->
 
-        <article class="project project-e"
-                 data-category="portraits outdoor">
+        <article
+            class="project project-e"
+            data-category="portraits outdoor"
+        >
 
             <div class="project-image">
+
 
                 <span class="project-number">
                     05
                 </span>
 
+
                 <div class="project-placeholder">
-                    <span class="coming-soon">
+
+                    <span
+                        class="coming-soon"
+                        data-en="COMING SOON"
+                        data-gr="ΣΥΝΤΟΜΑ"
+                    >
                         COMING SOON
                     </span>
+
                 </div>
+
 
                 <div class="project-overlay">
 
-                    <div class="project-overlay-title">
+
+                    <div
+                        class="project-overlay-title"
+                        data-en="PORTRAITS"
+                        data-gr="ΠΟΡΤΡΕΤΑ"
+                    >
                         PORTRAITS
                     </div>
+
 
                     <div class="project-overlay-arrow">
                         ↗
@@ -1150,19 +1600,31 @@ footer{
             </div>
 
 
+
             <div class="project-info">
 
                 <div>
 
-                    <div class="project-title">
+
+                    <div
+                        class="project-title"
+                        data-en="People, naturally"
+                        data-gr="Άνθρωποι, φυσικά"
+                    >
                         People, naturally
                     </div>
 
-                    <div class="project-category">
+
+                    <div
+                        class="project-category"
+                        data-en="Portraits / Lifestyle"
+                        data-gr="Πορτρέτα / Lifestyle"
+                    >
                         Portraits / Lifestyle
                     </div>
 
                 </div>
+
 
                 <div class="project-year">
                     05
@@ -1174,28 +1636,47 @@ footer{
 
 
 
-        <!-- PROJECT 06 -->
+        <!-- =================================================
+             PROJECT 06
+        ================================================== -->
 
-        <article class="project project-f"
-                 data-category="outdoor automotive sport aerial">
+        <article
+            class="project project-f"
+            data-category="outdoor automotive sport aerial"
+        >
 
             <div class="project-image">
+
 
                 <span class="project-number">
                     06
                 </span>
 
+
                 <div class="project-placeholder">
-                    <span class="coming-soon">
+
+                    <span
+                        class="coming-soon"
+                        data-en="COMING SOON"
+                        data-gr="ΣΥΝΤΟΜΑ"
+                    >
                         COMING SOON
                     </span>
+
                 </div>
+
 
                 <div class="project-overlay">
 
-                    <div class="project-overlay-title">
+
+                    <div
+                        class="project-overlay-title"
+                        data-en="OUTDOOR"
+                        data-gr="ΕΞΩΤΕΡΙΚΟΙ ΧΩΡΟΙ"
+                    >
                         OUTDOOR
                     </div>
+
 
                     <div class="project-overlay-arrow">
                         ↗
@@ -1206,19 +1687,31 @@ footer{
             </div>
 
 
+
             <div class="project-info">
 
                 <div>
 
-                    <div class="project-title">
+
+                    <div
+                        class="project-title"
+                        data-en="Beyond the frame"
+                        data-gr="Πέρα από το κάδρο"
+                    >
                         Beyond the frame
                     </div>
 
-                    <div class="project-category">
+
+                    <div
+                        class="project-category"
+                        data-en="Outdoor / Automotive / Sport"
+                        data-gr="Εξωτερικοί Χώροι / Αυτοκίνηση / Αθλητισμός"
+                    >
                         Outdoor / Automotive / Sport
                     </div>
 
                 </div>
+
 
                 <div class="project-year">
                     06
@@ -1241,22 +1734,47 @@ footer{
 
 <section class="statement">
 
-    <div class="statement-label">
+
+    <div
+        class="statement-label"
+        data-en="KOFINAS VISUALS / APPROACH"
+        data-gr="KOFINAS VISUALS / ΠΡΟΣΕΓΓΙΣΗ"
+    >
         KOFINAS VISUALS / APPROACH
     </div>
 
 
+
     <h2 class="statement-title">
 
-        EVERY PROJECT
-        <span>HAS A STORY.</span>
+        <span
+            style="margin-left:0;"
+            data-en="EVERY PROJECT"
+            data-gr="ΚΑΘΕ PROJECT"
+        >
+            EVERY PROJECT
+        </span>
+
+
+        <span
+            data-en="HAS A STORY."
+            data-gr="ΕΧΕΙ ΜΙΑ ΙΣΤΟΡΙΑ."
+        >
+            HAS A STORY.
+        </span>
 
     </h2>
 
 
+
     <div class="statement-bottom">
 
-        <p class="statement-copy">
+
+        <p
+            class="statement-copy"
+            data-en="From a product and a plate to a property, a person or a once-in-a-lifetime event, the goal remains the same: create images with purpose, character and lasting visual value."
+            data-gr="Από ένα προϊόν και ένα πιάτο μέχρι έναν χώρο, έναν άνθρωπο ή μια μοναδική στιγμή, ο στόχος παραμένει ο ίδιος: δημιουργία εικόνων με σκοπό, χαρακτήρα και διαχρονική οπτική αξία."
+        >
             From a product and a plate to a property,
             a person or a once-in-a-lifetime event,
             the goal remains the same:
@@ -1276,23 +1794,54 @@ footer{
 
 <section class="work-end">
 
-    <div class="work-end-label">
+
+    <div
+        class="work-end-label"
+        data-en="HAVE A PROJECT IN MIND?"
+        data-gr="ΕΧΕΙΣ ΕΝΑ PROJECT ΣΤΟ ΜΥΑΛΟ ΣΟΥ;"
+    >
         HAVE A PROJECT IN MIND?
     </div>
 
 
+
     <h2 class="work-end-title">
-        LET'S MAKE
-        <span>IT VISIBLE.</span>
+
+        <span
+            style="font-family:Arial, Helvetica, sans-serif; font-weight:500;"
+            data-en="LET'S MAKE"
+            data-gr="ΑΣ ΤΟ ΚΑΝΟΥΜΕ"
+        >
+            LET'S MAKE
+        </span>
+
+        <span
+            data-en="IT VISIBLE."
+            data-gr="ΟΡΑΤΟ."
+        >
+            IT VISIBLE.
+        </span>
+
     </h2>
 
 
+
     <a
-        href="mailto:kofinasvisuals@gmail.com"
+        href="contact.html"
         class="work-end-link"
     >
-        START A PROJECT
-        <span>→</span>
+
+        <span
+            data-en="START A PROJECT"
+            data-gr="ΕΠΙΚΟΙΝΩΝΗΣΕ ΜΑΖΙ ΜΑΣ"
+        >
+            START A PROJECT
+        </span>
+
+        <span>
+            →
+        </span>
+
     </a>
 
 </section>
@@ -1305,9 +1854,11 @@ footer{
 
 <footer>
 
+
     <div class="footer-brand">
         KOFINAS VISUALS · BY TRAVELFILMGR
     </div>
+
 
     <div class="footer-copy">
         © 2026 KOFINAS VISUALS
@@ -1318,31 +1869,44 @@ footer{
 
 
 <!-- =====================================================
-     FILTER SYSTEM
+     FILTER + LANGUAGE SYSTEM
 ===================================================== -->
 
 <script>
 
-const buttons = document.querySelectorAll(".category");
-const projects = document.querySelectorAll(".project");
+/* =====================================================
+   FILTER SYSTEM
+===================================================== */
+
+const buttons =
+    document.querySelectorAll(".category");
+
+const projects =
+    document.querySelectorAll(".project");
+
 
 buttons.forEach(button => {
 
     button.addEventListener("click", () => {
 
-        const filter = button.dataset.filter;
+        const filter =
+            button.dataset.filter;
 
 
         buttons.forEach(item => {
+
             item.classList.remove("active");
+
         });
+
 
         button.classList.add("active");
 
 
         projects.forEach(project => {
 
-            const categories = project.dataset.category.split(" ");
+            const categories =
+                project.dataset.category.split(" ");
 
 
             if(
@@ -1364,8 +1928,82 @@ buttons.forEach(button => {
 
 });
 
+
+/* =====================================================
+   LANGUAGE SYSTEM
+===================================================== */
+
+const enBtn =
+    document.getElementById("enBtn");
+
+const grBtn =
+    document.getElementById("grBtn");
+
+const translatable =
+    document.querySelectorAll("[data-en]");
+
+
+function setLanguage(language){
+
+    document.documentElement.lang =
+        language === "gr" ? "el" : "en";
+
+
+    translatable.forEach(element => {
+
+        element.textContent =
+            language === "gr"
+                ? element.getAttribute("data-gr")
+                : element.getAttribute("data-en");
+
+    });
+
+
+    enBtn.classList.toggle(
+        "active",
+        language === "en"
+    );
+
+
+    grBtn.classList.toggle(
+        "active",
+        language === "gr"
+    );
+
+}
+
+
+/* LANGUAGE BUTTONS */
+
+enBtn.addEventListener("click", () => {
+
+    setLanguage("en");
+
+});
+
+
+grBtn.addEventListener("click", () => {
+
+    setLanguage("gr");
+
+});
+
+
+/*
+   English is always the default.
+
+   No visitor language preference is stored.
+
+   No localStorage.
+   No sessionStorage.
+   No cookies.
+*/
+
+setLanguage("en");
+
 </script>
 
 
 </body>
+
 </html>
