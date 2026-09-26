@@ -768,15 +768,12 @@ function setLanguage(lang){
         "active",
         lang === "gr"
     );
-
-    localStorage.setItem("siteLanguage", lang);
 }
 
+/* EN is always the default.
+   No visitor language preference is stored. */
 
-const savedLanguage =
-    localStorage.getItem("siteLanguage") || "en";
-
-setLanguage(savedLanguage);
+setLanguage("en");
 
 </script>
 
