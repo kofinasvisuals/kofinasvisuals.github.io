@@ -30,11 +30,6 @@ a{
     text-decoration:none;
 }
 
-img{
-    display:block;
-    width:100%;
-}
-
 
 /* =====================================================
    HERO
@@ -54,21 +49,44 @@ img{
     inset:0;
 
     background:
+        radial-gradient(
+            circle at 60% 42%,
+            rgba(255,255,255,.045),
+            rgba(255,255,255,0) 42%
+        ),
         linear-gradient(
             90deg,
             rgba(0,0,0,.72),
             rgba(0,0,0,.18)
         ),
-        url("https://images.unsplash.com/photo-1516035069371-29a1b244cc32?auto=format&fit=crop&w=2400&q=90")
-        center/cover;
+        #111;
 
     transform:scale(1.02);
+}
+
+.hero-image:before{
+    content:"COMING SOON";
+
+    position:absolute;
+    top:50%;
+    left:50%;
+
+    transform:translate(-50%,-50%);
+
+    font-size:10px;
+    letter-spacing:6px;
+    text-transform:uppercase;
+
+    color:rgba(255,255,255,.22);
+
+    z-index:1;
 }
 
 .hero-image:after{
     content:"";
     position:absolute;
     inset:0;
+
     background:
         linear-gradient(
             180deg,
@@ -76,6 +94,8 @@ img{
             transparent 45%,
             rgba(0,0,0,.55)
         );
+
+    border:1px solid rgba(255,255,255,.025);
 }
 
 .top{
@@ -320,19 +340,68 @@ h1{
 .project-visual{
     position:relative;
     overflow:hidden;
+    background:#111;
 }
 
-.project-visual img{
+.project-placeholder{
     width:100%;
     height:100%;
-    object-fit:cover;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    position:relative;
+
+    background:
+        radial-gradient(
+            circle at 50% 45%,
+            rgba(255,255,255,.04),
+            rgba(255,255,255,0) 48%
+        ),
+        #111;
 
     transition:
-        transform 1s cubic-bezier(.2,.7,.2,1);
+        transform 1s cubic-bezier(.2,.7,.2,1),
+        background .6s ease;
 }
 
-.project:hover .project-visual img{
-    transform:scale(1.035);
+.project-placeholder:before{
+    content:"";
+
+    position:absolute;
+    inset:20px;
+
+    border:1px solid rgba(255,255,255,.045);
+
+    transition:border-color .5s ease;
+}
+
+.project:hover .project-placeholder{
+    transform:scale(1.015);
+
+    background:
+        radial-gradient(
+            circle at 50% 45%,
+            rgba(255,255,255,.06),
+            rgba(255,255,255,0) 50%
+        ),
+        #111;
+}
+
+.project:hover .project-placeholder:before{
+    border-color:rgba(255,255,255,.08);
+}
+
+.project-coming-soon{
+    position:relative;
+    z-index:1;
+
+    font-size:9px;
+    letter-spacing:6px;
+    text-transform:uppercase;
+
+    color:rgba(255,255,255,.28);
 }
 
 
@@ -981,10 +1050,11 @@ footer{
 
         <div class="project-visual">
 
-            <img
-                src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=2200&q=90"
-                alt="Modern interior placeholder"
-            >
+            <div class="project-placeholder">
+                <span class="project-coming-soon">
+                    COMING SOON
+                </span>
+            </div>
 
         </div>
 
@@ -1019,10 +1089,11 @@ footer{
 
         <div class="project-visual">
 
-            <img
-                src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&w=2200&q=90"
-                alt="Live event placeholder"
-            >
+            <div class="project-placeholder">
+                <span class="project-coming-soon">
+                    COMING SOON
+                </span>
+            </div>
 
         </div>
 
@@ -1057,10 +1128,11 @@ footer{
 
         <div class="project-visual">
 
-            <img
-                src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=2200&q=90"
-                alt="Outdoor environment placeholder"
-            >
+            <div class="project-placeholder">
+                <span class="project-coming-soon">
+                    COMING SOON
+                </span>
+            </div>
 
         </div>
 
