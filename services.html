@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Services — KOFINAS VISUALS</title>
+
+<meta name="description" content="KOFINAS VISUALS — Photography and visual content. Professional services coming soon.">
+
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    html {
+        scroll-behavior: smooth;
+    }
+
+    body {
+        background: #080808;
+        color: #f1f1f1;
+        font-family: Arial, Helvetica, sans-serif;
+        line-height: 1.5;
+        overflow-x: hidden;
+    }
+
+    a {
+        color: inherit;
+        text-decoration: none;
+    }
+
+    /* HEADER */
+
+    header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 100;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 28px 42px;
+        mix-blend-mode: difference;
+        color: #fff;
+    }
+
+    .brand {
+        font-size: 13px;
+        font-weight: 700;
+        letter-spacing: 0.18em;
+    }
+
+    .nav-right {
+        display: flex;
+        align-items: center;
+        gap: 30px;
+    }
+
+    .back {
+        font-size: 11px;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+        transition: opacity 0.3s ease;
+    }
+
+    .back:hover {
+        opacity: 0.55;
+    }
+
+    .language {
+        display: flex;
+        gap: 8px;
+        font-size: 11px;
+        letter-spacing: 0.15em;
+    }
+
+    .language button {
+        border: none;
+        background: none;
+        color: inherit;
+        font: inherit;
+        letter-spacing: inherit;
+        cursor: pointer;
+        opacity: 0.45;
+        padding: 4px 0;
+        transition: opacity 0.25s ease;
+    }
+
+    .language button.active,
+    .language button:hover {
+        opacity: 1;
+    }
+
+    /* HERO */
+
+    .hero {
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 150px 8vw 100px;
+        position: relative;
+    }
+
+    .eyebrow {
+        font-size: 10px;
+        letter-spacing: 0.25em;
+        text-transform: uppercase;
+        color: #777;
+        margin-bottom: 34px;
+    }
+
+    .hero-title {
+        max-width: 1100px;
+        font-size: clamp(58px, 10vw, 150px);
+        line-height: 0.88;
+        font-weight: 700;
+        letter-spacing: -0.055em;
+        text-transform: uppercase;
+    }
+
+    .hero-title span {
+        display: block;
+        color: #777;
+    }
+
+    .hero-intro {
+        max-width: 650px;
+        margin-top: 55px;
+        font-size: clamp(18px, 2vw, 25px);
+        line-height: 1.5;
+        color: #aaa;
+    }
+
+    .scroll-note {
+        position: absolute;
+        bottom: 38px;
+        left: 8vw;
+        font-size: 10px;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+        color: #666;
+    }
+
+    /* SERVICES */
+
+    .services {
+        border-top: 1px solid #202020;
+    }
+
+    .service {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        gap: 8vw;
+        padding: 120px 8vw;
+        border-bottom: 1px solid #202020;
+    }
+
+    .service-number {
+        font-size: 10px;
+        letter-spacing: 0.22em;
+        color: #666;
+        text-transform: uppercase;
+    }
+
+    .service-content {
+        max-width: 850px;
+    }
+
+    .service-content h2 {
+        font-size: clamp(42px, 6vw, 90px);
+        line-height: 0.92;
+        letter-spacing: -0.05em;
+        text-transform: uppercase;
+        margin-bottom: 35px;
+    }
+
+    .service-content p {
+        max-width: 700px;
+        font-size: clamp(18px, 2vw, 24px);
+        line-height: 1.55;
+        color: #aaa;
+    }
+
+    .service-list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px 25px;
+        margin-top: 40px;
+        color: #777;
+        font-size: 11px;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+    }
+
+    .service-list span {
+        white-space: nowrap;
+    }
+
+    /* FUTURE */
+
+    .future {
+        padding: 180px 8vw;
+        border-bottom: 1px solid #202020;
+    }
+
+    .future-label {
+        font-size: 10px;
+        letter-spacing: 0.22em;
+        color: #666;
+        text-transform: uppercase;
+        margin-bottom: 45px;
+    }
+
+    .future h2 {
+        max-width: 1200px;
+        font-size: clamp(45px, 7vw, 110px);
+        line-height: 0.92;
+        letter-spacing: -0.055em;
+        text-transform: uppercase;
+    }
+
+    .future p {
+        max-width: 700px;
+        margin-top: 45px;
+        font-size: 19px;
+        line-height: 1.6;
+        color: #999;
+    }
+
+    /* COMING SOON */
+
+    .coming {
+        padding: 170px 8vw;
+        text-align: center;
+    }
+
+    .coming-small {
+        font-size: 10px;
+        letter-spacing: 0.22em;
+        color: #666;
+        text-transform: uppercase;
+        margin-bottom: 30px;
+    }
+
+    .coming h2 {
+        font-size: clamp(48px, 8vw, 125px);
+        line-height: 0.88;
+        letter-spacing: -0.055em;
+        text-transform: uppercase;
+        margin-bottom: 45px;
+    }
+
+    .coming p {
+        max-width: 600px;
+        margin: 0 auto 45px;
+        color: #888;
+        font-size: 17px;
+        line-height: 1.6;
+    }
+
+    .cta-link {
+        display: inline-block;
+        font-size: 11px;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+        border-bottom: 1px solid #777;
+        padding-bottom: 9px;
+        transition: opacity 0.3s ease, border-color 0.3s ease;
+    }
+
+    .cta-link:hover {
+        opacity: 0.6;
+        border-color: #fff;
+    }
+
+    /* FOOTER */
+
+    footer {
+        border-top: 1px solid #202020;
+        padding: 30px 42px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        color: #666;
+        font-size: 10px;
+        letter-spacing: 0.15em;
+        text-transform: uppercase;
+    }
+
+    /* MOBILE */
+
+    @media (max-width: 700px) {
+
+        header {
+            padding: 22px 20px;
+        }
+
+        .brand {
+            font-size: 11px;
+        }
+
+        .nav-right {
+            gap: 18px;
+        }
+
+        .back {
+            font-size: 9px;
+        }
+
+        .language {
+            font-size: 9px;
+        }
+
+        .hero {
+            padding: 130px 20px 90px;
+        }
+
+        .hero-title {
+            font-size: clamp(52px, 17vw, 95px);
+        }
+
+        .hero-intro {
+            font-size: 18px;
+            margin-top: 40px;
+        }
+
+        .scroll-note {
+            left: 20px;
+            bottom: 25px;
+        }
+
+        .service {
+            grid-template-columns: 1fr;
+            gap: 40px;
+            padding: 95px 20px;
+        }
+
+        .service-content h2 {
+            font-size: clamp(42px, 13vw, 70px);
+        }
+
+        .service-content p {
+            font-size: 18px;
+        }
+
+        .service-list {
+            line-height: 1.8;
+        }
+
+        .future {
+            padding: 110px 20px;
+        }
+
+        .future h2 {
+            font-size: clamp(43px, 13vw, 75px);
+        }
+
+        .coming {
+            padding: 110px 20px;
+        }
+
+        .coming h2 {
+            font-size: clamp(45px, 14vw, 80px);
+        }
+
+        footer {
+            padding: 25px 20px;
+            flex-direction: column;
+            gap: 12px;
+            text-align: center;
+        }
+    }
+</style>
+</head>
+
+<body>
+
+<header>
+
+    <a href="preview.html" class="brand">
+        KOFINAS VISUALS
+    </a>
+
+    <div class="nav-right">
+
+        <a href="preview.html" class="back">
+            <span data-en="BACK" data-gr="ΠΙΣΩ">BACK</span>
+        </a>
+
+        <div class="language">
+            <button id="enBtn" class="active" type="button">EN</button>
+            <span>·</span>
+            <button id="grBtn" type="button">GR</button>
+        </div>
+
+    </div>
+
+</header>
+
+
+<main>
+
+    <!-- HERO -->
+
+    <section class="hero">
+
+        <div class="eyebrow"
+             data-en="KOFINAS VISUALS / SERVICES"
+             data-gr="KOFINAS VISUALS / ΥΠΗΡΕΣΙΕΣ">
+            KOFINAS VISUALS / SERVICES
+        </div>
+
+        <h1 class="hero-title">
+            <span data-en="VISUAL" data-gr="ΟΠΤΙΚΟ">VISUAL</span>
+            <span data-en="PRODUCTION." data-gr="ΠΕΡΙΕΧΟΜΕΝΟ.">PRODUCTION.</span>
+        </h1>
+
+        <p class="hero-intro"
+           data-en="Photography is where the journey begins. The visual direction remains open to wherever the work takes it."
+           data-gr="Η φωτογραφία είναι το σημείο από όπου ξεκινά η διαδρομή. Η δημιουργική κατεύθυνση παραμένει ανοιχτή σε ό,τι φέρει η πορεία.">
+            Photography is where the journey begins. The visual direction remains open to wherever the work takes it.
+        </p>
+
+        <div class="scroll-note"
+             data-en="SCROLL TO EXPLORE"
+             data-gr="ΚΑΝΕ SCROLL ΓΙΑ ΕΞΕΡΕΥΝΗΣΗ">
+            SCROLL TO EXPLORE
+        </div>
+
+    </section>
+
+
+    <!-- SERVICES -->
+
+    <section class="services">
+
+        <!-- PHOTOGRAPHY -->
+
+        <div class="service">
+
+            <div class="service-number">
+                01 / PHOTOGRAPHY
+            </div>
+
+            <div class="service-content">
+
+                <h2 data-en="PHOTOGRAPHY."
+                    data-gr="ΦΩΤΟΓΡΑΦΙΑ.">
+                    PHOTOGRAPHY.
+                </h2>
+
+                <p data-en="Professional photography for people, places, products, events and experiences. This is where KOFINAS VISUALS begins."
+                   data-gr="Επαγγελματική φωτογραφία για ανθρώπους, χώρους, προϊόντα, εκδηλώσεις και εμπειρίες. Από εδώ ξεκινά το KOFINAS VISUALS.">
+                    Professional photography for people, places, products, events and experiences. This is where KOFINAS VISUALS begins.
+                </p>
+
+                <div class="service-list">
+                    <span data-en="Portraits" data-gr="Πορτρέτα">Portraits</span>
+                    <span data-en="Real Estate" data-gr="Ακίνητα">Real Estate</span>
+                    <span data-en="Events" data-gr="Εκδηλώσεις">Events</span>
+                    <span data-en="Products" data-gr="Προϊόντα">Products</span>
+                    <span data-en="Food" data-gr="Φαγητό">Food</span>
+                    <span data-en="Architecture" data-gr="Αρχιτεκτονική">Architecture</span>
+                    <span data-en="Outdoor" data-gr="Outdoor">Outdoor</span>
+                    <span data-en="Automotive" data-gr="Αυτοκίνητο">Automotive</span>
+                    <span data-en="Commercial" data-gr="Εμπορική φωτογραφία">Commercial</span>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- VISUAL CONTENT -->
+
+        <div class="service">
+
+            <div class="service-number">
+                02 / VISUAL CONTENT
+            </div>
+
+            <div class="service-content">
+
+                <h2 data-en="VISUAL CONTENT."
+                    data-gr="ΟΠΤΙΚΟ ΠΕΡΙΕΧΟΜΕΝΟ.">
+                    VISUAL CONTENT.
+                </h2>
+
+                <p data-en="Visual content for brands, businesses, spaces and digital platforms. The exact direction will evolve with the work."
+                   data-gr="Οπτικό περιεχόμενο για brands, επιχειρήσεις, χώρους και ψηφιακές πλατφόρμες. Η ακριβής κατεύθυνση θα εξελιχθεί μαζί με τη δουλειά.">
+                    Visual content for brands, businesses, spaces and digital platforms. The exact direction will evolve with the work.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- FUTURE -->
+
+        <div class="service">
+
+            <div class="service-number">
+                03 / THE FUTURE
+            </div>
+
+            <div class="service-content">
+
+                <h2 data-en="MORE TO COME."
+                    data-gr="ΕΡΧΟΝΤΑΙ ΚΙ ΑΛΛΑ.">
+                    MORE TO COME.
+                </h2>
+
+                <p data-en="As KOFINAS VISUALS develops, the work may expand into video, 360° content, aerial imagery and other forms of visual production."
+                   data-gr="Καθώς το KOFINAS VISUALS εξελίσσεται, η δουλειά μπορεί να επεκταθεί σε video, 360° περιεχόμενο, εναέρια εικόνα και άλλες μορφές visual production.">
+                    As KOFINAS VISUALS develops, the work may expand into video, 360° content, aerial imagery and other forms of visual production.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- COMING SOON -->
+
+    <section class="coming">
+
+        <div class="coming-small"
+             data-en="KOFINAS VISUALS · BY TRAVELFILMGR"
+             data-gr="KOFINAS VISUALS · BY TRAVELFILMGR">
+            KOFINAS VISUALS · BY TRAVELFILMGR
+        </div>
+
+        <h2 data-en="COMING SOON."
+            data-gr="ΕΡΧΟΜΑΣΤΕ ΣΥΝΤΟΜΑ.">
+            COMING SOON.
+        </h2>
+
+        <p data-en="The professional services of KOFINAS VISUALS are currently in preparation and will be available soon."
+           data-gr="Οι επαγγελματικές υπηρεσίες του KOFINAS VISUALS βρίσκονται αυτή την περίοδο σε προετοιμασία και θα είναι σύντομα διαθέσιμες.">
+            The professional services of KOFINAS VISUALS are currently in preparation and will be available soon.
+        </p>
+
+        <a href="work.html"
+           class="cta-link"
+           data-en="EXPLORE THE WORK →"
+           data-gr="ΔΕΣ ΤΗ ΔΟΥΛΕΙΑ →">
+            EXPLORE THE WORK →
+        </a>
+
+    </section>
+
+</main>
+
+
+<footer>
+
+    <div>
+        KOFINAS VISUALS · BY TRAVELFILMGR
+    </div>
+
+    <div>
+        © 2026 KOFINAS VISUALS
+    </div>
+
+</footer>
+
+
+<script>
+
+    const enBtn = document.getElementById("enBtn");
+    const grBtn = document.getElementById("grBtn");
+
+    const translatable = document.querySelectorAll("[data-en]");
+
+    function setLanguage(language) {
+
+        document.documentElement.lang = language;
+
+        translatable.forEach(element => {
+            element.textContent = element.getAttribute("data-" + language);
+        });
+
+        if (language === "en") {
+            enBtn.classList.add("active");
+            grBtn.classList.remove("active");
+        } else {
+            grBtn.classList.add("active");
+            enBtn.classList.remove("active");
+        }
+
+        localStorage.setItem("kofinasLanguage", language);
+    }
+
+    enBtn.addEventListener("click", () => {
+        setLanguage("en");
+    });
+
+    grBtn.addEventListener("click", () => {
+        setLanguage("gr");
+    });
+
+    const savedLanguage = localStorage.getItem("kofinasLanguage");
+
+    if (savedLanguage === "gr") {
+        setLanguage("gr");
+    } else {
+        setLanguage("en");
+    }
+
+</script>
+
+</body>
+</html>
