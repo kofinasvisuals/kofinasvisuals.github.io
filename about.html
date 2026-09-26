@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>About — KOFINAS VISUALS</title>
+
+<meta name="description" content="KOFINAS VISUALS — Photography and visual production by Stathis Kofinas, Greece. Coming soon.">
+
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    html {
+        scroll-behavior: smooth;
+    }
+
+    body {
+        background: #080808;
+        color: #f1f1f1;
+        font-family: Arial, Helvetica, sans-serif;
+        line-height: 1.5;
+        overflow-x: hidden;
+    }
+
+    a {
+        color: inherit;
+        text-decoration: none;
+    }
+
+    /* HEADER */
+
+    header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 100;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 28px 42px;
+        mix-blend-mode: difference;
+        color: #fff;
+    }
+
+    .brand {
+        font-size: 13px;
+        font-weight: 700;
+        letter-spacing: 0.18em;
+    }
+
+    .nav-right {
+        display: flex;
+        align-items: center;
+        gap: 30px;
+    }
+
+    .back {
+        font-size: 11px;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+        transition: opacity 0.3s ease;
+    }
+
+    .back:hover {
+        opacity: 0.55;
+    }
+
+    .language {
+        display: flex;
+        gap: 8px;
+        font-size: 11px;
+        letter-spacing: 0.15em;
+    }
+
+    .language button {
+        border: none;
+        background: none;
+        color: inherit;
+        font: inherit;
+        letter-spacing: inherit;
+        cursor: pointer;
+        opacity: 0.45;
+        padding: 4px 0;
+        transition: opacity 0.25s ease;
+    }
+
+    .language button.active,
+    .language button:hover {
+        opacity: 1;
+    }
+
+    /* MAIN */
+
+    main {
+        min-height: 100vh;
+    }
+
+    .about-hero {
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 150px 8vw 100px;
+        position: relative;
+    }
+
+    .eyebrow {
+        font-size: 10px;
+        letter-spacing: 0.25em;
+        text-transform: uppercase;
+        color: #777;
+        margin-bottom: 34px;
+    }
+
+    .hero-title {
+        max-width: 1050px;
+        font-size: clamp(58px, 10vw, 150px);
+        line-height: 0.88;
+        font-weight: 700;
+        letter-spacing: -0.055em;
+        text-transform: uppercase;
+    }
+
+    .hero-title span {
+        display: block;
+        color: #777;
+    }
+
+    .scroll-note {
+        position: absolute;
+        bottom: 38px;
+        left: 8vw;
+        font-size: 10px;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+        color: #666;
+    }
+
+    /* CONTENT */
+
+    .section {
+        padding: 150px 8vw;
+        border-top: 1px solid #202020;
+    }
+
+    .section-grid {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        gap: 8vw;
+    }
+
+    .section-number {
+        font-size: 10px;
+        letter-spacing: 0.22em;
+        color: #666;
+        text-transform: uppercase;
+    }
+
+    .section-content {
+        max-width: 850px;
+    }
+
+    .section-content h2 {
+        font-size: clamp(38px, 5vw, 78px);
+        line-height: 0.95;
+        letter-spacing: -0.045em;
+        text-transform: uppercase;
+        margin-bottom: 42px;
+    }
+
+    .section-content p {
+        max-width: 720px;
+        font-size: clamp(18px, 2vw, 25px);
+        line-height: 1.55;
+        color: #aaa;
+        margin-bottom: 28px;
+    }
+
+    .highlight {
+        color: #f1f1f1;
+    }
+
+    /* STATEMENT */
+
+    .statement {
+        padding: 180px 8vw;
+        border-top: 1px solid #202020;
+        border-bottom: 1px solid #202020;
+    }
+
+    .statement-label {
+        font-size: 10px;
+        letter-spacing: 0.22em;
+        color: #666;
+        text-transform: uppercase;
+        margin-bottom: 45px;
+    }
+
+    .statement h2 {
+        max-width: 1200px;
+        font-size: clamp(45px, 7vw, 110px);
+        line-height: 0.92;
+        letter-spacing: -0.055em;
+        text-transform: uppercase;
+    }
+
+    /* CTA */
+
+    .cta {
+        padding: 160px 8vw;
+        text-align: center;
+    }
+
+    .cta-small {
+        font-size: 10px;
+        letter-spacing: 0.22em;
+        color: #666;
+        text-transform: uppercase;
+        margin-bottom: 30px;
+    }
+
+    .cta h2 {
+        font-size: clamp(42px, 7vw, 105px);
+        line-height: 0.9;
+        letter-spacing: -0.055em;
+        text-transform: uppercase;
+        margin-bottom: 50px;
+    }
+
+    .cta-link {
+        display: inline-block;
+        font-size: 11px;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+        border-bottom: 1px solid #777;
+        padding-bottom: 9px;
+        transition: border-color 0.3s ease, opacity 0.3s ease;
+    }
+
+    .cta-link:hover {
+        opacity: 0.6;
+        border-color: #fff;
+    }
+
+    /* FOOTER */
+
+    footer {
+        border-top: 1px solid #202020;
+        padding: 30px 42px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        color: #666;
+        font-size: 10px;
+        letter-spacing: 0.15em;
+        text-transform: uppercase;
+    }
+
+    /* MOBILE */
+
+    @media (max-width: 700px) {
+
+        header {
+            padding: 22px 20px;
+        }
+
+        .brand {
+            font-size: 11px;
+        }
+
+        .nav-right {
+            gap: 18px;
+        }
+
+        .back {
+            font-size: 9px;
+        }
+
+        .language {
+            font-size: 9px;
+        }
+
+        .about-hero {
+            padding: 130px 20px 90px;
+        }
+
+        .hero-title {
+            font-size: clamp(52px, 17vw, 95px);
+        }
+
+        .scroll-note {
+            left: 20px;
+            bottom: 25px;
+        }
+
+        .section {
+            padding: 100px 20px;
+        }
+
+        .section-grid {
+            grid-template-columns: 1fr;
+            gap: 45px;
+        }
+
+        .section-content h2 {
+            font-size: clamp(38px, 12vw, 65px);
+            margin-bottom: 30px;
+        }
+
+        .section-content p {
+            font-size: 18px;
+        }
+
+        .statement {
+            padding: 110px 20px;
+        }
+
+        .statement h2 {
+            font-size: clamp(42px, 13vw, 75px);
+        }
+
+        .cta {
+            padding: 110px 20px;
+        }
+
+        .cta h2 {
+            font-size: clamp(40px, 13vw, 75px);
+        }
+
+        footer {
+            padding: 25px 20px;
+            flex-direction: column;
+            gap: 12px;
+            text-align: center;
+        }
+    }
+</style>
+</head>
+
+<body>
+
+<header>
+
+    <a href="preview.html" class="brand">
+        KOFINAS VISUALS
+    </a>
+
+    <div class="nav-right">
+
+        <a href="work.html" class="back">
+            <span data-en="BACK" data-gr="ΠΙΣΩ">BACK</span>
+        </a>
+
+        <div class="language">
+            <button id="enBtn" class="active" type="button">EN</button>
+            <span>·</span>
+            <button id="grBtn" type="button">GR</button>
+        </div>
+
+    </div>
+
+</header>
+
+
+<main>
+
+    <!-- HERO -->
+
+    <section class="about-hero">
+
+        <div class="eyebrow"
+             data-en="KOFINAS VISUALS / ABOUT"
+             data-gr="KOFINAS VISUALS / ΣΧΕΤΙΚΑ">
+            KOFINAS VISUALS / ABOUT
+        </div>
+
+        <h1 class="hero-title">
+
+            <span data-en="COMING" data-gr="ΕΡΧΟΜΑΣΤΕ">
+                COMING
+            </span>
+
+            <span data-en="SOON." data-gr="ΣΥΝΤΟΜΑ.">
+                SOON.
+            </span>
+
+        </h1>
+
+        <div class="scroll-note"
+             data-en="SCROLL TO EXPLORE"
+             data-gr="ΚΑΝΕ SCROLL ΓΙΑ ΕΞΕΡΕΥΝΗΣΗ">
+            SCROLL TO EXPLORE
+        </div>
+
+    </section>
+
+
+    <!-- ABOUT -->
+
+    <section class="section">
+
+        <div class="section-grid">
+
+            <div class="section-number">
+                01 / ABOUT
+            </div>
+
+            <div class="section-content">
+
+                <h2 data-en="THE PERSON BEHIND THE WORK."
+                    data-gr="Ο ΑΝΘΡΩΠΟΣ ΠΙΣΩ ΑΠΟ ΤΗ ΔΟΥΛΕΙΑ.">
+                    THE PERSON BEHIND THE WORK.
+                </h2>
+
+                <p data-en="I’m Stathis Kofinas, a photographer based in Greece."
+                   data-gr="Είμαι ο Στάθης Κοφινάς, φωτογράφος με βάση την Ελλάδα.">
+                    I’m Stathis Kofinas, a photographer based in Greece.
+                </p>
+
+                <p data-en="KOFINAS VISUALS is currently in preparation, alongside my professional photography journey."
+                   data-gr="Το KOFINAS VISUALS βρίσκεται αυτή την περίοδο σε προετοιμασία, όπως και η επαγγελματική μου δραστηριότητα στη φωτογραφία.">
+                    KOFINAS VISUALS is currently in preparation, alongside my professional photography journey.
+                </p>
+
+                <p data-en="The website, portfolio and services are being developed and will be launching soon."
+                   data-gr="Η ιστοσελίδα, το portfolio και οι υπηρεσίες βρίσκονται υπό ανάπτυξη και θα είναι σύντομα διαθέσιμα.">
+                    The website, portfolio and services are being developed and will be launching soon.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- STATEMENT -->
+
+    <section class="statement">
+
+        <div class="statement-label"
+             data-en="02 / THE BEGINNING"
+             data-gr="02 / Η ΑΡΧΗ">
+            02 / THE BEGINNING
+        </div>
+
+        <h2 data-en="THIS IS THE BEGINNING OF SOMETHING NEW."
+            data-gr="ΑΥΤΗ ΕΙΝΑΙ Η ΑΡΧΗ ΓΙΑ ΚΑΤΙ ΝΕΟ.">
+            THIS IS THE BEGINNING OF SOMETHING NEW.
+        </h2>
+
+    </section>
+
+
+    <!-- CTA -->
+
+    <section class="cta">
+
+        <div class="cta-small"
+             data-en="KOFINAS VISUALS · BY TRAVELFILMGR"
+             data-gr="KOFINAS VISUALS · BY TRAVELFILMGR">
+            KOFINAS VISUALS · BY TRAVELFILMGR
+        </div>
+
+        <h2 data-en="SEE YOU SOON."
+            data-gr="ΤΑ ΛΕΜΕ ΣΥΝΤΟΜΑ.">
+            SEE YOU SOON.
+        </h2>
+
+        <a href="work.html"
+           class="cta-link"
+           data-en="EXPLORE THE WORK →"
+           data-gr="ΔΕΣ ΤΗ ΔΟΥΛΕΙΑ →">
+            EXPLORE THE WORK →
+        </a>
+
+    </section>
+
+</main>
+
+
+<footer>
+
+    <div>
+        KOFINAS VISUALS · BY TRAVELFILMGR
+    </div>
+
+    <div>
+        © 2026 KOFINAS VISUALS
+    </div>
+
+</footer>
+
+
+<script>
+
+    const enBtn = document.getElementById("enBtn");
+    const grBtn = document.getElementById("grBtn");
+
+    const translatable = document.querySelectorAll("[data-en]");
+
+    function setLanguage(language) {
+
+        document.documentElement.lang = language;
+
+        translatable.forEach(element => {
+            element.textContent = element.getAttribute("data-" + language);
+        });
+
+        if (language === "en") {
+            enBtn.classList.add("active");
+            grBtn.classList.remove("active");
+        } else {
+            grBtn.classList.add("active");
+            enBtn.classList.remove("active");
+        }
+
+        localStorage.setItem("kofinasLanguage", language);
+    }
+
+    enBtn.addEventListener("click", () => {
+        setLanguage("en");
+    });
+
+    grBtn.addEventListener("click", () => {
+        setLanguage("gr");
+    });
+
+    const savedLanguage = localStorage.getItem("kofinasLanguage");
+
+    if (savedLanguage === "gr") {
+        setLanguage("gr");
+    } else {
+        setLanguage("en");
+    }
+
+</script>
+
+</body>
+</html>
