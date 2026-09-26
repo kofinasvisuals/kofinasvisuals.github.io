@@ -6,510 +6,223 @@
 
     <title>KOFINAS VISUALS — Visual Production</title>
 
-    <meta name="description" content="KOFINAS VISUALS — Photography and Visual Production by TRAVELFILMGR.">
-    <meta name="theme-color" content="#0a0a0a">
-
     <style>
-
-        /* =========================
-           RESET
-        ========================= */
-
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
 
-        html {
-            scroll-behavior: smooth;
+        html, body {
+            width: 100%;
+            height: 100%;
         }
 
         body {
             background: #080808;
-            color: #f5f5f5;
+            color: #ffffff;
             font-family: Arial, Helvetica, sans-serif;
-            overflow-x: hidden;
-        }
-
-        a {
-            color: inherit;
-            text-decoration: none;
-        }
-
-        /* =========================
-           NAVIGATION
-        ========================= */
-
-        .nav {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            padding: 28px 45px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            z-index: 100;
-            mix-blend-mode: difference;
-        }
-
-        .logo {
-            font-size: 13px;
-            font-weight: 700;
-            letter-spacing: 3px;
-        }
-
-        .nav-links {
-            display: flex;
-            gap: 35px;
-            font-size: 10px;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-        }
-
-        .nav-links a {
-            opacity: .75;
-            transition: opacity .3s ease;
-        }
-
-        .nav-links a:hover {
-            opacity: 1;
-        }
-
-        /* =========================
-           HERO
-        ========================= */
-
-        .hero {
-            height: 100vh;
-            min-height: 700px;
-            position: relative;
-            display: flex;
-            align-items: flex-end;
-            padding: 60px;
             overflow: hidden;
         }
 
-        .hero-image {
-            position: absolute;
-            inset: 0;
-
-            background:
-                linear-gradient(
-                    to top,
-                    rgba(0,0,0,.92),
-                    rgba(0,0,0,.12) 65%,
-                    rgba(0,0,0,.2)
-                ),
-                url("https://images.unsplash.com/photo-1516035069371-29a1b244cc32?auto=format&fit=crop&w=2200&q=90")
-                center / cover;
-
-            transform: scale(1.02);
+        .page {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding: 42px 50px;
+            position: relative;
         }
 
-        .hero-content {
+        .top {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
             position: relative;
             z-index: 2;
-            max-width: 1200px;
+        }
+
+        .brand-small {
+            font-size: 11px;
+            letter-spacing: 4px;
+            opacity: 0.65;
+        }
+
+        .status {
+            font-size: 10px;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            opacity: 0.55;
+        }
+
+        .center {
+            position: relative;
+            z-index: 2;
         }
 
         .eyebrow {
-            font-size: 10px;
+            font-size: 11px;
             letter-spacing: 5px;
-            opacity: .65;
-            margin-bottom: 25px;
-            text-transform: uppercase;
+            opacity: 0.55;
+            margin-bottom: 28px;
         }
 
-        .hero h1 {
-            font-size: clamp(60px, 11vw, 165px);
-            line-height: .82;
+        h1 {
+            font-size: clamp(55px, 11vw, 160px);
+            line-height: 0.82;
             letter-spacing: -7px;
             font-weight: 700;
         }
 
-        .hero-sub {
-            margin-top: 32px;
-            font-size: 12px;
+        .descriptor {
+            margin-top: 35px;
+            font-size: 13px;
             letter-spacing: 5px;
             text-transform: uppercase;
-            opacity: .8;
+            opacity: 0.7;
         }
 
-        .scroll-indicator {
-            position: absolute;
-            right: 45px;
-            bottom: 45px;
-            writing-mode: vertical-rl;
-            font-size: 9px;
-            letter-spacing: 4px;
-            opacity: .55;
-        }
-
-        /* =========================
-           INTRO
-        ========================= */
-
-        .intro {
-            min-height: 80vh;
-            padding: 160px 8vw;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 10vw;
+        .construction {
+            margin-top: 55px;
+            display: flex;
             align-items: center;
-            background: #f2f0eb;
-            color: #101010;
+            gap: 18px;
         }
 
-        .intro-small {
+        .line {
+            width: 55px;
+            height: 1px;
+            background: rgba(255,255,255,0.5);
+        }
+
+        .construction span {
             font-size: 10px;
             letter-spacing: 4px;
-            text-transform: uppercase;
-            opacity: .55;
+            opacity: 0.5;
         }
 
-        .intro-title {
-            font-size: clamp(35px, 5vw, 75px);
-            line-height: .95;
-            letter-spacing: -3px;
-            font-weight: 500;
-        }
-
-        .intro-text {
-            max-width: 500px;
-            font-size: 16px;
-            line-height: 1.8;
-            opacity: .65;
-        }
-
-        /* =========================
-           SELECTED WORK
-        ========================= */
-
-        .work {
-            padding: 150px 6vw 180px;
-            background: #080808;
-        }
-
-        .section-head {
+        .bottom {
             display: flex;
             justify-content: space-between;
             align-items: flex-end;
-            margin-bottom: 90px;
+            position: relative;
+            z-index: 2;
         }
 
-        .section-label {
-            font-size: 10px;
-            letter-spacing: 4px;
-            text-transform: uppercase;
-            opacity: .5;
-        }
-
-        .section-title {
-            margin-top: 15px;
-            font-size: clamp(45px, 7vw, 100px);
-            line-height: .85;
-            letter-spacing: -5px;
-        }
-
-        .section-number {
-            font-size: 11px;
-            opacity: .4;
-        }
-
-        /* =========================
-           PORTFOLIO GRID
-        ========================= */
-
-        .portfolio {
-            display: grid;
-            grid-template-columns: 1.15fr .85fr;
-            gap: 8vw;
-            align-items: start;
-        }
-
-        .project {
-            margin-bottom: 130px;
-        }
-
-        .project:nth-child(2) {
-            margin-top: 180px;
-        }
-
-        .project-image {
-            width: 100%;
-            overflow: hidden;
-            background: #151515;
-        }
-
-        .project-image img {
-            width: 100%;
-            display: block;
-            aspect-ratio: 4 / 5;
-            object-fit: cover;
-            transition: transform 1s cubic-bezier(.2,.7,.2,1);
-        }
-
-        .project:hover img {
-            transform: scale(1.035);
-        }
-
-        .project:nth-child(2) img {
-            aspect-ratio: 4 / 3;
-        }
-
-        .project-info {
-            display: flex;
-            justify-content: space-between;
-            padding-top: 18px;
-            border-top: 1px solid rgba(255,255,255,.15);
-            margin-top: 15px;
-        }
-
-        .project-name {
-            font-size: 14px;
-            letter-spacing: 1px;
-        }
-
-        .project-type {
-            font-size: 9px;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-            opacity: .45;
-        }
-
-        /* =========================
-           SERVICES
-        ========================= */
-
-        .services {
-            background: #111;
-            padding: 160px 8vw;
-        }
-
-        .services-header {
-            max-width: 800px;
-            margin-bottom: 100px;
-        }
-
-        .services-header h2 {
-            font-size: clamp(45px, 7vw, 100px);
-            line-height: .85;
-            letter-spacing: -5px;
-        }
-
-        .service-list {
-            border-top: 1px solid rgba(255,255,255,.2);
-        }
-
-        .service {
-            display: grid;
-            grid-template-columns: 80px 1fr 300px;
-            gap: 30px;
-            padding: 35px 0;
-            border-bottom: 1px solid rgba(255,255,255,.2);
-            align-items: center;
-        }
-
-        .service-number {
-            font-size: 10px;
-            opacity: .35;
-        }
-
-        .service-name {
-            font-size: clamp(22px, 3vw, 42px);
-            letter-spacing: -1px;
-        }
-
-        .service-description {
-            font-size: 11px;
-            line-height: 1.6;
-            opacity: .45;
-        }
-
-        /* =========================
-           CTA
-        ========================= */
-
-        .contact {
-            min-height: 80vh;
-            padding: 150px 8vw;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            background: #f2f0eb;
-            color: #101010;
-        }
-
-        .contact-label {
-            font-size: 10px;
-            letter-spacing: 4px;
-            text-transform: uppercase;
-            opacity: .45;
-            margin-bottom: 35px;
-        }
-
-        .contact h2 {
-            font-size: clamp(55px, 10vw, 145px);
-            line-height: .8;
-            letter-spacing: -7px;
-            max-width: 1100px;
-        }
-
-        .contact-button {
-            display: inline-block;
-            margin-top: 65px;
-            width: fit-content;
-            padding: 18px 28px;
-            border: 1px solid #101010;
+        .location {
             font-size: 10px;
             letter-spacing: 3px;
+            opacity: 0.4;
             text-transform: uppercase;
-            transition: all .35s ease;
         }
 
-        .contact-button:hover {
-            background: #101010;
-            color: #f2f0eb;
-        }
-
-        /* =========================
-           FOOTER
-        ========================= */
-
-        footer {
-            background: #080808;
-            padding: 45px;
+        .loading {
             display: flex;
-            justify-content: space-between;
+            align-items: center;
+            gap: 12px;
             font-size: 9px;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-            opacity: .55;
+            letter-spacing: 3px;
+            opacity: 0.45;
         }
 
-        /* =========================
-           MOBILE
-        ========================= */
+        .dot {
+            width: 5px;
+            height: 5px;
+            border-radius: 50%;
+            background: white;
+            animation: pulse 1.5s infinite ease-in-out;
+        }
 
-        @media (max-width: 800px) {
-
-            .nav {
-                padding: 22px 25px;
+        @keyframes pulse {
+            0%, 100% {
+                opacity: 0.2;
+                transform: scale(0.8);
             }
 
-            .nav-links {
+            50% {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        .background-number {
+            position: absolute;
+            right: 35px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 28vw;
+            font-weight: 700;
+            line-height: 1;
+            color: rgba(255,255,255,0.025);
+            user-select: none;
+        }
+
+        @media (max-width: 700px) {
+
+            .page {
+                padding: 30px;
+            }
+
+            .top {
+                align-items: center;
+            }
+
+            .status {
                 display: none;
             }
 
-            .hero {
-                padding: 30px;
-                min-height: 650px;
-            }
-
-            .hero h1 {
+            h1 {
                 letter-spacing: -4px;
             }
 
-            .scroll-indicator {
-                right: 22px;
-                bottom: 30px;
+            .descriptor {
+                font-size: 10px;
+                letter-spacing: 3px;
+                line-height: 1.8;
+                max-width: 250px;
             }
 
-            .intro {
-                grid-template-columns: 1fr;
-                padding: 100px 30px;
-                gap: 60px;
+            .construction {
+                margin-top: 40px;
             }
 
-            .work {
-                padding: 100px 25px;
+            .bottom {
+                align-items: flex-end;
             }
 
-            .section-head {
-                margin-bottom: 60px;
+            .location {
+                font-size: 8px;
             }
 
-            .portfolio {
-                grid-template-columns: 1fr;
-                gap: 0;
-            }
-
-            .project:nth-child(2) {
-                margin-top: 0;
-            }
-
-            .project {
-                margin-bottom: 90px;
-            }
-
-            .services {
-                padding: 100px 25px;
-            }
-
-            .service {
-                grid-template-columns: 35px 1fr;
-                gap: 15px;
-            }
-
-            .service-description {
-                grid-column: 2;
-                margin-top: -5px;
-            }
-
-            .contact {
-                min-height: 70vh;
-                padding: 100px 30px;
-            }
-
-            .contact h2 {
-                letter-spacing: -4px;
-            }
-
-            footer {
-                padding: 30px 25px;
-                flex-direction: column;
-                gap: 15px;
+            .background-number {
+                right: -10px;
+                font-size: 45vw;
             }
         }
-
     </style>
 </head>
 
 <body>
 
-    <!-- =========================
-         NAVIGATION
-    ========================= -->
+    <main class="page">
 
-    <nav class="nav">
+        <div class="background-number">01</div>
 
-        <a href="#top" class="logo">
-            KOFINAS VISUALS
-        </a>
+        <header class="top">
+            <div class="brand-small">
+                BY TRAVELFILMGR
+            </div>
 
-        <div class="nav-links">
-            <a href="#work">Work</a>
-            <a href="#services">Services</a>
-            <a href="#contact">Contact</a>
-        </div>
-
-    </nav>
+            <div class="status">
+                New website
+            </div>
+        </header>
 
 
-    <!-- =========================
-         HERO
-    ========================= -->
-
-    <section class="hero" id="top">
-
-        <div class="hero-image"></div>
-
-        <div class="hero-content">
+        <section class="center">
 
             <div class="eyebrow">
-                BY TRAVELFILMGR
+                VISUAL PRODUCTION
             </div>
 
             <h1>
@@ -517,362 +230,32 @@
                 VISUALS
             </h1>
 
-            <div class="hero-sub">
-                Visual Production
+            <div class="descriptor">
+                Photography · Real Estate · Events
             </div>
 
-        </div>
-
-        <div class="scroll-indicator">
-            SCROLL TO EXPLORE
-        </div>
-
-    </section>
-
-
-    <!-- =========================
-         INTRO
-    ========================= -->
-
-    <section class="intro">
-
-        <div>
-
-            <div class="intro-small">
-                01 / Vision
+            <div class="construction">
+                <div class="line"></div>
+                <span>WEBSITE UNDER CONSTRUCTION</span>
             </div>
 
-            <div class="intro-title">
-                Visuals<br>
-                with purpose.
+        </section>
+
+
+        <footer class="bottom">
+
+            <div class="location">
+                Greece · 2026
             </div>
 
-        </div>
-
-        <div>
-
-            <p class="intro-text">
-                KOFINAS VISUALS creates photography and visual content
-                designed to make people stop, look and remember.
-                From architecture and real estate to people, places
-                and events — every frame is created with intention.
-            </p>
-
-        </div>
-
-    </section>
-
-
-    <!-- =========================
-         SELECTED WORK
-    ========================= -->
-
-    <section class="work" id="work">
-
-        <div class="section-head">
-
-            <div>
-
-                <div class="section-label">
-                    Selected Work
-                </div>
-
-                <h2 class="section-title">
-                    Selected<br>
-                    Work
-                </h2>
-
+            <div class="loading">
+                <div class="dot"></div>
+                <span>COMING SOON</span>
             </div>
 
-            <div class="section-number">
-                02
-            </div>
+        </footer>
 
-        </div>
-
-
-        <div class="portfolio">
-
-
-            <!-- PROJECT 01 -->
-
-            <article class="project">
-
-                <div class="project-image">
-
-                    <img
-                        src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1600&q=90"
-                        alt="Architecture photography"
-                    >
-
-                </div>
-
-                <div class="project-info">
-
-                    <span class="project-name">
-                        Architecture / Space
-                    </span>
-
-                    <span class="project-type">
-                        Real Estate
-                    </span>
-
-                </div>
-
-            </article>
-
-
-            <!-- PROJECT 02 -->
-
-            <article class="project">
-
-                <div class="project-image">
-
-                    <img
-                        src="https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=1600&q=90"
-                        alt="Outdoor photography"
-                    >
-
-                </div>
-
-                <div class="project-info">
-
-                    <span class="project-name">
-                        Outside / Motion
-                    </span>
-
-                    <span class="project-type">
-                        Outdoor
-                    </span>
-
-                </div>
-
-            </article>
-
-
-            <!-- PROJECT 03 -->
-
-            <article class="project">
-
-                <div class="project-image">
-
-                    <img
-                        src="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=1600&q=90"
-                        alt="Event photography"
-                    >
-
-                </div>
-
-                <div class="project-info">
-
-                    <span class="project-name">
-                        Moments / People
-                    </span>
-
-                    <span class="project-type">
-                        Events
-                    </span>
-
-                </div>
-
-            </article>
-
-
-            <!-- PROJECT 04 -->
-
-            <article class="project">
-
-                <div class="project-image">
-
-                    <img
-                        src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=1600&q=90"
-                        alt="Portrait photography"
-                    >
-
-                </div>
-
-                <div class="project-info">
-
-                    <span class="project-name">
-                        Character / Portrait
-                    </span>
-
-                    <span class="project-type">
-                        Portraits
-                    </span>
-
-                </div>
-
-            </article>
-
-        </div>
-
-    </section>
-
-
-    <!-- =========================
-         SERVICES
-    ========================= -->
-
-    <section class="services" id="services">
-
-        <div class="services-header">
-
-            <div class="section-label">
-                What I do
-            </div>
-
-            <h2>
-                Visual<br>
-                Production.
-            </h2>
-
-        </div>
-
-
-        <div class="service-list">
-
-
-            <div class="service">
-
-                <span class="service-number">
-                    01
-                </span>
-
-                <span class="service-name">
-                    Real Estate
-                </span>
-
-                <span class="service-description">
-                    Professional photography for properties,
-                    apartments, villas, hotels and commercial spaces.
-                </span>
-
-            </div>
-
-
-            <div class="service">
-
-                <span class="service-number">
-                    02
-                </span>
-
-                <span class="service-name">
-                    Events
-                </span>
-
-                <span class="service-description">
-                    Authentic event coverage focused on atmosphere,
-                    people and memorable moments.
-                </span>
-
-            </div>
-
-
-            <div class="service">
-
-                <span class="service-number">
-                    03
-                </span>
-
-                <span class="service-name">
-                    Outdoor
-                </span>
-
-                <span class="service-description">
-                    Lifestyle, travel and outdoor imagery
-                    created for people and brands.
-                </span>
-
-            </div>
-
-
-            <div class="service">
-
-                <span class="service-number">
-                    04
-                </span>
-
-                <span class="service-name">
-                    Portraits
-                </span>
-
-                <span class="service-description">
-                    Natural and controlled portraits
-                    for personal or professional use.
-                </span>
-
-            </div>
-
-
-            <div class="service">
-
-                <span class="service-number">
-                    05
-                </span>
-
-                <span class="service-name">
-                    Video
-                </span>
-
-                <span class="service-description">
-                    Coming soon — cinematic video production
-                    and aerial content.
-                </span>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- =========================
-         CONTACT
-    ========================= -->
-
-    <section class="contact" id="contact">
-
-        <div class="contact-label">
-            Start a project
-        </div>
-
-        <h2>
-            LET'S CREATE<br>
-            SOMETHING<br>
-            VISUAL.
-        </h2>
-
-        <a
-            class="contact-button"
-            href="mailto:kofinasvisuals@gmail.com"
-        >
-            Get in touch
-        </a>
-
-    </section>
-
-
-    <!-- =========================
-         FOOTER
-    ========================= -->
-
-    <footer>
-
-        <span>
-            KOFINAS VISUALS
-        </span>
-
-        <span>
-            by TRAVELFILMGR
-        </span>
-
-        <span>
-            Visual Production
-        </span>
-
-    </footer>
-
+    </main>
 
 </body>
 </html>
