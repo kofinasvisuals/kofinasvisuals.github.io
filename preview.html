@@ -1,1003 +1,1256 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>KOFINAS VISUALS — Visual Production</title>
-
-    <style>
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        html {
-            scroll-behavior: smooth;
-        }
-
-        body {
-            background: #080808;
-            color: #fff;
-            font-family: Arial, Helvetica, sans-serif;
-        }
-
-        img {
-            display: block;
-            width: 100%;
-        }
-
-        a {
-            color: inherit;
-            text-decoration: none;
-        }
-
-
-        /* =========================
-           HERO
-        ========================= */
-
-        .hero {
-            min-height: 100vh;
-            position: relative;
-            display: flex;
-            align-items: flex-end;
-            padding: 55px;
-            overflow: hidden;
-        }
-
-        .hero-image {
-            position: absolute;
-            inset: 0;
-
-            background:
-                linear-gradient(
-                    90deg,
-                    rgba(0,0,0,0.72),
-                    rgba(0,0,0,0.20)
-                ),
-                url("https://images.unsplash.com/photo-1516035069371-29a1b244cc32?auto=format&fit=crop&w=2400&q=90")
-                center / cover;
-
-            transform: scale(1.02);
-        }
-
-        .top {
-            position: absolute;
-            top: 40px;
-            left: 55px;
-            right: 55px;
-
-            display: flex;
-            justify-content: space-between;
-
-            z-index: 2;
-        }
-
-        .by {
-            font-size: 10px;
-            letter-spacing: 4px;
-            opacity: 0.65;
-        }
-
-        .menu {
-            font-size: 10px;
-            letter-spacing: 4px;
-            opacity: 0.65;
-        }
-
-        .hero-content {
-            position: relative;
-            z-index: 2;
-            max-width: 1100px;
-        }
-
-        .eyebrow {
-            font-size: 10px;
-            letter-spacing: 5px;
-            margin-bottom: 25px;
-            opacity: 0.65;
-        }
-
-        h1 {
-            font-size: clamp(60px, 11vw, 165px);
-            line-height: 0.82;
-            letter-spacing: -7px;
-            font-weight: 700;
-        }
-
-        .descriptor {
-            margin-top: 32px;
-            font-size: 12px;
-            letter-spacing: 5px;
-            text-transform: uppercase;
-            opacity: 0.75;
-        }
-
-        .bottom {
-            position: absolute;
-            right: 55px;
-            bottom: 55px;
-            z-index: 2;
-
-            writing-mode: vertical-rl;
-
-            font-size: 9px;
-            letter-spacing: 4px;
-            opacity: 0.55;
-        }
-
-
-        /* =========================
-           INTRO
-        ========================= */
-
-        .intro {
-            min-height: 80vh;
-            padding: 150px 8vw;
-
-            display: grid;
-            grid-template-columns: 0.8fr 1.2fr;
-            gap: 8vw;
-            align-items: center;
-
-            background: #080808;
-        }
-
-        .intro-label {
-            font-size: 10px;
-            letter-spacing: 4px;
-            opacity: 0.45;
-        }
-
-        .intro-content {
-            max-width: 850px;
-        }
-
-        .intro-title {
-            font-size: clamp(38px, 5vw, 75px);
-            line-height: 1;
-            letter-spacing: -3px;
-            font-weight: 500;
-        }
-
-        .intro-text {
-            margin-top: 45px;
-            max-width: 650px;
-
-            font-size: 17px;
-            line-height: 1.8;
-
-            color: rgba(255,255,255,0.62);
-        }
-
-        .intro-line {
-            width: 80px;
-            height: 1px;
-
-            background: rgba(255,255,255,0.35);
-
-            margin-top: 45px;
-        }
-
-
-        /* =========================
-           WORK
-        ========================= */
-
-        .work {
-            padding: 140px 6vw 170px;
-            background: #f2f1ed;
-            color: #0a0a0a;
-        }
-
-        .work-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-end;
-
-            margin-bottom: 100px;
-        }
-
-        .work-number {
-            font-size: 10px;
-            letter-spacing: 4px;
-            opacity: 0.45;
-        }
-
-        .work-title {
-            font-size: clamp(55px, 10vw, 150px);
-            line-height: 0.8;
-            letter-spacing: -7px;
-            font-weight: 700;
-        }
-
-        .work-description {
-            max-width: 330px;
-
-            font-size: 13px;
-            line-height: 1.7;
-
-            color: rgba(0,0,0,0.55);
-        }
-
-
-        /* PROJECT */
-
-        .project {
-            margin-bottom: 150px;
-        }
-
-        .project-image {
-            position: relative;
-            overflow: hidden;
-            background: #ddd;
-        }
-
-        .project-image img {
-            aspect-ratio: 16 / 9;
-            object-fit: cover;
-
-            transition: transform 0.8s ease;
-        }
-
-        .project:hover .project-image img {
-            transform: scale(1.035);
-        }
-
-        .project-info {
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-start;
-
-            padding-top: 24px;
-        }
-
-        .project-name {
-            font-size: 26px;
-            letter-spacing: -1px;
-            font-weight: 500;
-        }
-
-        .project-type {
-            margin-top: 8px;
-
-            font-size: 9px;
-            letter-spacing: 3px;
-            text-transform: uppercase;
-
-            opacity: 0.5;
-        }
-
-        .project-index {
-            font-size: 10px;
-            letter-spacing: 3px;
-            opacity: 0.45;
-        }
-
-
-        /* SECOND PROJECT */
-
-        .project.offset {
-            width: 76%;
-            margin-left: auto;
-        }
-
-        .project.offset .project-image img {
-            aspect-ratio: 4 / 3;
-        }
-
-
-        /* THIRD PROJECT */
-
-        .project.third {
-            width: 88%;
-        }
-
-        .project.third .project-image img {
-            aspect-ratio: 16 / 10;
-        }
-
-
-        /* WORK LINK */
-
-        .work-link-wrap {
-            display: flex;
-            justify-content: center;
-
-            margin-top: 40px;
-        }
-
-        .work-link {
-            border-bottom: 1px solid rgba(0,0,0,0.45);
-
-            padding-bottom: 10px;
-
-            font-size: 10px;
-            letter-spacing: 4px;
-
-            transition: opacity 0.3s ease;
-        }
-
-        .work-link:hover {
-            opacity: 0.45;
-        }
-
-
-        /* =========================
-           SERVICES PREVIEW
-        ========================= */
-
-        .services {
-            background: #080808;
-            color: #fff;
-
-            padding: 150px 8vw;
-        }
-
-        .services-top {
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-start;
-
-            margin-bottom: 90px;
-        }
-
-        .services-label {
-            font-size: 10px;
-            letter-spacing: 4px;
-            opacity: 0.45;
-        }
-
-        .services-title {
-            font-size: clamp(45px, 7vw, 100px);
-            line-height: 0.9;
-            letter-spacing: -5px;
-            font-weight: 500;
-        }
-
-        .services-list {
-            border-top: 1px solid rgba(255,255,255,0.16);
-        }
-
-        .service {
-            padding: 30px 0;
-
-            border-bottom: 1px solid rgba(255,255,255,0.16);
-
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .service-name {
-            font-size: 22px;
-            letter-spacing: -0.5px;
-        }
-
-        .service-number {
-            font-size: 9px;
-            letter-spacing: 3px;
-            opacity: 0.4;
-        }
-
-
-        /* =========================
-           CONTACT
-        ========================= */
-
-        .contact {
-            min-height: 70vh;
-
-            padding: 140px 8vw;
-
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-
-            background: #f2f1ed;
-            color: #080808;
-        }
-
-        .contact-label {
-            font-size: 10px;
-            letter-spacing: 4px;
-            opacity: 0.45;
-        }
-
-        .contact-title {
-            margin-top: 80px;
-
-            font-size: clamp(50px, 9vw, 135px);
-            line-height: 0.85;
-            letter-spacing: -6px;
-            font-weight: 600;
-        }
-
-        .contact-bottom {
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-end;
-
-            margin-top: 100px;
-        }
-
-        .contact-email {
-            font-size: clamp(18px, 3vw, 32px);
-            letter-spacing: -1px;
-
-            border-bottom: 1px solid rgba(0,0,0,0.35);
-            padding-bottom: 8px;
-        }
-
-        .contact-note {
-            font-size: 9px;
-            letter-spacing: 3px;
-            opacity: 0.45;
-        }
-
-
-        /* =========================
-           FOOTER
-        ========================= */
-
-        footer {
-            padding: 35px 6vw;
-
-            background: #080808;
-            color: #fff;
-
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .footer-brand {
-            font-size: 10px;
-            letter-spacing: 4px;
-        }
-
-        .footer-copy {
-            font-size: 8px;
-            letter-spacing: 2px;
-            opacity: 0.4;
-        }
-
-
-        /* =========================
-           MOBILE
-        ========================= */
-
-        @media (max-width: 700px) {
-
-            .hero {
-                padding: 30px;
-            }
-
-            .top {
-                top: 30px;
-                left: 30px;
-                right: 30px;
-            }
-
-            .menu {
-                display: none;
-            }
-
-            h1 {
-                font-size: clamp(55px, 16vw, 100px);
-                letter-spacing: -4px;
-            }
-
-            .descriptor {
-                font-size: 9px;
-                letter-spacing: 3px;
-                line-height: 1.8;
-                max-width: 280px;
-            }
-
-            .bottom {
-                right: 25px;
-                bottom: 30px;
-            }
-
-
-            .intro {
-                min-height: auto;
-                padding: 110px 30px;
-                display: block;
-            }
-
-            .intro-content {
-                margin-top: 45px;
-            }
-
-            .intro-title {
-                font-size: 42px;
-                letter-spacing: -2px;
-            }
-
-            .intro-text {
-                font-size: 15px;
-                line-height: 1.75;
-                margin-top: 30px;
-            }
-
-
-            .work {
-                padding: 100px 25px 120px;
-            }
-
-            .work-header {
-                display: block;
-                margin-bottom: 65px;
-            }
-
-            .work-title {
-                margin-top: 30px;
-
-                font-size: 70px;
-                letter-spacing: -4px;
-            }
-
-            .work-description {
-                margin-top: 35px;
-            }
-
-            .project {
-                margin-bottom: 90px;
-            }
-
-            .project.offset,
-            .project.third {
-                width: 100%;
-            }
-
-            .project-image img,
-            .project.offset .project-image img,
-            .project.third .project-image img {
-                aspect-ratio: 4 / 3;
-            }
-
-            .project-name {
-                font-size: 21px;
-            }
-
-
-            .services {
-                padding: 110px 30px;
-            }
-
-            .services-top {
-                display: block;
-                margin-bottom: 60px;
-            }
-
-            .services-title {
-                margin-top: 30px;
-
-                font-size: 58px;
-                letter-spacing: -3px;
-            }
-
-            .service-name {
-                font-size: 18px;
-            }
-
-
-            .contact {
-                min-height: 65vh;
-                padding: 110px 30px;
-            }
-
-            .contact-title {
-                margin-top: 70px;
-
-                font-size: 60px;
-                letter-spacing: -3px;
-            }
-
-            .contact-bottom {
-                display: block;
-                margin-top: 80px;
-            }
-
-            .contact-note {
-                margin-top: 25px;
-            }
-
-
-            footer {
-                padding: 30px;
-                display: block;
-            }
-
-            .footer-copy {
-                margin-top: 15px;
-            }
-        }
-
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>KOFINAS VISUALS — Visual Production</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#080808;
+    color:#f4f3ef;
+    font-family:Arial, Helvetica, sans-serif;
+    overflow-x:hidden;
+}
+
+a{
+    color:inherit;
+    text-decoration:none;
+}
+
+img{
+    display:block;
+    width:100%;
+}
+
+
+/* =====================================================
+   HERO
+===================================================== */
+
+.hero{
+    min-height:100vh;
+    position:relative;
+    display:flex;
+    align-items:flex-end;
+    padding:55px;
+    overflow:hidden;
+}
+
+.hero-image{
+    position:absolute;
+    inset:0;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(0,0,0,.72),
+            rgba(0,0,0,.18)
+        ),
+        url("https://images.unsplash.com/photo-1516035069371-29a1b244cc32?auto=format&fit=crop&w=2400&q=90")
+        center/cover;
+
+    transform:scale(1.02);
+}
+
+.hero-image:after{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:
+        linear-gradient(
+            180deg,
+            rgba(0,0,0,.15),
+            transparent 45%,
+            rgba(0,0,0,.55)
+        );
+}
+
+.top{
+    position:absolute;
+    top:40px;
+    left:55px;
+    right:55px;
+
+    display:flex;
+    justify-content:space-between;
+
+    z-index:3;
+}
+
+.by,
+.menu{
+    font-size:10px;
+    letter-spacing:4px;
+    opacity:.65;
+}
+
+.hero-content{
+    position:relative;
+    z-index:2;
+    max-width:1200px;
+}
+
+.eyebrow{
+    font-size:10px;
+    letter-spacing:5px;
+    margin-bottom:25px;
+    opacity:.65;
+}
+
+h1{
+    font-size:clamp(60px,11vw,165px);
+    line-height:.82;
+    letter-spacing:-7px;
+    font-weight:700;
+}
+
+.descriptor{
+    margin-top:32px;
+    font-size:12px;
+    letter-spacing:5px;
+    text-transform:uppercase;
+    opacity:.75;
+}
+
+.bottom{
+    position:absolute;
+    right:55px;
+    bottom:55px;
+    z-index:2;
+
+    writing-mode:vertical-rl;
+
+    font-size:9px;
+    letter-spacing:4px;
+    opacity:.55;
+}
+
+
+/* =====================================================
+   INTRO — VISUAL STATEMENT
+===================================================== */
+
+.intro{
+    position:relative;
+    padding:170px 8vw 190px;
+    background:#080808;
+}
+
+.intro-top{
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-start;
+
+    margin-bottom:110px;
+}
+
+.intro-label{
+    font-size:10px;
+    letter-spacing:4px;
+    opacity:.4;
+}
+
+.intro-location{
+    font-size:9px;
+    letter-spacing:3px;
+    opacity:.35;
+    text-transform:uppercase;
+}
+
+.intro-main{
+    max-width:1250px;
+}
+
+.intro-title{
+    font-size:clamp(55px,8.8vw,145px);
+    line-height:.88;
+    letter-spacing:-7px;
+    font-weight:500;
+}
+
+.intro-title .soft{
+    color:rgba(255,255,255,.35);
+}
+
+.intro-title .indent{
+    display:block;
+    margin-left:15vw;
+}
+
+.intro-bottom{
+    margin-top:100px;
+
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:8vw;
+}
+
+.intro-line{
+    width:100%;
+    height:1px;
+    background:rgba(255,255,255,.16);
+    margin-bottom:25px;
+}
+
+.intro-small{
+    max-width:390px;
+    font-size:11px;
+    line-height:1.8;
+    color:rgba(255,255,255,.48);
+}
+
+
+/* =====================================================
+   MANIFESTO
+===================================================== */
+
+.manifesto{
+    background:#e9e7e1;
+    color:#0a0a0a;
+
+    padding:150px 7vw 170px;
+
+    position:relative;
+}
+
+.manifesto-number{
+    font-size:10px;
+    letter-spacing:4px;
+    opacity:.4;
+    margin-bottom:80px;
+}
+
+.manifesto-title{
+    font-size:clamp(55px,9vw,145px);
+    line-height:.84;
+    letter-spacing:-7px;
+    font-weight:500;
+}
+
+.manifesto-title span{
+    display:block;
+    margin-left:17vw;
+}
+
+.manifesto-copy{
+    max-width:400px;
+    margin-left:auto;
+    margin-top:100px;
+
+    font-size:13px;
+    line-height:1.8;
+    color:rgba(0,0,0,.55);
+}
+
+.manifesto-mark{
+    position:absolute;
+    right:7vw;
+    top:150px;
+
+    width:9px;
+    height:9px;
+    border-radius:50%;
+    background:#0a0a0a;
+}
+
+
+/* =====================================================
+   WORK INTRO
+===================================================== */
+
+.work{
+    background:#080808;
+    color:#f4f3ef;
+
+    padding:160px 6vw 180px;
+}
+
+.work-head{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:8vw;
+
+    margin-bottom:120px;
+}
+
+.work-number{
+    font-size:10px;
+    letter-spacing:4px;
+    opacity:.4;
+}
+
+.work-title{
+    font-size:clamp(70px,12vw,180px);
+    line-height:.75;
+    letter-spacing:-9px;
+    font-weight:600;
+}
+
+.work-description{
+    max-width:380px;
+    align-self:end;
+
+    font-size:13px;
+    line-height:1.8;
+    color:rgba(255,255,255,.45);
+}
+
+
+/* =====================================================
+   PROJECT SYSTEM
+===================================================== */
+
+.project{
+    margin-bottom:180px;
+}
+
+.project-visual{
+    position:relative;
+    overflow:hidden;
+}
+
+.project-visual img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+
+    transition:
+        transform 1s cubic-bezier(.2,.7,.2,1);
+}
+
+.project:hover .project-visual img{
+    transform:scale(1.035);
+}
+
+
+/* PROJECT 01 */
+
+.project-one{
+    width:100%;
+}
+
+.project-one .project-visual{
+    height:min(68vw,820px);
+}
+
+
+/* PROJECT 02 */
+
+.project-two{
+    width:72%;
+    margin-left:auto;
+}
+
+.project-two .project-visual{
+    height:min(55vw,650px);
+}
+
+
+/* PROJECT 03 */
+
+.project-three{
+    width:84%;
+    margin-left:4vw;
+}
+
+.project-three .project-visual{
+    height:min(60vw,720px);
+}
+
+
+/* PROJECT META */
+
+.project-meta{
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-start;
+
+    padding-top:25px;
+}
+
+.project-name{
+    font-size:25px;
+    letter-spacing:-1px;
+}
+
+.project-type{
+    margin-top:8px;
+
+    font-size:9px;
+    letter-spacing:3px;
+    text-transform:uppercase;
+
+    color:rgba(255,255,255,.4);
+}
+
+.project-index{
+    font-size:9px;
+    letter-spacing:3px;
+    opacity:.4;
+}
+
+
+/* =====================================================
+   WORK CTA
+===================================================== */
+
+.work-cta{
+    margin-top:40px;
+
+    display:flex;
+    justify-content:center;
+}
+
+.work-cta a{
+    display:inline-flex;
+    align-items:center;
+    gap:30px;
+
+    padding:18px 0;
+
+    border-top:1px solid rgba(255,255,255,.25);
+    border-bottom:1px solid rgba(255,255,255,.25);
+
+    font-size:10px;
+    letter-spacing:4px;
+
+    transition:.35s ease;
+}
+
+.work-cta a:hover{
+    padding-left:25px;
+    padding-right:25px;
+}
+
+
+/* =====================================================
+   SERVICES
+===================================================== */
+
+.services{
+    background:#111;
+    padding:160px 8vw 180px;
+}
+
+.services-head{
+    display:grid;
+    grid-template-columns:1fr 2fr;
+    gap:8vw;
+
+    margin-bottom:110px;
+}
+
+.services-label{
+    font-size:10px;
+    letter-spacing:4px;
+    opacity:.4;
+}
+
+.services-title{
+    font-size:clamp(60px,9vw,135px);
+    line-height:.78;
+    letter-spacing:-7px;
+    font-weight:500;
+}
+
+.services-list{
+    border-top:1px solid rgba(255,255,255,.15);
+}
+
+.service{
+    display:grid;
+    grid-template-columns:70px 1fr 80px;
+    align-items:center;
+
+    padding:32px 0;
+
+    border-bottom:1px solid rgba(255,255,255,.15);
+
+    transition:.35s ease;
+}
+
+.service:hover{
+    padding-left:18px;
+}
+
+.service-number{
+    font-size:9px;
+    letter-spacing:3px;
+    opacity:.35;
+}
+
+.service-name{
+    font-size:clamp(22px,3vw,42px);
+    letter-spacing:-1.5px;
+}
+
+.service-arrow{
+    text-align:right;
+    font-size:18px;
+    opacity:.35;
+}
+
+
+/* =====================================================
+   CONTACT
+===================================================== */
+
+.contact{
+    background:#e9e7e1;
+    color:#080808;
+
+    padding:160px 7vw 110px;
+}
+
+.contact-label{
+    font-size:10px;
+    letter-spacing:4px;
+    opacity:.4;
+    margin-bottom:90px;
+}
+
+.contact-title{
+    font-size:clamp(60px,10vw,155px);
+    line-height:.78;
+    letter-spacing:-8px;
+    font-weight:600;
+}
+
+.contact-title span{
+    display:block;
+    margin-left:14vw;
+    font-family:Georgia,serif;
+    font-weight:400;
+}
+
+.contact-bottom{
+    margin-top:120px;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-end;
+}
+
+.contact-email{
+    font-size:clamp(18px,3vw,34px);
+    letter-spacing:-1px;
+
+    border-bottom:1px solid rgba(0,0,0,.3);
+    padding-bottom:10px;
+}
+
+.contact-note{
+    font-size:9px;
+    letter-spacing:3px;
+    opacity:.4;
+}
+
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+footer{
+    background:#080808;
+    color:#fff;
+
+    padding:35px 6vw;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.footer-brand{
+    font-size:10px;
+    letter-spacing:4px;
+}
+
+.footer-copy{
+    font-size:8px;
+    letter-spacing:2px;
+    opacity:.35;
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media(max-width:700px){
+
+    .hero{
+        padding:30px;
+    }
+
+    .top{
+        top:30px;
+        left:30px;
+        right:30px;
+    }
+
+    .menu{
+        display:none;
+    }
+
+    h1{
+        font-size:16vw;
+        letter-spacing:-4px;
+    }
+
+    .descriptor{
+        font-size:8px;
+        letter-spacing:2.5px;
+        line-height:1.8;
+        max-width:260px;
+    }
+
+    .bottom{
+        right:25px;
+        bottom:30px;
+    }
+
+
+    .intro{
+        padding:110px 30px 120px;
+    }
+
+    .intro-top{
+        margin-bottom:75px;
+    }
+
+    .intro-location{
+        display:none;
+    }
+
+    .intro-title{
+        font-size:15vw;
+        letter-spacing:-4px;
+    }
+
+    .intro-title .indent{
+        margin-left:9vw;
+    }
+
+    .intro-bottom{
+        display:block;
+        margin-top:65px;
+    }
+
+    .intro-small{
+        margin-top:30px;
+        font-size:12px;
+    }
+
+
+    .manifesto{
+        padding:110px 25px 120px;
+    }
+
+    .manifesto-number{
+        margin-bottom:60px;
+    }
+
+    .manifesto-title{
+        font-size:16vw;
+        letter-spacing:-4px;
+    }
+
+    .manifesto-title span{
+        margin-left:8vw;
+    }
+
+    .manifesto-copy{
+        margin-top:65px;
+        margin-left:8vw;
+    }
+
+    .manifesto-mark{
+        top:110px;
+        right:25px;
+    }
+
+
+    .work{
+        padding:110px 25px 130px;
+    }
+
+    .work-head{
+        display:block;
+        margin-bottom:75px;
+    }
+
+    .work-title{
+        margin-top:35px;
+        font-size:20vw;
+        letter-spacing:-5px;
+    }
+
+    .work-description{
+        margin-top:45px;
+    }
+
+    .project{
+        margin-bottom:100px;
+    }
+
+    .project-one,
+    .project-two,
+    .project-three{
+        width:100%;
+        margin-left:0;
+    }
+
+    .project-one .project-visual,
+    .project-two .project-visual,
+    .project-three .project-visual{
+        height:105vw;
+    }
+
+    .project-meta{
+        padding-top:20px;
+    }
+
+    .project-name{
+        font-size:21px;
+    }
+
+
+    .services{
+        padding:110px 30px 130px;
+    }
+
+    .services-head{
+        display:block;
+        margin-bottom:70px;
+    }
+
+    .services-title{
+        margin-top:35px;
+        font-size:18vw;
+        letter-spacing:-4px;
+    }
+
+    .service{
+        grid-template-columns:42px 1fr 35px;
+        padding:25px 0;
+    }
+
+    .service:hover{
+        padding-left:0;
+    }
+
+    .service-name{
+        font-size:22px;
+    }
+
+
+    .contact{
+        padding:110px 30px 90px;
+    }
+
+    .contact-label{
+        margin-bottom:65px;
+    }
+
+    .contact-title{
+        font-size:18vw;
+        letter-spacing:-4px;
+    }
+
+    .contact-title span{
+        margin-left:8vw;
+    }
+
+    .contact-bottom{
+        display:block;
+        margin-top:75px;
+    }
+
+    .contact-email{
+        font-size:20px;
+        word-break:break-word;
+    }
+
+    .contact-note{
+        margin-top:30px;
+    }
+
+
+    footer{
+        display:block;
+        padding:30px;
+    }
+
+    .footer-copy{
+        margin-top:15px;
+    }
+
+}
+
+</style>
 </head>
 
 
 <body>
 
 
-    <!-- =========================
-         HERO
-    ========================= -->
+<!-- =====================================================
+     HERO
+===================================================== -->
 
-    <section class="hero">
+<section class="hero">
 
-        <div class="hero-image"></div>
+    <div class="hero-image"></div>
 
-        <header class="top">
+    <header class="top">
 
-            <div class="by">
-                BY TRAVELFILMGR
-            </div>
-
-            <div class="menu">
-                MENU
-            </div>
-
-        </header>
-
-
-        <div class="hero-content">
-
-            <div class="eyebrow">
-                VISUAL PRODUCTION
-            </div>
-
-            <h1>
-                KOFINAS<br>
-                VISUALS
-            </h1>
-
-            <div class="descriptor">
-                Photography · Real Estate · Events
-            </div>
-
+        <div class="by">
+            BY TRAVELFILMGR
         </div>
 
-
-        <div class="bottom">
-            SCROLL TO EXPLORE
+        <div class="menu">
+            MENU
         </div>
 
-    </section>
+    </header>
+
+
+    <div class="hero-content">
+
+        <div class="eyebrow">
+            VISUAL PRODUCTION
+        </div>
+
+        <h1>
+            KOFINAS<br>
+            VISUALS
+        </h1>
+
+        <div class="descriptor">
+            Photography · Real Estate · Events
+        </div>
+
+    </div>
+
+
+    <div class="bottom">
+        SCROLL TO EXPLORE
+    </div>
+
+</section>
 
 
 
-    <!-- =========================
-         INTRO
-    ========================= -->
+<!-- =====================================================
+     INTRO
+===================================================== -->
 
-    <section class="intro">
+<section class="intro">
+
+    <div class="intro-top">
 
         <div class="intro-label">
             01 / THE APPROACH
         </div>
 
-
-        <div class="intro-content">
-
-            <h2 class="intro-title">
-                The work starts<br>
-                with the frame.
-            </h2>
-
-            <div class="intro-line"></div>
-
-            <p class="intro-text">
-                KOFINAS VISUALS creates clean, purposeful imagery
-                for people, places and brands. From real estate and
-                outdoor environments to events and commercial work,
-                every image is built to communicate clearly and leave
-                a lasting impression.
-            </p>
-
+        <div class="intro-location">
+            Greece · Visual Production
         </div>
 
-    </section>
+    </div>
 
 
+    <div class="intro-main">
 
-    <!-- =========================
-         SELECTED WORK
-    ========================= -->
+        <h2 class="intro-title">
 
-    <section class="work">
+            Visuals with
+            <span class="soft">purpose.</span>
 
-        <div class="work-header">
+            <span class="indent">
+                Built to be
+                <span class="soft">remembered.</span>
+            </span>
 
-            <div>
-
-                <div class="work-number">
-                    02 / SELECTED WORK
-                </div>
-
-                <h2 class="work-title">
-                    WORK
-                </h2>
-
-            </div>
-
-
-            <p class="work-description">
-                A selection of visual work across spaces,
-                people and environments.
-            </p>
-
-        </div>
-
-
-
-        <!-- PROJECT 01 -->
-
-        <article class="project">
-
-            <div class="project-image">
-
-                <img
-                    src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=2200&q=90"
-                    alt="Modern interior"
-                >
-
-            </div>
-
-
-            <div class="project-info">
-
-                <div>
-
-                    <div class="project-name">
-                        REAL ESTATE
-                    </div>
-
-                    <div class="project-type">
-                        Spaces / Architecture
-                    </div>
-
-                </div>
-
-
-                <div class="project-index">
-                    01
-                </div>
-
-            </div>
-
-        </article>
-
-
-
-        <!-- PROJECT 02 -->
-
-        <article class="project offset">
-
-            <div class="project-image">
-
-                <img
-                    src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&w=2200&q=90"
-                    alt="Live event"
-                >
-
-            </div>
-
-
-            <div class="project-info">
-
-                <div>
-
-                    <div class="project-name">
-                        EVENTS
-                    </div>
-
-                    <div class="project-type">
-                        People / Atmosphere
-                    </div>
-
-                </div>
-
-
-                <div class="project-index">
-                    02
-                </div>
-
-            </div>
-
-        </article>
-
-
-
-        <!-- PROJECT 03 -->
-
-        <article class="project third">
-
-            <div class="project-image">
-
-                <img
-                    src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=2200&q=90"
-                    alt="Outdoor landscape"
-                >
-
-            </div>
-
-
-            <div class="project-info">
-
-                <div>
-
-                    <div class="project-name">
-                        OUTDOOR
-                    </div>
-
-                    <div class="project-type">
-                        Landscape / Lifestyle
-                    </div>
-
-                </div>
-
-
-                <div class="project-index">
-                    03
-                </div>
-
-            </div>
-
-        </article>
-
-
-
-        <div class="work-link-wrap">
-
-            <a href="work.html" class="work-link">
-                VIEW FULL WORK
-            </a>
-
-        </div>
-
-    </section>
-
-
-
-    <!-- =========================
-         SERVICES
-    ========================= -->
-
-    <section class="services">
-
-        <div class="services-top">
-
-            <div class="services-label">
-                03 / SERVICES
-            </div>
-
-            <h2 class="services-title">
-                WHAT<br>
-                WE DO
-            </h2>
-
-        </div>
-
-
-        <div class="services-list">
-
-            <div class="service">
-
-                <div class="service-name">
-                    Photography
-                </div>
-
-                <div class="service-number">
-                    01
-                </div>
-
-            </div>
-
-
-            <div class="service">
-
-                <div class="service-name">
-                    Real Estate
-                </div>
-
-                <div class="service-number">
-                    02
-                </div>
-
-            </div>
-
-
-            <div class="service">
-
-                <div class="service-name">
-                    Events
-                </div>
-
-                <div class="service-number">
-                    03
-                </div>
-
-            </div>
-
-
-            <div class="service">
-
-                <div class="service-name">
-                    Outdoor & Lifestyle
-                </div>
-
-                <div class="service-number">
-                    04
-                </div>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-
-    <!-- =========================
-         CONTACT
-    ========================= -->
-
-    <section class="contact">
-
-        <div class="contact-label">
-            04 / CONTACT
-        </div>
-
-
-        <h2 class="contact-title">
-            LET'S CREATE<br>
-            SOMETHING<br>
-            DISTINCT.
         </h2>
 
 
-        <div class="contact-bottom">
+        <div class="intro-bottom">
 
-            <a
-                href="mailto:kofinasvisuals@gmail.com"
-                class="contact-email"
+            <div>
+                <div class="intro-line"></div>
+            </div>
+
+            <p class="intro-small">
+                KOFINAS VISUALS creates photography and visual
+                content for spaces, people and experiences.
+                Every project is approached with precision,
+                atmosphere and a clear visual intention.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     MANIFESTO
+===================================================== -->
+
+<section class="manifesto">
+
+    <div class="manifesto-mark"></div>
+
+    <div class="manifesto-number">
+        02 / VISUAL LANGUAGE
+    </div>
+
+
+    <h2 class="manifesto-title">
+
+        NOT MORE
+        <span>IMAGES.</span>
+
+        <span>THE RIGHT</span>
+        <span>ONES.</span>
+
+    </h2>
+
+
+    <p class="manifesto-copy">
+        From a property prepared for the market to an event
+        that happens once, the image has a job to do.
+        It should attract attention, communicate value
+        and leave something behind.
+    </p>
+
+</section>
+
+
+
+<!-- =====================================================
+     WORK
+===================================================== -->
+
+<section class="work">
+
+    <div class="work-head">
+
+        <div>
+
+            <div class="work-number">
+                03 / SELECTED WORK
+            </div>
+
+            <h2 class="work-title">
+                WORK
+            </h2>
+
+        </div>
+
+
+        <p class="work-description">
+            A visual selection across architecture,
+            people, environments and experiences.
+        </p>
+
+    </div>
+
+
+
+    <!-- PROJECT 01 -->
+
+    <article class="project project-one">
+
+        <div class="project-visual">
+
+            <img
+                src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=2200&q=90"
+                alt="Modern interior placeholder"
             >
-                kofinasvisuals@gmail.com
-            </a>
+
+        </div>
 
 
-            <div class="contact-note">
-                AVAILABLE FOR SELECT PROJECTS
+        <div class="project-meta">
+
+            <div>
+
+                <div class="project-name">
+                    REAL ESTATE
+                </div>
+
+                <div class="project-type">
+                    Spaces / Architecture
+                </div>
+
+            </div>
+
+            <div class="project-index">
+                01
             </div>
 
         </div>
 
-    </section>
+    </article>
 
 
 
-    <!-- =========================
-         FOOTER
-    ========================= -->
+    <!-- PROJECT 02 -->
 
-    <footer>
+    <article class="project project-two">
 
-        <div class="footer-brand">
-            KOFINAS VISUALS
+        <div class="project-visual">
+
+            <img
+                src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&w=2200&q=90"
+                alt="Live event placeholder"
+            >
+
         </div>
 
-        <div class="footer-copy">
-            © 2026 KOFINAS VISUALS · BY TRAVELFILMGR
+
+        <div class="project-meta">
+
+            <div>
+
+                <div class="project-name">
+                    EVENTS
+                </div>
+
+                <div class="project-type">
+                    People / Atmosphere
+                </div>
+
+            </div>
+
+            <div class="project-index">
+                02
+            </div>
+
         </div>
 
-    </footer>
+    </article>
+
+
+
+    <!-- PROJECT 03 -->
+
+    <article class="project project-three">
+
+        <div class="project-visual">
+
+            <img
+                src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=2200&q=90"
+                alt="Outdoor environment placeholder"
+            >
+
+        </div>
+
+
+        <div class="project-meta">
+
+            <div>
+
+                <div class="project-name">
+                    OUTDOOR
+                </div>
+
+                <div class="project-type">
+                    Landscape / Lifestyle
+                </div>
+
+            </div>
+
+            <div class="project-index">
+                03
+            </div>
+
+        </div>
+
+    </article>
+
+
+
+    <div class="work-cta">
+
+        <a href="work.html">
+            VIEW FULL WORK
+            <span>→</span>
+        </a>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     SERVICES
+===================================================== -->
+
+<section class="services">
+
+    <div class="services-head">
+
+        <div class="services-label">
+            04 / SERVICES
+        </div>
+
+        <h2 class="services-title">
+            WHAT<br>
+            WE DO
+        </h2>
+
+    </div>
+
+
+    <div class="services-list">
+
+        <a href="work.html" class="service">
+
+            <div class="service-number">
+                01
+            </div>
+
+            <div class="service-name">
+                Photography
+            </div>
+
+            <div class="service-arrow">
+                ↗
+            </div>
+
+        </a>
+
+
+        <a href="work.html" class="service">
+
+            <div class="service-number">
+                02
+            </div>
+
+            <div class="service-name">
+                Real Estate
+            </div>
+
+            <div class="service-arrow">
+                ↗
+            </div>
+
+        </a>
+
+
+        <a href="work.html" class="service">
+
+            <div class="service-number">
+                03
+            </div>
+
+            <div class="service-name">
+                Events
+            </div>
+
+            <div class="service-arrow">
+                ↗
+            </div>
+
+        </a>
+
+
+        <a href="work.html" class="service">
+
+            <div class="service-number">
+                04
+            </div>
+
+            <div class="service-name">
+                Outdoor & Lifestyle
+            </div>
+
+            <div class="service-arrow">
+                ↗
+            </div>
+
+        </a>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     CONTACT
+===================================================== -->
+
+<section class="contact">
+
+    <div class="contact-label">
+        05 / CONTACT
+    </div>
+
+
+    <h2 class="contact-title">
+
+        LET'S MAKE
+        <span>IT VISIBLE.</span>
+
+    </h2>
+
+
+    <div class="contact-bottom">
+
+        <a
+            href="mailto:kofinasvisuals@gmail.com"
+            class="contact-email"
+        >
+            kofinasvisuals@gmail.com
+        </a>
+
+
+        <div class="contact-note">
+            AVAILABLE FOR SELECT PROJECTS
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer>
+
+    <div class="footer-brand">
+        KOFINAS VISUALS
+    </div>
+
+    <div class="footer-copy">
+        © 2026 KOFINAS VISUALS · BY TRAVELFILMGR
+    </div>
+
+</footer>
 
 
 </body>
