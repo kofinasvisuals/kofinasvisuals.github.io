@@ -1,0 +1,861 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Website Status — KOFINAS VISUALS</title>
+
+<meta
+    name="description"
+    content="Current website status information for KOFINAS VISUALS."
+>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#080808;
+    color:#f1f1f1;
+    font-family:Arial, Helvetica, sans-serif;
+    line-height:1.6;
+    overflow-x:hidden;
+}
+
+a{
+    color:inherit;
+    text-decoration:none;
+}
+
+
+/* HEADER */
+
+header{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+
+    z-index:100;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:28px 42px;
+
+    mix-blend-mode:difference;
+    color:#fff;
+}
+
+.brand{
+    font-size:12px;
+    font-weight:700;
+    letter-spacing:.18em;
+}
+
+.nav-right{
+    display:flex;
+    align-items:center;
+    gap:28px;
+}
+
+.back{
+    font-size:10px;
+    letter-spacing:.18em;
+    text-transform:uppercase;
+    opacity:.65;
+
+    transition:opacity .3s ease;
+}
+
+.back:hover{
+    opacity:1;
+}
+
+
+/* LANGUAGE */
+
+.language{
+    display:flex;
+    align-items:center;
+    gap:8px;
+
+    font-size:10px;
+    letter-spacing:.15em;
+}
+
+.language button{
+    border:0;
+    background:none;
+
+    color:inherit;
+    font:inherit;
+
+    cursor:pointer;
+
+    opacity:.4;
+
+    padding:4px 0;
+
+    transition:opacity .25s ease;
+}
+
+.language button:hover,
+.language button.active{
+    opacity:1;
+}
+
+.language-separator{
+    opacity:.25;
+}
+
+
+/* HERO */
+
+.hero{
+    min-height:72vh;
+
+    padding:170px 8vw 100px;
+
+    display:flex;
+    flex-direction:column;
+    justify-content:flex-end;
+
+    border-bottom:1px solid #202020;
+}
+
+.eyebrow{
+    font-size:10px;
+    letter-spacing:.25em;
+
+    color:#666;
+
+    text-transform:uppercase;
+
+    margin-bottom:35px;
+}
+
+.hero-title{
+    max-width:1150px;
+
+    font-size:clamp(55px,9vw,135px);
+
+    line-height:.86;
+
+    letter-spacing:-.055em;
+
+    text-transform:uppercase;
+
+    font-weight:700;
+}
+
+.hero-title span{
+    display:block;
+    color:#777;
+}
+
+.hero-text{
+    max-width:650px;
+
+    margin-top:65px;
+
+    font-size:14px;
+    line-height:1.8;
+
+    color:#888;
+}
+
+
+/* CONTENT */
+
+.content{
+    padding:0 8vw;
+}
+
+.section{
+    display:grid;
+
+    grid-template-columns:1fr 2.3fr;
+
+    gap:8vw;
+
+    padding:110px 0;
+
+    border-bottom:1px solid #202020;
+}
+
+.section-number{
+    font-size:9px;
+    letter-spacing:.22em;
+
+    color:#555;
+
+    text-transform:uppercase;
+}
+
+.section-content{
+    max-width:850px;
+}
+
+.section-content h2{
+    font-size:clamp(30px,4vw,58px);
+
+    line-height:1;
+
+    letter-spacing:-.04em;
+
+    text-transform:uppercase;
+
+    margin-bottom:35px;
+}
+
+.section-content p{
+    max-width:760px;
+
+    font-size:15px;
+    line-height:1.85;
+
+    color:#999;
+
+    margin-bottom:24px;
+}
+
+.section-content p:last-child{
+    margin-bottom:0;
+}
+
+
+/* STATUS BLOCK */
+
+.status-block{
+    margin-top:45px;
+
+    padding:30px;
+
+    border:1px solid #242424;
+
+    background:#0d0d0d;
+}
+
+.status-line{
+    display:flex;
+    justify-content:space-between;
+    gap:30px;
+
+    padding:16px 0;
+
+    border-bottom:1px solid #202020;
+}
+
+.status-line:last-child{
+    border-bottom:0;
+}
+
+.status-label{
+    font-size:9px;
+    letter-spacing:.18em;
+
+    color:#555;
+
+    text-transform:uppercase;
+}
+
+.status-value{
+    font-size:11px;
+    letter-spacing:.12em;
+
+    color:#ccc;
+
+    text-transform:uppercase;
+
+    text-align:right;
+}
+
+
+/* FOOTER */
+
+footer{
+    background:#080808;
+
+    color:#fff;
+
+    padding:35px 6vw;
+
+    display:flex;
+
+    justify-content:space-between;
+    align-items:center;
+}
+
+.footer-brand{
+    font-size:10px;
+    letter-spacing:4px;
+}
+
+.footer-copy{
+    display:flex;
+    align-items:center;
+
+    gap:22px;
+
+    font-size:8px;
+    letter-spacing:2px;
+
+    opacity:.45;
+}
+
+.footer-link{
+    transition:opacity .3s ease;
+}
+
+.footer-link:hover{
+    opacity:1;
+}
+
+
+/* MOBILE */
+
+@media(max-width:700px){
+
+    header{
+        padding:22px 20px;
+    }
+
+    .brand{
+        font-size:10px;
+    }
+
+    .nav-right{
+        gap:15px;
+    }
+
+    .back{
+        font-size:8px;
+    }
+
+    .language,
+    .language button{
+        font-size:8px;
+    }
+
+    .hero{
+        min-height:68vh;
+
+        padding:140px 20px 80px;
+    }
+
+    .hero-title{
+        font-size:15vw;
+    }
+
+    .hero-text{
+        margin-top:50px;
+
+        font-size:13px;
+    }
+
+    .content{
+        padding:0 20px;
+    }
+
+    .section{
+        grid-template-columns:1fr;
+
+        gap:35px;
+
+        padding:80px 0;
+    }
+
+    .section-content h2{
+        font-size:10vw;
+    }
+
+    .section-content p{
+        font-size:14px;
+    }
+
+    .status-line{
+        display:block;
+    }
+
+    .status-value{
+        margin-top:8px;
+
+        text-align:left;
+    }
+
+    footer{
+        display:block;
+
+        padding:30px;
+    }
+
+    .footer-copy{
+        margin-top:15px;
+
+        flex-wrap:wrap;
+
+        gap:12px;
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<header>
+
+    <a href="preview.html" class="brand">
+        KOFINAS VISUALS
+    </a>
+
+
+    <div class="nav-right">
+
+        <a
+            href="preview.html"
+            class="back"
+            data-en="BACK"
+            data-gr="ΠΙΣΩ"
+        >
+            BACK
+        </a>
+
+
+        <div class="language">
+
+            <button
+                id="enBtn"
+                class="active"
+                type="button"
+            >
+                EN
+            </button>
+
+            <span class="language-separator">
+                ·
+            </span>
+
+            <button
+                id="grBtn"
+                type="button"
+            >
+                GR
+            </button>
+
+        </div>
+
+    </div>
+
+</header>
+
+
+
+<main>
+
+
+<!-- HERO -->
+
+<section class="hero">
+
+    <div
+        class="eyebrow"
+        data-en="KOFINAS VISUALS / WEBSITE STATUS"
+        data-gr="KOFINAS VISUALS / ΚΑΤΑΣΤΑΣΗ ΙΣΤΟΣΕΛΙΔΑΣ"
+    >
+        KOFINAS VISUALS / WEBSITE STATUS
+    </div>
+
+
+    <h1 class="hero-title">
+
+        <span
+            data-en="CURRENT"
+            data-gr="ΤΡΕΧΟΥΣΑ"
+        >
+            CURRENT
+        </span>
+
+        <span
+            data-en="STATUS."
+            data-gr="ΚΑΤΑΣΤΑΣΗ."
+        >
+            STATUS.
+        </span>
+
+    </h1>
+
+
+    <p
+        class="hero-text"
+        data-en="Information about the current development and professional status of KOFINAS VISUALS."
+        data-gr="Πληροφορίες σχετικά με την τρέχουσα κατάσταση ανάπτυξης και επαγγελματικής λειτουργίας του KOFINAS VISUALS."
+    >
+        Information about the current development and
+        professional status of KOFINAS VISUALS.
+    </p>
+
+</section>
+
+
+
+<div class="content">
+
+
+<!-- 01 -->
+
+<section class="section">
+
+    <div
+        class="section-number"
+        data-en="01 / CURRENT STAGE"
+        data-gr="01 / ΤΡΕΧΟΝ ΣΤΑΔΙΟ"
+    >
+        01 / CURRENT STAGE
+    </div>
+
+
+    <div class="section-content">
+
+        <h2
+            data-en="IN PREPARATION."
+            data-gr="ΣΕ ΠΡΟΕΤΟΙΜΑΣΙΑ."
+        >
+            IN PREPARATION.
+        </h2>
+
+
+        <p
+            data-en="KOFINAS VISUALS is currently in a preparation and development stage."
+            data-gr="Το KOFINAS VISUALS βρίσκεται αυτή τη στιγμή σε στάδιο προετοιμασίας και ανάπτυξης."
+        >
+            KOFINAS VISUALS is currently in a preparation
+            and development stage.
+        </p>
+
+
+        <p
+            data-en="The website is currently used to develop and present the visual identity, structure and future direction of the project."
+            data-gr="Η ιστοσελίδα χρησιμοποιείται αυτή τη στιγμή για την ανάπτυξη και παρουσίαση της οπτικής ταυτότητας, της δομής και της μελλοντικής κατεύθυνσης του project."
+        >
+            The website is currently used to develop and present
+            the visual identity, structure and future direction
+            of the project.
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<!-- 02 -->
+
+<section class="section">
+
+    <div
+        class="section-number"
+        data-en="02 / SERVICES"
+        data-gr="02 / ΥΠΗΡΕΣΙΕΣ"
+    >
+        02 / SERVICES
+    </div>
+
+
+    <div class="section-content">
+
+        <h2
+            data-en="COMING SOON."
+            data-gr="ΣΥΝΤΟΜΑ."
+        >
+            COMING SOON.
+        </h2>
+
+
+        <p
+            data-en="Professional services are currently in preparation and are not yet available through this website."
+            data-gr="Οι επαγγελματικές υπηρεσίες βρίσκονται αυτή τη στιγμή σε προετοιμασία και δεν είναι ακόμη διαθέσιμες μέσω της ιστοσελίδας."
+        >
+            Professional services are currently in preparation
+            and are not yet available through this website.
+        </p>
+
+
+        <p
+            data-en="The website does not currently operate as an online store, booking platform or payment platform."
+            data-gr="Η ιστοσελίδα δεν λειτουργεί αυτή τη στιγμή ως ηλεκτρονικό κατάστημα, πλατφόρμα κρατήσεων ή πλατφόρμα πληρωμών."
+        >
+            The website does not currently operate as an online
+            store, booking platform or payment platform.
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<!-- 03 -->
+
+<section class="section">
+
+    <div
+        class="section-number"
+        data-en="03 / WEBSITE"
+        data-gr="03 / ΙΣΤΟΣΕΛΙΔΑ"
+    >
+        03 / WEBSITE
+    </div>
+
+
+    <div class="section-content">
+
+        <h2
+            data-en="PRESENTATION ONLY."
+            data-gr="ΠΑΡΟΥΣΙΑΣΗ."
+        >
+            PRESENTATION ONLY.
+        </h2>
+
+
+        <p
+            data-en="The current website mainly serves as a presentation and development preview of KOFINAS VISUALS."
+            data-gr="Η παρούσα ιστοσελίδα λειτουργεί κυρίως ως χώρος παρουσίασης και προεπισκόπησης της ανάπτυξης του KOFINAS VISUALS."
+        >
+            The current website mainly serves as a presentation
+            and development preview of KOFINAS VISUALS.
+        </p>
+
+
+        <div class="status-block">
+
+            <div class="status-line">
+
+                <div
+                    class="status-label"
+                    data-en="PROJECT"
+                    data-gr="PROJECT"
+                >
+                    PROJECT
+                </div>
+
+                <div
+                    class="status-value"
+                    data-en="IN DEVELOPMENT"
+                    data-gr="ΥΠΟ ΑΝΑΠΤΥΞΗ"
+                >
+                    IN DEVELOPMENT
+                </div>
+
+            </div>
+
+
+            <div class="status-line">
+
+                <div
+                    class="status-label"
+                    data-en="PROFESSIONAL SERVICES"
+                    data-gr="ΕΠΑΓΓΕΛΜΑΤΙΚΕΣ ΥΠΗΡΕΣΙΕΣ"
+                >
+                    PROFESSIONAL SERVICES
+                </div>
+
+                <div
+                    class="status-value"
+                    data-en="COMING SOON"
+                    data-gr="ΣΥΝΤΟΜΑ"
+                >
+                    COMING SOON
+                </div>
+
+            </div>
+
+
+            <div class="status-line">
+
+                <div
+                    class="status-label"
+                    data-en="ONLINE PAYMENTS"
+                    data-gr="ONLINE ΠΛΗΡΩΜΕΣ"
+                >
+                    ONLINE PAYMENTS
+                </div>
+
+                <div
+                    class="status-value"
+                    data-en="NOT AVAILABLE"
+                    data-gr="ΜΗ ΔΙΑΘΕΣΙΜΕΣ"
+                >
+                    NOT AVAILABLE
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- 04 -->
+
+<section class="section">
+
+    <div
+        class="section-number"
+        data-en="04 / FUTURE"
+        data-gr="04 / ΜΕΛΛΟΝ"
+    >
+        04 / FUTURE
+    </div>
+
+
+    <div class="section-content">
+
+        <h2
+            data-en="THE NEXT STAGE."
+            data-gr="ΤΟ ΕΠΟΜΕΝΟ ΣΤΑΔΙΟ."
+        >
+            THE NEXT STAGE.
+        </h2>
+
+
+        <p
+            data-en="The website will be updated as KOFINAS VISUALS develops and professional services become available."
+            data-gr="Η ιστοσελίδα θα ενημερώνεται καθώς εξελίσσεται το KOFINAS VISUALS και γίνονται διαθέσιμες οι επαγγελματικές υπηρεσίες."
+        >
+            The website will be updated as KOFINAS VISUALS develops
+            and professional services become available.
+        </p>
+
+    </div>
+
+</section>
+
+
+</div>
+
+</main>
+
+
+
+<footer>
+
+    <div class="footer-brand">
+        KOFINAS VISUALS
+    </div>
+
+
+    <div class="footer-copy">
+
+        <a
+            href="privacy.html"
+            class="footer-link"
+            data-en="PRIVACY POLICY"
+            data-gr="ΠΟΛΙΤΙΚΗ ΑΠΟΡΡΗΤΟΥ"
+        >
+            PRIVACY POLICY
+        </a>
+
+        <span>
+            © 2026 KOFINAS VISUALS · ALL RIGHTS RESERVED
+        </span>
+
+    </div>
+
+</footer>
+
+
+
+<script>
+
+const enBtn =
+    document.getElementById("enBtn");
+
+const grBtn =
+    document.getElementById("grBtn");
+
+const translatable =
+    document.querySelectorAll("[data-en]");
+
+
+function setLanguage(language){
+
+    document.documentElement.lang =
+        language === "gr" ? "el" : "en";
+
+
+    translatable.forEach(element => {
+
+        element.textContent =
+            language === "gr"
+                ? element.getAttribute("data-gr")
+                : element.getAttribute("data-en");
+
+    });
+
+
+    enBtn.classList.toggle(
+        "active",
+        language === "en"
+    );
+
+
+    grBtn.classList.toggle(
+        "active",
+        language === "gr"
+    );
+
+}
+
+
+enBtn.addEventListener("click", () => {
+
+    setLanguage("en");
+
+});
+
+
+grBtn.addEventListener("click", () => {
+
+    setLanguage("gr");
+
+});
+
+
+/*
+    English is always the default.
+
+    No language preference is stored.
+    No localStorage.
+    No sessionStorage.
+    No cookies.
+*/
+
+setLanguage("en");
+
+</script>
+
+
+</body>
+
+</html>
