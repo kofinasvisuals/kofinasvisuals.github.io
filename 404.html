@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+>
+
+<title>404 — KOFINAS VISUALS</title>
+
+<link rel="icon" type="image/x-icon" href="favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="192x192" href="favicon-192x192.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+
+<meta
+    name="description"
+    content="Page not found — KOFINAS VISUALS."
+>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html,
+body{
+    width:100%;
+    min-height:100%;
+}
+
+body{
+    background:#080808;
+    color:#ffffff;
+
+    font-family:Arial, Helvetica, sans-serif;
+
+    overflow:hidden;
+}
+
+a{
+    color:inherit;
+    text-decoration:none;
+}
+
+button{
+    font:inherit;
+}
+
+
+/* =====================================================
+   PAGE
+===================================================== */
+
+.page{
+    min-height:100svh;
+
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
+
+    padding:42px 50px;
+
+    position:relative;
+
+    overflow:hidden;
+}
+
+
+/* =====================================================
+   TOP
+===================================================== */
+
+.top{
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-start;
+
+    position:relative;
+
+    z-index:3;
+}
+
+.brand-small{
+    font-size:11px;
+    letter-spacing:4px;
+
+    opacity:.65;
+}
+
+.top-right{
+    display:flex;
+    align-items:center;
+
+    gap:28px;
+}
+
+
+/* =====================================================
+   LANGUAGE
+===================================================== */
+
+.language{
+    display:flex;
+    align-items:center;
+
+    gap:7px;
+
+    font-size:9px;
+    letter-spacing:2px;
+}
+
+.language button{
+    border:0;
+    background:none;
+
+    color:#ffffff;
+
+    cursor:pointer;
+
+    font-size:9px;
+    letter-spacing:2px;
+
+    opacity:.35;
+
+    padding:5px 0;
+
+    transition:opacity .25s ease;
+}
+
+.language button:hover,
+.language button.active{
+    opacity:1;
+}
+
+.language-separator{
+    opacity:.25;
+}
+
+
+/* =====================================================
+   CENTER
+===================================================== */
+
+.center{
+    position:relative;
+
+    z-index:2;
+
+    max-width:1300px;
+}
+
+.eyebrow{
+    font-size:11px;
+    letter-spacing:5px;
+
+    opacity:.45;
+
+    margin-bottom:30px;
+}
+
+.error-number{
+    font-size:clamp(90px,18vw,260px);
+
+    line-height:.7;
+
+    letter-spacing:-12px;
+
+    font-weight:700;
+
+    color:#ffffff;
+}
+
+.error-title{
+    margin-top:55px;
+
+    font-size:clamp(34px,6vw,85px);
+
+    line-height:.9;
+
+    letter-spacing:-4px;
+
+    font-weight:500;
+
+    text-transform:uppercase;
+}
+
+.error-title span{
+    display:block;
+
+    color:rgba(255,255,255,.35);
+}
+
+
+/* =====================================================
+   RETURN HOME
+===================================================== */
+
+.return{
+    display:inline-flex;
+    align-items:center;
+
+    gap:22px;
+
+    margin-top:55px;
+
+    padding:16px 0;
+
+    border-top:1px solid rgba(255,255,255,.25);
+    border-bottom:1px solid rgba(255,255,255,.25);
+
+    font-size:9px;
+    letter-spacing:3px;
+
+    transition:
+        padding .3s ease,
+        opacity .3s ease;
+}
+
+.return:hover{
+    padding-left:20px;
+    padding-right:20px;
+}
+
+
+/* =====================================================
+   BOTTOM
+===================================================== */
+
+.bottom{
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-end;
+
+    gap:30px;
+
+    position:relative;
+
+    z-index:2;
+}
+
+.location{
+    font-size:10px;
+    letter-spacing:3px;
+
+    opacity:.35;
+
+    text-transform:uppercase;
+}
+
+.status{
+    font-size:9px;
+    letter-spacing:3px;
+
+    opacity:.35;
+
+    text-transform:uppercase;
+}
+
+
+/* =====================================================
+   BACKGROUND
+===================================================== */
+
+.background-number{
+    position:absolute;
+
+    right:20px;
+    top:50%;
+
+    transform:translateY(-50%);
+
+    font-size:35vw;
+    font-weight:700;
+
+    line-height:1;
+
+    color:rgba(255,255,255,.022);
+
+    user-select:none;
+
+    pointer-events:none;
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media(max-width:700px){
+
+    .page{
+        min-height:100svh;
+
+        padding:
+            max(28px, env(safe-area-inset-top))
+            25px
+            max(28px, env(safe-area-inset-bottom));
+    }
+
+
+    .top{
+        align-items:center;
+    }
+
+
+    .brand-small{
+        font-size:8px;
+        letter-spacing:2.5px;
+    }
+
+
+    .top-right{
+        gap:14px;
+    }
+
+
+    .language,
+    .language button{
+        font-size:8px;
+    }
+
+
+    .eyebrow{
+        font-size:8px;
+        letter-spacing:3.5px;
+
+        margin-bottom:25px;
+    }
+
+
+    .error-number{
+        font-size:28vw;
+
+        letter-spacing:-7px;
+    }
+
+
+    .error-title{
+        margin-top:45px;
+
+        font-size:12vw;
+
+        letter-spacing:-3px;
+    }
+
+
+    .return{
+        margin-top:45px;
+
+        font-size:8px;
+
+        letter-spacing:2.5px;
+    }
+
+
+    .location{
+        font-size:8px;
+
+        letter-spacing:2px;
+    }
+
+
+    .status{
+        font-size:7px;
+
+        letter-spacing:2px;
+
+        text-align:right;
+    }
+
+
+    .background-number{
+        right:-20px;
+
+        font-size:60vw;
+    }
+
+}
+
+
+/* =====================================================
+   VERY SMALL MOBILE
+===================================================== */
+
+@media(max-width:380px){
+
+    .page{
+        padding-left:20px;
+        padding-right:20px;
+    }
+
+
+    .brand-small{
+        font-size:7px;
+        letter-spacing:2px;
+    }
+
+
+    .error-title{
+        font-size:11vw;
+    }
+
+
+    .return{
+        font-size:7px;
+        letter-spacing:2px;
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<main class="page">
+
+
+    <div
+        class="background-number"
+        aria-hidden="true"
+    >
+        404
+    </div>
+
+
+
+    <!-- TOP -->
+
+    <header class="top">
+
+        <div class="brand-small">
+            BY TRAVELFILMGR
+        </div>
+
+
+        <div class="top-right">
+
+            <div class="language">
+
+                <button
+                    id="enBtn"
+                    class="active"
+                    type="button"
+                    aria-label="English"
+                >
+                    EN
+                </button>
+
+
+                <span class="language-separator">
+                    ·
+                </span>
+
+
+                <button
+                    id="grBtn"
+                    type="button"
+                    aria-label="Ελληνικά"
+                >
+                    GR
+                </button>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+
+    <!-- CENTER -->
+
+    <section class="center">
+
+        <div
+            class="eyebrow"
+            data-en="KOFINAS VISUALS / ERROR"
+            data-gr="KOFINAS VISUALS / ΣΦΑΛΜΑ"
+        >
+            KOFINAS VISUALS / ERROR
+        </div>
+
+
+        <div class="error-number">
+            404
+        </div>
+
+
+        <h1 class="error-title">
+
+            <span
+                style="color:#ffffff;"
+                data-en="FRAME"
+                data-gr="ΤΟ ΚΑΡΕ"
+            >
+                FRAME
+            </span>
+
+            <span
+                data-en="NOT FOUND."
+                data-gr="ΔΕΝ ΒΡΕΘΗΚΕ."
+            >
+                NOT FOUND.
+            </span>
+
+        </h1>
+
+
+        <a
+            href="index.html"
+            class="return"
+        >
+
+            <span
+                data-en="RETURN HOME"
+                data-gr="ΕΠΙΣΤΡΟΦΗ ΣΤΗΝ ΑΡΧΙΚΗ"
+            >
+                RETURN HOME
+            </span>
+
+            <span>
+                →
+            </span>
+
+        </a>
+
+    </section>
+
+
+
+    <!-- BOTTOM -->
+
+    <footer class="bottom">
+
+        <div
+            class="location"
+            data-en="Greece · 2026"
+            data-gr="Ελλάδα · 2026"
+        >
+            Greece · 2026
+        </div>
+
+
+        <div
+            class="status"
+            data-en="PAGE NOT FOUND"
+            data-gr="Η ΣΕΛΙΔΑ ΔΕΝ ΒΡΕΘΗΚΕ"
+        >
+            PAGE NOT FOUND
+        </div>
+
+    </footer>
+
+
+</main>
+
+
+
+<script>
+
+const enBtn =
+    document.getElementById("enBtn");
+
+const grBtn =
+    document.getElementById("grBtn");
+
+const translatable =
+    document.querySelectorAll("[data-en]");
+
+
+function setLanguage(language){
+
+    document.documentElement.lang =
+        language === "gr"
+            ? "el"
+            : "en";
+
+
+    translatable.forEach(element => {
+
+        element.textContent =
+            language === "gr"
+                ? element.getAttribute("data-gr")
+                : element.getAttribute("data-en");
+
+    });
+
+
+    enBtn.classList.toggle(
+        "active",
+        language === "en"
+    );
+
+
+    grBtn.classList.toggle(
+        "active",
+        language === "gr"
+    );
+
+}
+
+
+enBtn.addEventListener(
+    "click",
+    () => setLanguage("en")
+);
+
+
+grBtn.addEventListener(
+    "click",
+    () => setLanguage("gr")
+);
+
+
+/*
+    English is always the default language.
+
+    No localStorage.
+    No sessionStorage.
+    No cookies.
+*/
+
+setLanguage("en");
+
+</script>
+
+
+</body>
+
+</html>
