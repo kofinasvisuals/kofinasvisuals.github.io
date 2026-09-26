@@ -7,6 +7,7 @@
     <title>KOFINAS VISUALS — Visual Production</title>
 
     <style>
+
         * {
             margin: 0;
             padding: 0;
@@ -22,6 +23,17 @@
             color: #fff;
             font-family: Arial, Helvetica, sans-serif;
         }
+
+        img {
+            display: block;
+            width: 100%;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
 
         /* =========================
            HERO
@@ -125,6 +137,7 @@
         .intro {
             min-height: 80vh;
             padding: 150px 8vw;
+
             display: grid;
             grid-template-columns: 0.8fr 1.2fr;
             gap: 8vw;
@@ -156,14 +169,300 @@
 
             font-size: 17px;
             line-height: 1.8;
+
             color: rgba(255,255,255,0.62);
         }
 
         .intro-line {
             width: 80px;
             height: 1px;
+
             background: rgba(255,255,255,0.35);
+
             margin-top: 45px;
+        }
+
+
+        /* =========================
+           WORK
+        ========================= */
+
+        .work {
+            padding: 140px 6vw 170px;
+            background: #f2f1ed;
+            color: #0a0a0a;
+        }
+
+        .work-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+
+            margin-bottom: 100px;
+        }
+
+        .work-number {
+            font-size: 10px;
+            letter-spacing: 4px;
+            opacity: 0.45;
+        }
+
+        .work-title {
+            font-size: clamp(55px, 10vw, 150px);
+            line-height: 0.8;
+            letter-spacing: -7px;
+            font-weight: 700;
+        }
+
+        .work-description {
+            max-width: 330px;
+
+            font-size: 13px;
+            line-height: 1.7;
+
+            color: rgba(0,0,0,0.55);
+        }
+
+
+        /* PROJECT */
+
+        .project {
+            margin-bottom: 150px;
+        }
+
+        .project-image {
+            position: relative;
+            overflow: hidden;
+            background: #ddd;
+        }
+
+        .project-image img {
+            aspect-ratio: 16 / 9;
+            object-fit: cover;
+
+            transition: transform 0.8s ease;
+        }
+
+        .project:hover .project-image img {
+            transform: scale(1.035);
+        }
+
+        .project-info {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+
+            padding-top: 24px;
+        }
+
+        .project-name {
+            font-size: 26px;
+            letter-spacing: -1px;
+            font-weight: 500;
+        }
+
+        .project-type {
+            margin-top: 8px;
+
+            font-size: 9px;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+
+            opacity: 0.5;
+        }
+
+        .project-index {
+            font-size: 10px;
+            letter-spacing: 3px;
+            opacity: 0.45;
+        }
+
+
+        /* SECOND PROJECT */
+
+        .project.offset {
+            width: 76%;
+            margin-left: auto;
+        }
+
+        .project.offset .project-image img {
+            aspect-ratio: 4 / 3;
+        }
+
+
+        /* THIRD PROJECT */
+
+        .project.third {
+            width: 88%;
+        }
+
+        .project.third .project-image img {
+            aspect-ratio: 16 / 10;
+        }
+
+
+        /* WORK LINK */
+
+        .work-link-wrap {
+            display: flex;
+            justify-content: center;
+
+            margin-top: 40px;
+        }
+
+        .work-link {
+            border-bottom: 1px solid rgba(0,0,0,0.45);
+
+            padding-bottom: 10px;
+
+            font-size: 10px;
+            letter-spacing: 4px;
+
+            transition: opacity 0.3s ease;
+        }
+
+        .work-link:hover {
+            opacity: 0.45;
+        }
+
+
+        /* =========================
+           SERVICES PREVIEW
+        ========================= */
+
+        .services {
+            background: #080808;
+            color: #fff;
+
+            padding: 150px 8vw;
+        }
+
+        .services-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+
+            margin-bottom: 90px;
+        }
+
+        .services-label {
+            font-size: 10px;
+            letter-spacing: 4px;
+            opacity: 0.45;
+        }
+
+        .services-title {
+            font-size: clamp(45px, 7vw, 100px);
+            line-height: 0.9;
+            letter-spacing: -5px;
+            font-weight: 500;
+        }
+
+        .services-list {
+            border-top: 1px solid rgba(255,255,255,0.16);
+        }
+
+        .service {
+            padding: 30px 0;
+
+            border-bottom: 1px solid rgba(255,255,255,0.16);
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .service-name {
+            font-size: 22px;
+            letter-spacing: -0.5px;
+        }
+
+        .service-number {
+            font-size: 9px;
+            letter-spacing: 3px;
+            opacity: 0.4;
+        }
+
+
+        /* =========================
+           CONTACT
+        ========================= */
+
+        .contact {
+            min-height: 70vh;
+
+            padding: 140px 8vw;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
+            background: #f2f1ed;
+            color: #080808;
+        }
+
+        .contact-label {
+            font-size: 10px;
+            letter-spacing: 4px;
+            opacity: 0.45;
+        }
+
+        .contact-title {
+            margin-top: 80px;
+
+            font-size: clamp(50px, 9vw, 135px);
+            line-height: 0.85;
+            letter-spacing: -6px;
+            font-weight: 600;
+        }
+
+        .contact-bottom {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+
+            margin-top: 100px;
+        }
+
+        .contact-email {
+            font-size: clamp(18px, 3vw, 32px);
+            letter-spacing: -1px;
+
+            border-bottom: 1px solid rgba(0,0,0,0.35);
+            padding-bottom: 8px;
+        }
+
+        .contact-note {
+            font-size: 9px;
+            letter-spacing: 3px;
+            opacity: 0.45;
+        }
+
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        footer {
+            padding: 35px 6vw;
+
+            background: #080808;
+            color: #fff;
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .footer-brand {
+            font-size: 10px;
+            letter-spacing: 4px;
+        }
+
+        .footer-copy {
+            font-size: 8px;
+            letter-spacing: 2px;
+            opacity: 0.4;
         }
 
 
@@ -204,6 +503,7 @@
                 bottom: 30px;
             }
 
+
             .intro {
                 min-height: auto;
                 padding: 110px 30px;
@@ -224,14 +524,111 @@
                 line-height: 1.75;
                 margin-top: 30px;
             }
+
+
+            .work {
+                padding: 100px 25px 120px;
+            }
+
+            .work-header {
+                display: block;
+                margin-bottom: 65px;
+            }
+
+            .work-title {
+                margin-top: 30px;
+
+                font-size: 70px;
+                letter-spacing: -4px;
+            }
+
+            .work-description {
+                margin-top: 35px;
+            }
+
+            .project {
+                margin-bottom: 90px;
+            }
+
+            .project.offset,
+            .project.third {
+                width: 100%;
+            }
+
+            .project-image img,
+            .project.offset .project-image img,
+            .project.third .project-image img {
+                aspect-ratio: 4 / 3;
+            }
+
+            .project-name {
+                font-size: 21px;
+            }
+
+
+            .services {
+                padding: 110px 30px;
+            }
+
+            .services-top {
+                display: block;
+                margin-bottom: 60px;
+            }
+
+            .services-title {
+                margin-top: 30px;
+
+                font-size: 58px;
+                letter-spacing: -3px;
+            }
+
+            .service-name {
+                font-size: 18px;
+            }
+
+
+            .contact {
+                min-height: 65vh;
+                padding: 110px 30px;
+            }
+
+            .contact-title {
+                margin-top: 70px;
+
+                font-size: 60px;
+                letter-spacing: -3px;
+            }
+
+            .contact-bottom {
+                display: block;
+                margin-top: 80px;
+            }
+
+            .contact-note {
+                margin-top: 25px;
+            }
+
+
+            footer {
+                padding: 30px;
+                display: block;
+            }
+
+            .footer-copy {
+                margin-top: 15px;
+            }
         }
+
     </style>
 </head>
+
 
 <body>
 
 
-    <!-- HERO -->
+    <!-- =========================
+         HERO
+    ========================= -->
 
     <section class="hero">
 
@@ -276,7 +673,9 @@
 
 
 
-    <!-- INTRO -->
+    <!-- =========================
+         INTRO
+    ========================= -->
 
     <section class="intro">
 
@@ -305,6 +704,300 @@
         </div>
 
     </section>
+
+
+
+    <!-- =========================
+         SELECTED WORK
+    ========================= -->
+
+    <section class="work">
+
+        <div class="work-header">
+
+            <div>
+
+                <div class="work-number">
+                    02 / SELECTED WORK
+                </div>
+
+                <h2 class="work-title">
+                    WORK
+                </h2>
+
+            </div>
+
+
+            <p class="work-description">
+                A selection of visual work across spaces,
+                people and environments.
+            </p>
+
+        </div>
+
+
+
+        <!-- PROJECT 01 -->
+
+        <article class="project">
+
+            <div class="project-image">
+
+                <img
+                    src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=2200&q=90"
+                    alt="Modern interior"
+                >
+
+            </div>
+
+
+            <div class="project-info">
+
+                <div>
+
+                    <div class="project-name">
+                        REAL ESTATE
+                    </div>
+
+                    <div class="project-type">
+                        Spaces / Architecture
+                    </div>
+
+                </div>
+
+
+                <div class="project-index">
+                    01
+                </div>
+
+            </div>
+
+        </article>
+
+
+
+        <!-- PROJECT 02 -->
+
+        <article class="project offset">
+
+            <div class="project-image">
+
+                <img
+                    src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&w=2200&q=90"
+                    alt="Live event"
+                >
+
+            </div>
+
+
+            <div class="project-info">
+
+                <div>
+
+                    <div class="project-name">
+                        EVENTS
+                    </div>
+
+                    <div class="project-type">
+                        People / Atmosphere
+                    </div>
+
+                </div>
+
+
+                <div class="project-index">
+                    02
+                </div>
+
+            </div>
+
+        </article>
+
+
+
+        <!-- PROJECT 03 -->
+
+        <article class="project third">
+
+            <div class="project-image">
+
+                <img
+                    src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=2200&q=90"
+                    alt="Outdoor landscape"
+                >
+
+            </div>
+
+
+            <div class="project-info">
+
+                <div>
+
+                    <div class="project-name">
+                        OUTDOOR
+                    </div>
+
+                    <div class="project-type">
+                        Landscape / Lifestyle
+                    </div>
+
+                </div>
+
+
+                <div class="project-index">
+                    03
+                </div>
+
+            </div>
+
+        </article>
+
+
+
+        <div class="work-link-wrap">
+
+            <a href="work.html" class="work-link">
+                VIEW FULL WORK
+            </a>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         SERVICES
+    ========================= -->
+
+    <section class="services">
+
+        <div class="services-top">
+
+            <div class="services-label">
+                03 / SERVICES
+            </div>
+
+            <h2 class="services-title">
+                WHAT<br>
+                WE DO
+            </h2>
+
+        </div>
+
+
+        <div class="services-list">
+
+            <div class="service">
+
+                <div class="service-name">
+                    Photography
+                </div>
+
+                <div class="service-number">
+                    01
+                </div>
+
+            </div>
+
+
+            <div class="service">
+
+                <div class="service-name">
+                    Real Estate
+                </div>
+
+                <div class="service-number">
+                    02
+                </div>
+
+            </div>
+
+
+            <div class="service">
+
+                <div class="service-name">
+                    Events
+                </div>
+
+                <div class="service-number">
+                    03
+                </div>
+
+            </div>
+
+
+            <div class="service">
+
+                <div class="service-name">
+                    Outdoor & Lifestyle
+                </div>
+
+                <div class="service-number">
+                    04
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         CONTACT
+    ========================= -->
+
+    <section class="contact">
+
+        <div class="contact-label">
+            04 / CONTACT
+        </div>
+
+
+        <h2 class="contact-title">
+            LET'S CREATE<br>
+            SOMETHING<br>
+            DISTINCT.
+        </h2>
+
+
+        <div class="contact-bottom">
+
+            <a
+                href="mailto:kofinasvisuals@gmail.com"
+                class="contact-email"
+            >
+                kofinasvisuals@gmail.com
+            </a>
+
+
+            <div class="contact-note">
+                AVAILABLE FOR SELECT PROJECTS
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         FOOTER
+    ========================= -->
+
+    <footer>
+
+        <div class="footer-brand">
+            KOFINAS VISUALS
+        </div>
+
+        <div class="footer-copy">
+            © 2026 KOFINAS VISUALS · BY TRAVELFILMGR
+        </div>
+
+    </footer>
 
 
 </body>
